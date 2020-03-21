@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nina.Revit.Selection
+namespace Nina.Library.Views
 {
-    class Selection
+    class ViewTemplate
     {
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nina.Revit.Views
+namespace Nina.Revit.PointCloud
 {
-    class Views
+    class Hide
     {
     }
 }

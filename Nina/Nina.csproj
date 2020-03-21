@@ -105,11 +105,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Revit\Selection\Selection.cs" />
-    <Compile Include="Revit\Views\Views.cs" />
-    <Compile Include="Revit\Views\ViewTemplate.cs" />
-    <Compile Include="Revit\Ribbon\Ribbon.cs" />
+    <Compile Include="Library\Selection\Selection.cs" />
+    <Compile Include="Library\Views\Views.cs" />
+    <Compile Include="Library\Views\ViewTemplate.cs" />
+    <Compile Include="Library\Ribbon\Ribbon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Revit\PointCloud\Hide.cs" />
+    <Compile Include="Revit\Selection\SelectAll.cs" />
+    <Compile Include="Revit\PointCloud\Unhide.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Nina.addin">
