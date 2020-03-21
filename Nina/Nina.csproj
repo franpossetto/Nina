@@ -105,14 +105,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Ribbon.cs" />
+    <Compile Include="Revit\Selection\Selection.cs" />
+    <Compile Include="Revit\Views\Views.cs" />
+    <Compile Include="Revit\Views\ViewTemplate.cs" />
+    <Compile Include="Revit\Ribbon\Ribbon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Nina.addin">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="TextFile2.txt" />
     <None Include="Resources\icon30.png" />
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +123,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>echo Configuration: $(Configuration)

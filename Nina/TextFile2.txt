@@ -1,9 +1,0 @@
-﻿Debug Checklist
-
-1. On project File:
-	a. Check References
-2. On template file:
-	a. Icon Replace Parameter True
-	b. Manifest Replace Parameter True
-3. On Resources.cs File:
-	a. Properties.Resources need the namespace before it.
