@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nina", "Nina\Nina.csproj", "{087ACF19-3757-4128-882E-184561FF227F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		R2018|Any CPU = R2018|Any CPU
+		R2019|Any CPU = R2019|Any CPU
+		R2020|Any CPU = R2020|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{087ACF19-3757-4128-882E-184561FF227F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{087ACF19-3757-4128-882E-184561FF227F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{087ACF19-3757-4128-882E-184561FF227F}.R2018|Any CPU.ActiveCfg = R2018|Any CPU
+		{087ACF19-3757-4128-882E-184561FF227F}.R2018|Any CPU.Build.0 = R2018|Any CPU
+		{087ACF19-3757-4128-882E-184561FF227F}.R2019|Any CPU.ActiveCfg = R2019|Any CPU
+		{087ACF19-3757-4128-882E-184561FF227F}.R2019|Any CPU.Build.0 = R2019|Any CPU
+		{087ACF19-3757-4128-882E-184561FF227F}.R2020|Any CPU.ActiveCfg = R2020|Any CPU
+		{087ACF19-3757-4128-882E-184561FF227F}.R2020|Any CPU.Build.0 = R2020|Any CPU
+		{087ACF19-3757-4128-882E-184561FF227F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{087ACF19-3757-4128-882E-184561FF227F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB488B07-90F8-404F-A510-583448D814C4}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>Nina</Name>
+    <FullClassName>Nina.ExternalApplication</FullClassName>
+    <Text>Nina</Text>
+    <Description>Nina</Description>
+    <VisibilityMode>AlwaysVisible</VisibilityMode>
+    <Assembly>Nina.dll</Assembly>
+    <AddInId>
+      087acf19-3757-4128-882e-184561ff227f
+    </AddInId>
+    <VendorId>ADSK</VendorId>
+    <VendorDescription>Autodesk, Inc, www.autodesk.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
