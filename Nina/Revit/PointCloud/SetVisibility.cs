@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nina.Library.Selection
+namespace Nina.Revit.PointCloud
 {
-    class Selection
+    class SetVisibility
     {
-        //Comment
-        //Comment2  //Fix this method
     }
 }
