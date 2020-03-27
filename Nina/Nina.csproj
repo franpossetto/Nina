@@ -110,7 +110,9 @@
     <Compile Include="Library\Views\ViewTemplate.cs" />
     <Compile Include="Library\Ribbon\Ribbon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Revit\PointCloud\CreateWorkingView.cs" />
     <Compile Include="Revit\PointCloud\Hide.cs" />
+    <Compile Include="Revit\PointCloud\SetVisibility.cs" />
     <Compile Include="Revit\Selection\SelectAll.cs" />
     <Compile Include="Revit\PointCloud\Unhide.cs" />
   </ItemGroup>
