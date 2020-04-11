@@ -8,7 +8,7 @@ using Autodesk.Revit.UI;
 using System.Reflection;
 using Autodesk.Windows;
 
-namespace Nina
+namespace Nina.Revit
 {
     public static class Ribbon
     {
