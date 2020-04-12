@@ -16,6 +16,8 @@ namespace Nina.Revit
             Categories categories = doc.Settings.Categories;
             Category pointCloudCategory = categories.get_Item(BuiltInCategory.OST_PointClouds);
             View activeView = doc.ActiveView;
+            
+            PointCloudOverrides pc_ovverides =  activeView.GetPointCloudOverrides();
 
             using(Transaction t = new Transaction(doc,"Point Clouds were hidden"))
             {
@@ -30,7 +32,7 @@ namespace Nina.Revit
                 }
             }
         }
-        public static void SetColorMode(Document doc)
+        public static void SetColorMode(Document doc, int colorMode)
         {
             
             FilteredElementCollector collector = new FilteredElementCollector(doc);
@@ -40,9 +42,32 @@ namespace Nina.Revit
 
 
 
-
             PointCloudOverrideSettings pt_cloud_settings = new PointCloudOverrideSettings();
-            pt_cloud_settings.ColorMode = PointCloudColorMode.Normals;
+            if (pt_cloud_settings.ColorMode == PointCloudColorMode.Intensity)
+            {
+
+            }
+            switch (colorMode)
+            {
+                case 0:
+                    pt_cloud_settings.ColorMode = PointCloudColorMode.Elevation;
+                    break;
+                case 1:
+                    pt_cloud_settings.ColorMode = PointCloudColorMode.FixedColor;
+                    break;
+                case 2:
+                    pt_cloud_settings.ColorMode = PointCloudColorMode.Intensity;
+                    break;
+                case 3:
+                    pt_cloud_settings.ColorMode = PointCloudColorMode.NoOverride;
+                    break;
+                case 4:
+                    pt_cloud_settings.ColorMode = PointCloudColorMode.Normals;
+                    break;
+
+                default:
+                    break;
+            }
 
             foreach (PointCloudInstance pointCloud in pointClouds)
             {
@@ -50,6 +75,9 @@ namespace Nina.Revit
                 PointCloudOverrides overrides = activeView.GetPointCloudOverrides();
                 PointCloudColorSettings pointCloudColorSettings = new PointCloudColorSettings();
 
+                if (pt_cloud_settings.ColorMode == PointCloudColorMode.Intensity){
+
+                }
                 using (Transaction t = new Transaction(doc, "Point Clouds were hidden"))
                 {
                     try
