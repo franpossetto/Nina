@@ -111,6 +111,9 @@
     <Compile Include="Commands\PointClouds\ColorMode\SetElevation.cs" />
     <Compile Include="Commands\PointClouds\ColorMode\SetFixedColor.cs" />
     <Compile Include="Commands\PointClouds\ColorMode\SetNormals.cs" />
+    <Compile Include="Commands\PointClouds\WallByDimension.cs" />
+    <Compile Include="Commands\PointClouds\SwitchUp.cs" />
+    <Compile Include="Revit\FamilyType.cs" />
     <Compile Include="ExternalApplication.cs" />
     <Compile Include="Commands\PointClouds\Hide.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -130,6 +133,7 @@
   <ItemGroup>
     <Content Include="Nina.addin">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="prop-cmd.txt" />
     <None Include="Resources\purple.png" />
@@ -146,7 +150,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
