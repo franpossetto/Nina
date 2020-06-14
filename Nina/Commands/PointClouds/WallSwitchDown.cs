@@ -3,10 +3,10 @@ using Autodesk.Revit.UI;
 using Autodesk.Revit.Attributes;
 using Autodesk.Revit.UI.Selection;
 
-namespace Nina.Commands.PointClouds
+namespace Nina
 {
     [Transaction(TransactionMode.Manual)]
-    public class SwitchUp : IExternalCommand
+    public class WallSwitchDown : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
@@ -17,7 +17,7 @@ namespace Nina.Commands.PointClouds
 
 
                 Selection selection = uidoc.Selection;
-                Nina.FamilyType.SwitchUp(uidoc, doc);
+                Nina.FamilyType.WallSwitch(uidoc, doc, false);
                 return Autodesk.Revit.UI.Result.Succeeded;
             }
             catch

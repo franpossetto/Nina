@@ -112,7 +112,8 @@
     <Compile Include="Commands\PointClouds\ColorMode\SetFixedColor.cs" />
     <Compile Include="Commands\PointClouds\ColorMode\SetNormals.cs" />
     <Compile Include="Commands\PointClouds\WallByDimension.cs" />
-    <Compile Include="Commands\PointClouds\SwitchUp.cs" />
+    <Compile Include="Commands\PointClouds\WallSwitchUp.cs" />
+    <Compile Include="Commands\PointClouds\WallSwitchDown.cs" />
     <Compile Include="Revit\FamilyType.cs" />
     <Compile Include="ExternalApplication.cs" />
     <Compile Include="Commands\PointClouds\Hide.cs" />
@@ -121,6 +122,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Revit\Ribbon2.cs" />
     <Compile Include="Revit\Selection.cs" />
     <Compile Include="Revit\Validations.cs" />
     <Compile Include="Revit\Views.cs" />
@@ -136,6 +138,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="prop-cmd.txt" />
+    <None Include="Resources\wall_switch_up.png" />
+    <None Include="Resources\wall_switch_down.png" />
+    <None Include="Resources\wall_by_dimension.png" />
     <None Include="Resources\purple.png" />
     <None Include="Resources\red.png" />
     <None Include="Resources\dark.png" />

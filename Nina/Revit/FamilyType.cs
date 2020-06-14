@@ -52,7 +52,7 @@ namespace Nina
 
         }
 
-        public static void SwitchUp(UIDocument uiDoc, Document doc)
+        public static void WallSwitch(UIDocument uiDoc, Document doc, bool order)
         {
 
 
@@ -79,17 +79,37 @@ namespace Nina
 
             int index = 0;
             int n = 0;
-            foreach(ElementId eid in elementTypesId)
+            //up
+            if (order)
             {
-                if (eid == elementTypeId)
+                foreach (ElementId eid in elementTypesId)
                 {
-                    index = n - 1;
-                    if (index == -1)
-                        index = elementTypesId.Count() - 1;
-                }
+                    if (eid == elementTypeId)
+                    {
+                        index = n - 1;
+                        if (index == -1)
+                            index = elementTypesId.Count() - 1;
+                    }
 
-                n++;
+                    n++;
+                }
+            } else
+            {
+                foreach (ElementId eid in elementTypesId)
+                {
+                    if (eid == elementTypeId)
+                    {
+                        index = n + 1;
+                        if (index >= elementTypesId.Count())
+                            index = 0;
+                    }
+
+                    n++;
+                }
             }
+            
+
+
             ElementId newSelectedId = elementTypesId.ToList()[index];
             ElementType selectedElementType = doc.GetElement(newSelectedId) as ElementType;
 

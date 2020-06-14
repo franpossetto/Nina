@@ -22,16 +22,17 @@ namespace Nina
             /// <summary>
             /// Create a new Tab on Ribbon Bar.
             /// </summary>
-            const string RIBBON_TAB = "BBr";
+            const string RIBBON_TAB = "Nina";
             Ribbon.CreateRibbonTab(application, RIBBON_TAB);
 
             /// <summary>
             /// Create a new Panel on Ribbon Tab.
             /// </summary>
 
-            const string RIBBON_PANEL = "Scan to BIM";
+            const string RIBBON_PANEL = "Visibility";
+            const string RIBBON_PANEL2 = "Selection";
             RibbonPanel ribbonPanel = Ribbon.CreateRibbonPanel(application, RIBBON_PANEL, RIBBON_TAB);
-
+            RibbonPanel ribbonPanel2 = Ribbon.CreateRibbonPanel(application, RIBBON_PANEL2, RIBBON_TAB);
             #region Colors - Icons
             System.Drawing.Bitmap ico1 = Properties.Resources.dark;
             System.Windows.Media.Imaging.BitmapSource icon1 = Ribbon.Icon(ico1);
@@ -53,6 +54,15 @@ namespace Nina
 
             System.Drawing.Bitmap ico7 = Properties.Resources.purple;
             System.Windows.Media.Imaging.BitmapSource icon7 = Ribbon.Icon(ico7);
+
+            System.Drawing.Bitmap ico8 = Properties.Resources.wall_by_dimension;
+            System.Windows.Media.Imaging.BitmapSource icon8 = Ribbon.Icon(ico8);
+
+            System.Drawing.Bitmap ico9 = Properties.Resources.wall_switch_up;
+            System.Windows.Media.Imaging.BitmapSource icon9 = Ribbon.Icon(ico9);
+
+            System.Drawing.Bitmap ico10 = Properties.Resources.wall_switch_down;
+            System.Windows.Media.Imaging.BitmapSource icon10 = Ribbon.Icon(ico10);
             #endregion
 
 
@@ -112,10 +122,29 @@ namespace Nina
 
 
 
+            const string wall_byDimension_name = "wall_byDimension";
+            const string wall_byDimension_desc = "WallType \n by Dimension";
+            PushButtonData wall_byDimension_button = Ribbon.CreatePushButtonData(wall_byDimension_name,
+                                                                                wall_byDimension_desc,
+                                                                                "Nina.WallByDimension");
+            wall_byDimension_button.Image = icon8;
 
+            const string wall_switch_up_name = "wall_switch_up";
+            const string wall_switch_up_desc = "WallType \n switch-up";
+            PushButtonData wall_switch_up_button = Ribbon.CreatePushButtonData(wall_switch_up_name,
+                                                                                  wall_switch_up_desc,
+                                                                                  "Nina.WallSwitchUp");
+            wall_switch_up_button.Image = icon9;
+
+            const string wall_switch_down_name = "wall_switch_down";
+            const string wall_switch_down_desc = "WallType \n switch-down";
+            PushButtonData wall_switch_down_button = Ribbon.CreatePushButtonData(wall_switch_down_name,
+                                                                                  wall_switch_down_desc,
+                                                                                  "Nina.WallSwitchDown");
+            wall_switch_down_button.Image = icon10;
 
             // A PulldownButton data
-            PulldownButtonData ChangeModeGroup = new PulldownButtonData("ChangeMode", "Change Color Mode");
+            PulldownButtonData ChangeModeGroup = new PulldownButtonData("ChangeMode", "Color Mode");
             ChangeModeGroup.ToolTip = "PointCloud visibility change mode";
             ChangeModeGroup.Image = icon6;
 
@@ -141,7 +170,17 @@ namespace Nina
             item15.LargeImage = icon7;
 
 
-            ribbonPanel.AddSeparator();
+            PushButton item16 = ribbonPanel2.AddItem(wall_byDimension_button) as PushButton;
+            item16.LargeImage = icon8;
+
+
+            PushButton item17 = ribbonPanel2.AddItem(wall_switch_up_button) as PushButton;
+            item17.LargeImage = icon9;
+
+
+            PushButton item18 = ribbonPanel2.AddItem(wall_switch_down_button) as PushButton;
+            item18.LargeImage = icon10;
+
 
             return Result.Succeeded;
 
