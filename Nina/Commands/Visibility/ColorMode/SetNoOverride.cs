@@ -9,7 +9,7 @@ using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Nina.Revit;
 
-namespace Nina.ColorMode
+namespace Nina.Visibility
 {
     [Transaction(TransactionMode.Manual)]
     [Regeneration(RegenerationOption.Manual)]

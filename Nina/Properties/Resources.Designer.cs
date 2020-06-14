@@ -93,6 +93,16 @@ namespace Nina.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap info {
+            get {
+                object obj = ResourceManager.GetObject("info", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lila {
             get {
                 object obj = ResourceManager.GetObject("lila", resourceCulture);
@@ -156,6 +166,16 @@ namespace Nina.Properties {
         internal static System.Drawing.Bitmap wall_switch_up {
             get {
                 object obj = ResourceManager.GetObject("wall_switch_up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap walltype_creation {
+            get {
+                object obj = ResourceManager.GetObject("walltype_creation", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

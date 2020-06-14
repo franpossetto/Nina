@@ -9,12 +9,12 @@ using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Nina.Revit;
 
-namespace Nina.ColorMode
+namespace Nina.Visibility
 {
     [Transaction(TransactionMode.Manual)]
     [Regeneration(RegenerationOption.Manual)]
 
-    public class SetElevation : IExternalCommand
+    public class Hide : IExternalCommand
     {
         /// <summary>
         ///     External Command
@@ -32,14 +32,29 @@ namespace Nina.ColorMode
             Application app = uiApp.Application;
             Document doc = uiDoc.Document;
 
-            bool revitVersion = Validations.CheckRevitVersion(app, "2020");
-            if (!revitVersion)
-                return Result.Failed;
+            try
+            {
+                //Check Revit Version
+                if (!commandData.Application.Application.VersionName.Contains("2020"))
+                {
+                    using (TaskDialog taskDialog = new TaskDialog("Cannot Continue"))
+                    {
+                        taskDialog.TitleAutoPrefix = false;
+                        taskDialog.MainInstruction = "Incompatible Version of Revit";
+                        taskDialog.MainContent = "Main Content";
+                        taskDialog.Show();
+                    }
+                    return Result.Cancelled;
+                }
 
-            PointCloud.SetColorMode(doc, 0);
-            return Result.Succeeded;
-                
-            
+                PointCloud.Hide(doc, true);
+                return Result.Succeeded;
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message;
+                return Result.Failed;
+            }
         }
     }
 }

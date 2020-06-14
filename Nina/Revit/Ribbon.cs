@@ -18,17 +18,19 @@ namespace Nina.Revit
         /// Each Panel can have many Items. 
         /// </summary>
 
-        public static void CreateRibbonTab(UIControlledApplication application, string ribbonTabName)
+        public static void CreateRibbonTab(UIControlledApplication application,
+                                           string ribbonTabName)
         {
             RibbonControl ribbon = ComponentManager.Ribbon;
             RibbonTab tab = ribbon.FindTab(ribbonTabName);
 
             if (tab == null)
                 application.CreateRibbonTab(ribbonTabName);
-
         }
 
-        public static Autodesk.Revit.UI.RibbonPanel CreateRibbonPanel(UIControlledApplication application, string ribbonPanelName, string ribbonTabName = null)
+        public static Autodesk.Revit.UI.RibbonPanel CreateRibbonPanel(UIControlledApplication application, 
+                                                                      string ribbonPanelName, 
+                                                                      string ribbonTabName = null)
         {
             /// <summary>
             /// This metthod is used to create a new Ribbon panel.
@@ -47,7 +49,9 @@ namespace Nina.Revit
             }
         }
 
-        public static PushButtonData CreatePushButtonData(string pushButtonName, string pushButtonText, string className)
+        public static PushButtonData CreatePushButtonData(string pushButtonName, 
+                                                          string pushButtonText, 
+                                                          string className)
         {
             /// <summary>
             /// This metthod is used to create a new PushButtonData.
@@ -60,7 +64,8 @@ namespace Nina.Revit
             return pushButtonData;
         }
 
-        public static void AddPushButton(Autodesk.Revit.UI.RibbonPanel ribbonPanel, PushButtonData pushButtonData)
+        public static void AddPushButton(Autodesk.Revit.UI.RibbonPanel ribbonPanel,
+                                         PushButtonData pushButtonData)
         {
             PushButton pushButton = ribbonPanel.AddItem(pushButtonData) as PushButton;
         }

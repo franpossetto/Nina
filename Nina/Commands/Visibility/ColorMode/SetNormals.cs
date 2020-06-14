@@ -9,21 +9,13 @@ using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Nina.Revit;
 
-namespace Nina.ColorMode
+namespace Nina.Visibility
 {
     [Transaction(TransactionMode.Manual)]
     [Regeneration(RegenerationOption.Manual)]
 
-    public class SetFixedColor : IExternalCommand
+    public class SetNormals : IExternalCommand
     {
-        /// <summary>
-        ///     External Command
-        /// </summary>
-        /// <param name ="commandData"></param>
-        /// <param name="message"></param>
-        /// <param name="elements"></param>
-        /// <returns></returns>
-
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
 
@@ -36,7 +28,7 @@ namespace Nina.ColorMode
             if (!revitVersion)
                 return Result.Failed;
 
-            PointCloud.SetColorMode(doc, 1);
+            PointCloud.SetColorMode(doc, 4);
             return Result.Succeeded;
                 
             

@@ -9,12 +9,12 @@ using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Nina.Revit;
 
-namespace Nina.ColorMode
+namespace Nina.Visibility
 {
     [Transaction(TransactionMode.Manual)]
     [Regeneration(RegenerationOption.Manual)]
 
-    public class SetIntensity : IExternalCommand
+    public class SetElevation : IExternalCommand
     {
         /// <summary>
         ///     External Command
@@ -36,7 +36,7 @@ namespace Nina.ColorMode
             if (!revitVersion)
                 return Result.Failed;
 
-            PointCloud.SetColorMode(doc, 2);
+            PointCloud.SetColorMode(doc, 0);
             return Result.Succeeded;
                 
             

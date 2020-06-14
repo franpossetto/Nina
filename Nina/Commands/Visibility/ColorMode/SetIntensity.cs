@@ -9,12 +9,12 @@ using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Nina.Revit;
 
-namespace Nina
+namespace Nina.Visibility
 {
     [Transaction(TransactionMode.Manual)]
     [Regeneration(RegenerationOption.Manual)]
 
-    public class Hide : IExternalCommand
+    public class SetIntensity : IExternalCommand
     {
         /// <summary>
         ///     External Command
@@ -32,29 +32,14 @@ namespace Nina
             Application app = uiApp.Application;
             Document doc = uiDoc.Document;
 
-            try
-            {
-                //Check Revit Version
-                if (!commandData.Application.Application.VersionName.Contains("2020"))
-                {
-                    using (TaskDialog taskDialog = new TaskDialog("Cannot Continue"))
-                    {
-                        taskDialog.TitleAutoPrefix = false;
-                        taskDialog.MainInstruction = "Incompatible Version of Revit";
-                        taskDialog.MainContent = "Main Content";
-                        taskDialog.Show();
-                    }
-                    return Result.Cancelled;
-                }
-
-                PointCloud.Hide(doc, true);
-                return Result.Succeeded;
-            }
-            catch (Exception ex)
-            {
-                message = ex.Message;
+            bool revitVersion = Validations.CheckRevitVersion(app, "2020");
+            if (!revitVersion)
                 return Result.Failed;
-            }
+
+            PointCloud.SetColorMode(doc, 2);
+            return Result.Succeeded;
+                
+            
         }
     }
 }

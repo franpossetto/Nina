@@ -68,7 +68,14 @@ namespace Nina
 
             //ICollection<ElementId> elementTypesId = new FilteredElementCollector(doc).OfCategoryId(categoryId).WhereElementIsElementType().ToElementIds();
 
-            ICollection<ElementId> elementIds = new FilteredElementCollector(doc).OfCategoryId(categoryId).WhereElementIsElementType().ToElementIds();
+            ICollection<WallType> walls = new FilteredElementCollector(doc)
+                                                .OfCategoryId(categoryId).WhereElementIsElementType()
+                                                .Cast<WallType>()
+                                                .Where(w => w.Kind == WallKind.Basic)
+                                                .ToList();
+
+            IList<ElementId> elementIds = walls.Select(x => x.Id).ToList();
+
             IList<ElementId> elementTypesId = elementIds.OrderBy(x => doc.GetElement(x).Name).ToList();
 
 
@@ -129,6 +136,39 @@ namespace Nina
 
             
             //uiDoc.PostRequestForElementTypePlacement(selectedElementType);
+        }
+
+        public static void WallTypeBatchCreation(Document doc/*, *//*WallType wallType, double ceiling, double floor*/, double freq)
+        {
+
+            IEnumerable<WallType> collector = new FilteredElementCollector(doc)
+                .OfCategory(BuiltInCategory.OST_Walls)
+                .WhereElementIsElementType()
+                .ToElements()
+                .Cast<WallType>();
+
+            
+
+            using (Transaction t = new Transaction(doc, "Transaction Name"))
+            {
+                t.Start();
+                // DO something
+                for (int i = 0; i < freq; i++)
+                {
+                    WallType selectedWallType = collector.FirstOrDefault();
+                    string newWallTypeName = "WallType n " + i.ToString();
+                    doc.Regenerate();
+
+                    WallType newWallType = selectedWallType.Duplicate(newWallTypeName) as WallType;
+                    CompoundStructure compoundStructure = newWallType.GetCompoundStructure();
+                    compoundStructure.GetLayers().FirstOrDefault().Width = compoundStructure.GetLayers().FirstOrDefault().Width + i;
+                }
+                    
+                t.Commit();
+            }
+
+           
+
         }
 
     }

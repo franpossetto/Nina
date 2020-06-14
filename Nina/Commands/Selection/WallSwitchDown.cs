@@ -3,10 +3,10 @@ using Autodesk.Revit.UI;
 using Autodesk.Revit.Attributes;
 using Autodesk.Revit.UI.Selection;
 
-namespace Nina
+namespace Nina.Selection
 {
     [Transaction(TransactionMode.Manual)]
-    public class WallSwitchUp : IExternalCommand
+    public class WallSwitchDown : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
@@ -16,8 +16,8 @@ namespace Nina
                 UIDocument uidoc = commandData.Application.ActiveUIDocument;
 
 
-                Selection selection = uidoc.Selection;
-                Nina.FamilyType.WallSwitch(uidoc, doc, true);
+                Autodesk.Revit.UI.Selection.Selection selection = uidoc.Selection;
+                Nina.FamilyType.WallSwitch(uidoc, doc, false);
                 return Autodesk.Revit.UI.Result.Succeeded;
             }
             catch

@@ -1,12 +1,11 @@
 ﻿using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.Attributes;
-using Autodesk.Revit.UI.Selection;
 
-namespace Nina
+namespace Nina.Selection
 {
     [Transaction(TransactionMode.Manual)]
-    public class WallSwitchDown : IExternalCommand
+    public class WallByDimension : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
@@ -16,8 +15,12 @@ namespace Nina
                 UIDocument uidoc = commandData.Application.ActiveUIDocument;
 
 
-                Selection selection = uidoc.Selection;
-                Nina.FamilyType.WallSwitch(uidoc, doc, false);
+                XYZ p1 = uidoc.Selection.PickPoint("Pick the first point");
+                XYZ p2 = uidoc.Selection.PickPoint("Pick the second point");
+
+                double distance = p1.DistanceTo(p2);
+
+                Nina.FamilyType.SelectWall(uidoc, doc, distance);
                 return Autodesk.Revit.UI.Result.Succeeded;
             }
             catch
@@ -25,7 +28,6 @@ namespace Nina
                 message = "Unexpected Exception thrown.";
                 return Autodesk.Revit.UI.Result.Failed;
             }
-
 
         }
     }
