@@ -5,14 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
+using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
+using Nina.Revit;
 
-namespace Nina
+namespace Nina.Visibility
 {
     [Transaction(TransactionMode.Manual)]
     [Regeneration(RegenerationOption.Manual)]
 
-    public class ExternalCommand : IExternalCommand
+    public class Hide : IExternalCommand
     {
         /// <summary>
         ///     External Command
@@ -24,6 +26,12 @@ namespace Nina
 
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
+
+            UIApplication uiApp = commandData.Application;
+            UIDocument uiDoc = uiApp.ActiveUIDocument;
+            Application app = uiApp.Application;
+            Document doc = uiDoc.Document;
+
             try
             {
                 //Check Revit Version
@@ -39,7 +47,7 @@ namespace Nina
                     return Result.Cancelled;
                 }
 
-                TaskDialog.Show("From Revit", "Hello World");
+                PointCloud.Hide(doc, true);
                 return Result.Succeeded;
             }
             catch (Exception ex)
