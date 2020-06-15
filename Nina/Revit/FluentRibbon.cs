@@ -40,6 +40,20 @@ namespace Nina.Revit
             }
         }
 
+        private List<Autodesk.Revit.UI.RibbonPanel> _Panels = new List<Autodesk.Revit.UI.RibbonPanel>();
+        public List<Autodesk.Revit.UI.RibbonPanel> Panels
+        {
+            get { return _Panels; }
+            set { _Panels = value; }
+        }
+
+        private Autodesk.Revit.UI.RibbonPanel _Panel{ get; set; }
+        public Autodesk.Revit.UI.RibbonPanel Panel
+        {
+            get { return _Panel; }
+            set { _Panel = value; }
+        }
+
         public RibbonTab Create(string ribbonTabName)
         {
             RibbonControl ribbon = ComponentManager.Ribbon;
@@ -47,7 +61,7 @@ namespace Nina.Revit
             return tab;
         }
 
-        public Autodesk.Revit.UI.RibbonPanel GetPanel(UIApplication uiApp,  string ribbonPanelName)
+        public FluentPanel GetPanel(UIApplication uiApp,  string ribbonPanelName)
         {
             Autodesk.Revit.UI.RibbonPanel panel = uiApp.GetRibbonPanels(ribbonPanelName)
                                                        .FirstOrDefault(n => n.Name.Equals(ribbonPanelName, 
@@ -60,19 +74,82 @@ namespace Nina.Revit
             IList<Autodesk.Revit.UI.RibbonPanel> panels = uiApp.GetRibbonPanels(Tab.Name);
             return panels;
         }
+        public Autodesk.Revit.UI.RibbonPanel AddPanel(UIControlledApplication application, string ribbonPanelName)
+        {
+            Autodesk.Revit.UI.RibbonPanel panel = application.GetRibbonPanels(Tab.Name)
+                                                        .FirstOrDefault(n => n.Name.Equals(Tab.Name, 
+                                                                                           StringComparison.InvariantCulture));
+            Panel = panel;
+            Panels.Add(panel);
 
+            if (panel != null)
+                return panel;
+            else
+            {
+                panel = application.CreateRibbonPanel(Tab.Name, ribbonPanelName);
+                return panel;
+            }
+        }
 
-
-
-
-
-        FluentTab(string ribbonTabName)
+        public Autodesk.Revit.UI.PulldownButton AddPulldownButton(PulldownButtonData pullDownButtonData)
+        {
+            PulldownButton pulldownButton = Panel.AddItem(pullDownButtonData) as PulldownButton;
+            return pulldownButton;
+        }
+        public FluentTab(string ribbonTabName)
         {
             Tab = Create(ribbonTabName);
         }
     }
 
-    public class FluentButton
+    public class FluentPanel
     {
+        private Autodesk.Revit.UI.RibbonPanel _PanelId { get; set; }
+        public Autodesk.Revit.UI.RibbonPanel PanelId
+        {
+            get
+            {
+                return _PanelId;
+            }
+            set
+            {
+                _PanelId = value;
+            }
+        }
+
+        private Autodesk.Revit.UI.RibbonPanel _Panel { get; set; }
+        public Autodesk.Revit.UI.RibbonPanel Panel
+        {
+            get
+            {
+                return _Panel;
+            }
+            set
+            {
+                _Panel = value;
+            }
+        }
+
+        public FluentPanel(UIControlledApplication application, FluentTab tab, string ribbonPanelName)
+        {
+            Autodesk.Revit.UI.RibbonPanel panel = application.GetRibbonPanels(tab.Tab.Name)
+                                                        .FirstOrDefault(n => n.Name.Equals(tab.Tab.Name, StringComparison.InvariantCulture));
+            //Panels.Add(panel);
+
+            if (panel != null)
+            {
+                Panel = panel;
+            }
+                
+            else
+            {
+                panel = application.CreateRibbonPanel(tab.Tab.Name, ribbonPanelName);
+            }
+        }
+
     }
+
+
 }
+
+//objets have to return fluent objects.

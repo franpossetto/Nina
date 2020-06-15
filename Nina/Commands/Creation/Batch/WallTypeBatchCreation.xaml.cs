@@ -23,6 +23,10 @@ namespace Nina.Commands.Creation.Batch
         public WallTypeBatchCreation()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+
         }
+
+
     }
 }

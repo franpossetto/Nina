@@ -32,13 +32,14 @@ namespace Nina
             const string INFO_PANEL = "Info";
             const string VISIBILITY_PANEL = "Visibility";
             const string SELECTION_PANEL = "Selection";
-            const string CREATION_PANEL = "Batch Creation";
+            const string CREATION_PANEL = "Creation";
 
 
             RibbonPanel infoPanel = Ribbon.CreateRibbonPanel(application, INFO_PANEL, RIBBON_TAB);
             RibbonPanel creationPanel = Ribbon.CreateRibbonPanel(application, CREATION_PANEL, RIBBON_TAB);
             RibbonPanel selectionPanel = Ribbon.CreateRibbonPanel(application, SELECTION_PANEL, RIBBON_TAB);
             RibbonPanel visibilityPanel = Ribbon.CreateRibbonPanel(application, VISIBILITY_PANEL, RIBBON_TAB);
+            
             #region Colors - Icons
             System.Drawing.Bitmap ico1 = Properties.Resources.dark;
             System.Windows.Media.Imaging.BitmapSource icon1 = Ribbon.Icon(ico1);
@@ -113,7 +114,7 @@ namespace Nina
 
             #region Creation
             const string wallTypesBatchCreation_name= "walltype_batchCreation";
-            const string wallTypesBatchCreation_desc = "WallType \n Creation";
+            const string wallTypesBatchCreation_desc = "WallType \n Batch Creation";
             PushButtonData wallTypesBatchCreation_button = Ribbon.CreatePushButtonData(wallTypesBatchCreation_name,
                                                                                 wallTypesBatchCreation_desc,
                                                                                 "Nina.Creation.Batch.WallTypes");
@@ -240,7 +241,7 @@ namespace Nina
 
             #endregion
 
-
+                       
             return Result.Succeeded;
 
 

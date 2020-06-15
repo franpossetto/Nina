@@ -5,27 +5,23 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Nina.Commands.Creation.Batch"
              mc:Ignorable="d" Width="385.773"
-            Title="Walltype Batch Creation" Background="#FFF3F3F3" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Height="451.333"
+            Title="Walltype Batch Creation" Background="#FFF3F3F3" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Height="638.333"
         ResizeMode="NoResize"
         >
-    <Grid Background="#FFF0F0F0">
-        <Label Content="Family Type:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="93" Margin="16,34,0,0" Height="31"/>
-        <ComboBox VerticalAlignment="Top" Margin="114,37,33,0"/>
-        <Label Content="Presition:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="99" Margin="16,72,0,0" Height="23"/>
-        <Label Content="Prefix:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="58" Margin="18,223,0,0" Height="29"/>
-        <TextBox Height="23" Margin="114,227,152,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Label Content="Body:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="58" Margin="18,263,0,0" Height="29"/>
-        <TextBox Height="23" Margin="114,267,33,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Label Content="Suffix:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="58" Margin="18,303,0,0" Height="29"/>
-        <TextBox Height="23" Margin="114,307,152,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <CheckBox Content="Thickness" VerticalAlignment="Top" Margin="250,311,0,0" HorizontalAlignment="Left" Width="71" RenderTransformOrigin="0.671,0.622"/>
-        <Button Content="Create..." Margin="0,0,13,13" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="97"/>
-        <Button Content="Cancel" Margin="0,0,121,13" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="97"/>
-        <ComboBox VerticalAlignment="Top" Margin="114,110,152,0" Height="23"/>
-        <Label Content="Start:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="99" Margin="16,108,0,0" Height="23"/>
-        <Label Content="Naming convention" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="118" Margin="18,196,0,0" Height="29"/>
-        <Separator Height="10" Margin="0,206,13,0" VerticalAlignment="Top" Background="Gainsboro" HorizontalAlignment="Right" Width="231"/>
-        <Separator Height="10" Margin="0,275,-57,0" VerticalAlignment="Top" Background="Gainsboro" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="140">
+    <Grid Background="White">
+        <Label Content="Wall Type:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="93" Margin="19,111,0,0" Height="31"/>
+        <ComboBox VerticalAlignment="Top" Margin="114,114,33,0"/>
+        <TextBox Height="23" Margin="114,346,155,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="Body:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="58" Margin="21,378,0,0" Height="29"/>
+        <TextBox Height="23" Margin="114,382,33,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Height="23" Margin="114,422,155,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <CheckBox Content="Suffix" VerticalAlignment="Top" Margin="23,427,0,0" HorizontalAlignment="Left" Width="97" RenderTransformOrigin="0.671,0.622" IsChecked="True"/>
+        <Button Content="Ok" Margin="0,0,13,13" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="97"/>
+        <Button Content="Create..." Margin="0,0,13,46" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="97"/>
+        <Label Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="65" Margin="114,155,0,0" Height="23"/>
+        <Label Content="Naming convention" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="118" Margin="21,307,0,0" Height="29"/>
+        <Separator Height="10" Margin="136,317,13,0" VerticalAlignment="Top" Background="Gainsboro"/>
+        <Separator Height="10" Margin="0,407,-78,0" VerticalAlignment="Top" Background="Gainsboro" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="182">
             <Separator.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -35,8 +31,8 @@
                 </TransformGroup>
             </Separator.RenderTransform>
         </Separator>
-        <Separator Height="10" Margin="13,345,14,0" VerticalAlignment="Top" Background="Gainsboro"/>
-        <Separator HorizontalAlignment="Left" Height="10" Margin="-57,275,0,0" VerticalAlignment="Top" Width="140" Background="Gainsboro" RenderTransformOrigin="0.5,0.5">
+        <Separator Height="10" Margin="12,499,13,0" VerticalAlignment="Top" Background="Gainsboro"/>
+        <Separator HorizontalAlignment="Left" Height="10" Margin="-78,407,0,0" VerticalAlignment="Top" Width="182" Background="Gainsboro" RenderTransformOrigin="0.5,0.5">
             <Separator.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -46,10 +42,10 @@
                 </TransformGroup>
             </Separator.RenderTransform>
         </Separator>
-        <Separator HorizontalAlignment="Left" Height="10" Margin="13,206,0,0" VerticalAlignment="Top" Width="5" Background="Gainsboro"/>
-        <Label Content="Settings" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="118" Margin="18,2,0,0" Height="29"/>
-        <Separator Height="10" Margin="70,12,14,0" VerticalAlignment="Top" Background="Gainsboro"/>
-        <Separator Height="10" Margin="0,94,-70,0" VerticalAlignment="Top" Background="Gainsboro" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="166">
+        <Separator HorizontalAlignment="Left" Height="10" Margin="13,317,0,0" VerticalAlignment="Top" Width="5" Background="Gainsboro"/>
+        <Label Content="Settings" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="118" Margin="21,75,0,0" Height="29"/>
+        <Separator Height="10" Margin="74,85,14,0" VerticalAlignment="Top" Background="Gainsboro"/>
+        <Separator Height="10" Margin="0,185,-88,0" VerticalAlignment="Top" Background="Gainsboro" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="202">
             <Separator.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -59,8 +55,8 @@
                 </TransformGroup>
             </Separator.RenderTransform>
         </Separator>
-        <Separator Height="10" Margin="12,178,13,0" VerticalAlignment="Top" Background="Gainsboro"/>
-        <Separator HorizontalAlignment="Left" Height="10" Margin="-70,94,0,0" VerticalAlignment="Top" Width="166" Background="Gainsboro" RenderTransformOrigin="0.5,0.5">
+        <Separator Height="10" Margin="12,287,13,0" VerticalAlignment="Top" Background="Gainsboro"/>
+        <Separator HorizontalAlignment="Left" Height="10" Margin="-88,185,0,0" VerticalAlignment="Top" Width="202" Background="Gainsboro" RenderTransformOrigin="0.5,0.5">
             <Separator.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -70,11 +66,27 @@
                 </TransformGroup>
             </Separator.RenderTransform>
         </Separator>
-        <Separator HorizontalAlignment="Left" Height="10" Margin="12,12,0,0" VerticalAlignment="Top" Width="6" Background="Gainsboro"/>
-        <CheckBox Content="Separator" VerticalAlignment="Top" Margin="250,231,0,0" HorizontalAlignment="Left" Width="71" RenderTransformOrigin="0.563,3" />
-        <ComboBox VerticalAlignment="Top" Margin="114,75,152,0" Height="23"/>
-        <ComboBox VerticalAlignment="Top" Margin="114,146,152,0" Height="23"/>
-        <Label Content="End:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="99" Margin="16,144,0,0" Height="23"/>
+        <Separator HorizontalAlignment="Left" Height="10" Margin="12,85,0,0" VerticalAlignment="Top" Width="6" Background="Gainsboro"/>
+        <TextBox Height="23" Margin="114,183,201,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Cancel" Margin="13,0,270,13" Height="24" VerticalAlignment="Bottom"/>
+        <TextBox Height="23" Margin="114,459,155,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <CheckBox Content="Separator" VerticalAlignment="Top" Margin="23,462,0,0" HorizontalAlignment="Left" Width="97" RenderTransformOrigin="0.671,0.622" IsChecked="True"/>
+        <CheckBox Content="Prefix" VerticalAlignment="Top" Margin="23,349,0,0" HorizontalAlignment="Left" Width="86" RenderTransformOrigin="0.671,0.622" IsChecked="True"/>
+        <CheckBox Content="Use Thickness" VerticalAlignment="Top" Margin="250,426,0,0" HorizontalAlignment="Left" Width="116" RenderTransformOrigin="0.671,0.622" IsChecked="True"/>
+        <CheckBox Content="Use Space" VerticalAlignment="Top" Margin="250,462,0,0" HorizontalAlignment="Left" Width="78" RenderTransformOrigin="0.671,0.622" IsChecked="True"/>
+        <RadioButton Content="Use Range" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,163,0,0" IsChecked="True"/>
+        <Label Content="Step" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="65" Margin="277,155,0,0" Height="28"/>
+        <TextBox Height="23" Margin="277,183,33,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="End" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="64" Margin="194,155,0,0" Height="28"/>
+        <TextBox Height="23" Margin="194,183,116,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="65" Margin="114,215,0,0" Height="23"/>
+        <TextBox Height="23" Margin="114,243,201,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <RadioButton Content="Use&#xD;&#xA;Sequence" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,223,0,0" IsChecked="True"/>
+        <Label Content="Step" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="65" Margin="277,215,0,0" Height="28"/>
+        <TextBox Height="23" Margin="277,243,33,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="Amount" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="64" Margin="194,215,0,0" Height="28"/>
+        <TextBox Height="23" Margin="194,243,116,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="Select an existing Wall Type and set a min thickness as initial&#xD;&#xA;value to generate the new Wall Types." Height="46" VerticalAlignment="Top" Background="White" Foreground="Black" Margin="13,18,14,0"/>
 
     </Grid>
 </Window>
