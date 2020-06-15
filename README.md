@@ -1,2 +1,3 @@
 # revit-nina-extension
-This is a set of tools for working with Revit. 
+Sunday morning work doing with Nina.
+A set of tools to work with Revit. 
