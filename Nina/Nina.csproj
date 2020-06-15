@@ -127,6 +127,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Revit\FluentRibbon.cs" />
     <Compile Include="Revit\Selection.cs" />
     <Compile Include="Revit\Validations.cs" />
     <Compile Include="Revit\Views.cs" />
