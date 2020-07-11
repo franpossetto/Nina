@@ -106,6 +106,7 @@ namespace Nina
             info_button.LargeImage = icon11;
 
             PulldownButton info_pullDownButton = infoPanel.AddItem(info_button) as PulldownButton;
+
             info_pullDownButton.AddPushButton(about_button);
             info_pullDownButton.AddPushButton(repo_button);
             info_pullDownButton.AddPushButton(docs_button);
@@ -171,7 +172,7 @@ namespace Nina
             const string pointcloud_hide_desc = "Hide Point Cloud";
             PushButtonData pointcloud_hide_button = Ribbon.CreatePushButtonData(pointcloud_hide_name,
                                                                                 pointcloud_hide_desc,
-                                                                                "Nina.Hide");
+                                                                                "Nina.Visibility.Hide");
             pointcloud_hide_button.Image = icon1;
 
 
@@ -179,7 +180,7 @@ namespace Nina
             const string pointcloud_unhide_desc = "Show Point Cloud";
             PushButtonData pointcloud_unhide_button = Ribbon.CreatePushButtonData(pointcloud_unhide_name,
                                                                                   pointcloud_unhide_desc,
-                                                                                  "Nina.Unhide");
+                                                                                  "Nina.Visibility.Unhide");
             pointcloud_unhide_button.Image = icon2;
 
 

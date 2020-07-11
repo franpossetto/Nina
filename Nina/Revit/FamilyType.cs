@@ -153,7 +153,7 @@ namespace Nina
             {
                 t.Start();
                 // DO something
-                for (int i = 0; i < freq; i++)
+                for (int i = 1; i <= freq; i++)
                 {
                     WallType selectedWallType = collector.FirstOrDefault();
                     string newWallTypeName = "WallType n " + i.ToString();
@@ -161,7 +161,18 @@ namespace Nina
 
                     WallType newWallType = selectedWallType.Duplicate(newWallTypeName) as WallType;
                     CompoundStructure compoundStructure = newWallType.GetCompoundStructure();
-                    compoundStructure.GetLayers().FirstOrDefault().Width = compoundStructure.GetLayers().FirstOrDefault().Width + i;
+                    int layerIndex = compoundStructure.GetFirstCoreLayerIndex();
+                    IList<CompoundStructureLayer> csLayers = compoundStructure.GetLayers();
+                    double k = 1.0 * i;
+                    foreach(CompoundStructureLayer csl in csLayers)
+                    {
+                        if(csl.Function.ToString() == "Structure")
+                        {
+                            compoundStructure.SetLayerWidth(layerIndex, k);
+                        }
+                    }
+                    layerIndex++;
+                    newWallType.SetCompoundStructure(compoundStructure);
                 }
                     
                 t.Commit();

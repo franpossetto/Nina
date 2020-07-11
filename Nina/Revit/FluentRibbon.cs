@@ -61,7 +61,7 @@ namespace Nina.Revit
             return tab;
         }
 
-        public FluentPanel GetPanel(UIApplication uiApp,  string ribbonPanelName)
+        public Autodesk.Revit.UI.RibbonPanel GetPanel(UIApplication uiApp,  string ribbonPanelName)
         {
             Autodesk.Revit.UI.RibbonPanel panel = uiApp.GetRibbonPanels(ribbonPanelName)
                                                        .FirstOrDefault(n => n.Name.Equals(ribbonPanelName, 

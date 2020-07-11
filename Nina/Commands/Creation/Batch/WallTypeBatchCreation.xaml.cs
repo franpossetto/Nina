@@ -26,7 +26,5 @@ namespace Nina.Commands.Creation.Batch
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
 
         }
-
-
     }
 }

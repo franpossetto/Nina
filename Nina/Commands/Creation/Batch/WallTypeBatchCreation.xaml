@@ -4,24 +4,22 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Nina.Commands.Creation.Batch"
-             mc:Ignorable="d" Width="385.773"
-            Title="Walltype Batch Creation" Background="#FFF3F3F3" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Height="638.333"
+             mc:Ignorable="d" Width="386"
+            Title="Walltype Batch Creation" Background="#FFF3F3F3" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Height="623"
         ResizeMode="NoResize"
         >
     <Grid Background="White">
         <Label Content="Wall Type:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="93" Margin="19,111,0,0" Height="31"/>
         <ComboBox VerticalAlignment="Top" Margin="114,114,33,0"/>
         <TextBox Height="23" Margin="114,346,155,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Label Content="Body:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="58" Margin="21,378,0,0" Height="29"/>
+        <Label Content="Body" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="58" Margin="21,378,0,0" Height="29"/>
         <TextBox Height="23" Margin="114,382,33,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox Height="23" Margin="114,422,155,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <CheckBox Content="Suffix" VerticalAlignment="Top" Margin="23,427,0,0" HorizontalAlignment="Left" Width="97" RenderTransformOrigin="0.671,0.622" IsChecked="True"/>
         <Button Content="Ok" Margin="0,0,13,13" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="97"/>
         <Button Content="Create..." Margin="0,0,13,46" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="97"/>
         <Label Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="65" Margin="114,155,0,0" Height="23"/>
         <Label Content="Naming convention" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="118" Margin="21,307,0,0" Height="29"/>
         <Separator Height="10" Margin="136,317,13,0" VerticalAlignment="Top" Background="Gainsboro"/>
-        <Separator Height="10" Margin="0,407,-78,0" VerticalAlignment="Top" Background="Gainsboro" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="182">
+        <Separator Height="10" Margin="0,394,-65,0" VerticalAlignment="Top" Background="Gainsboro" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="156">
             <Separator.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -31,8 +29,8 @@
                 </TransformGroup>
             </Separator.RenderTransform>
         </Separator>
-        <Separator Height="10" Margin="12,499,13,0" VerticalAlignment="Top" Background="Gainsboro"/>
-        <Separator HorizontalAlignment="Left" Height="10" Margin="-78,407,0,0" VerticalAlignment="Top" Width="182" Background="Gainsboro" RenderTransformOrigin="0.5,0.5">
+        <Separator Height="10" Margin="12,473,13,0" VerticalAlignment="Top" Background="Gainsboro"/>
+        <Separator HorizontalAlignment="Left" Height="10" Margin="-65,394,0,0" VerticalAlignment="Top" Width="156" Background="Gainsboro" RenderTransformOrigin="0.5,0.5">
             <Separator.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -69,11 +67,8 @@
         <Separator HorizontalAlignment="Left" Height="10" Margin="12,85,0,0" VerticalAlignment="Top" Width="6" Background="Gainsboro"/>
         <TextBox Height="23" Margin="114,183,201,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Button Content="Cancel" Margin="13,0,270,13" Height="24" VerticalAlignment="Bottom"/>
-        <TextBox Height="23" Margin="114,459,155,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <CheckBox Content="Separator" VerticalAlignment="Top" Margin="23,462,0,0" HorizontalAlignment="Left" Width="97" RenderTransformOrigin="0.671,0.622" IsChecked="True"/>
+        <CheckBox Content="Separator" VerticalAlignment="Top" Margin="250,349,0,0" HorizontalAlignment="Left" Width="97" RenderTransformOrigin="0.671,0.622" IsChecked="True"/>
         <CheckBox Content="Prefix" VerticalAlignment="Top" Margin="23,349,0,0" HorizontalAlignment="Left" Width="86" RenderTransformOrigin="0.671,0.622" IsChecked="True"/>
-        <CheckBox Content="Use Thickness" VerticalAlignment="Top" Margin="250,426,0,0" HorizontalAlignment="Left" Width="116" RenderTransformOrigin="0.671,0.622" IsChecked="True"/>
-        <CheckBox Content="Use Space" VerticalAlignment="Top" Margin="250,462,0,0" HorizontalAlignment="Left" Width="78" RenderTransformOrigin="0.671,0.622" IsChecked="True"/>
         <RadioButton Content="Use Range" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,163,0,0" IsChecked="True"/>
         <Label Content="Step" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="65" Margin="277,155,0,0" Height="28"/>
         <TextBox Height="23" Margin="277,183,33,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
@@ -86,7 +81,10 @@
         <TextBox Height="23" Margin="277,243,33,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Label Content="Amount" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="64" Margin="194,215,0,0" Height="28"/>
         <TextBox Height="23" Margin="194,243,116,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Label Content="Select an existing Wall Type and set a min thickness as initial&#xD;&#xA;value to generate the new Wall Types." Height="46" VerticalAlignment="Top" Background="White" Foreground="Black" Margin="13,18,14,0"/>
+        <Label Content="Select an existing Wall Type and specify the initial thickness&#xD;&#xA;and the mode you will use to create the new Wall Types." Height="46" VerticalAlignment="Top" Background="White" Foreground="Black" Margin="13,18,14,0"/>
+        <ComboBox Margin="114,427,155,0" VerticalAlignment="Top"/>
+        <Label Content="Suffix" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.912,1.09" Width="58" Margin="21,424,0,0" Height="29"/>
+        <CheckBox Content="No Duplicates" VerticalAlignment="Top" Margin="250,430,33,0" RenderTransformOrigin="0.671,0.622" IsChecked="True"/>
 
     </Grid>
 </Window>
