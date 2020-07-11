@@ -119,6 +119,7 @@
     <Compile Include="Commands\Selection\WallByDimension.cs" />
     <Compile Include="Commands\Selection\WallSwitchUp.cs" />
     <Compile Include="Commands\Selection\WallSwitchDown.cs" />
+    <Compile Include="Config\References.cs" />
     <Compile Include="Revit\FamilyType.cs" />
     <Compile Include="ExternalApplication.cs" />
     <Compile Include="Commands\Visibility\Hide.cs" />
