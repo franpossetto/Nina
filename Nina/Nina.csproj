@@ -95,6 +95,11 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Extensions, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Extensions.4.3.1\lib\net462\System.Runtime.Extensions.dll</HintPath>
+      <Private>False</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Windows" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -119,7 +124,6 @@
     <Compile Include="Commands\Selection\WallByDimension.cs" />
     <Compile Include="Commands\Selection\WallSwitchUp.cs" />
     <Compile Include="Commands\Selection\WallSwitchDown.cs" />
-    <Compile Include="Config\References.cs" />
     <Compile Include="Revit\FamilyType.cs" />
     <Compile Include="ExternalApplication.cs" />
     <Compile Include="Commands\Visibility\Hide.cs" />
@@ -130,6 +134,7 @@
     </Compile>
     <Compile Include="Revit\FluentRibbon.cs" />
     <Compile Include="Revit\Selection.cs" />
+    <Compile Include="Revit\Selector.cs" />
     <Compile Include="Revit\Validations.cs" />
     <Compile Include="Revit\Views.cs" />
     <Compile Include="Revit\ViewTemplate.cs" />
@@ -144,6 +149,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="prop-cmd.txt" />
+    <None Include="packages.config" />
     <None Include="Resources\walltype_creation.png" />
     <None Include="Resources\info.png" />
     <None Include="Resources\wall_switch_up.png" />
