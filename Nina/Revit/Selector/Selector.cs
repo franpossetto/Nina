@@ -17,22 +17,7 @@ namespace Nina.Revit
         {
             return Regex.Replace(input, "[0-9]+", match => match.Value.PadLeft(10, '0'));
         }
-        public class WallFamilyType
-        {
-            public WallType walltype { get; set; }
-            public string family { get; set; }
-            public string type { get; set; }
-            public string key { get; set; }
-        }
-
-        public class Etype
-       {
-            public ElementType elementtype { get; set; }
-            public string family { get; set; }
-            public string type { get; set; }
-            public string key { get; set; }
-        }
-
+       
         public static void ElementSwitch(UIDocument uiDoc, Document doc, bool order)
         {
 
@@ -46,17 +31,15 @@ namespace Nina.Revit
             Element element = doc.GetElement(selectedIds.FirstOrDefault());
             ElementId categoryId = element.Category.Id;
 
-            //ICollection<ElementId> elementTypesId = new FilteredElementCollector(doc).OfCategoryId(categoryId).WhereElementIsElementType().ToElementIds();
 
             ElementId elementtypeid = element.GetTypeId();
             List<ElementId> elementTypes = element.GetValidTypes().ToList();
-            //icollection<elementid> elementtypesid = new filteredelementcollector(doc).ofcategoryid(categoryid).whereelementiselementtype().toelementids();
 
 
-            List<Etype> etype = new List<Etype>();
+            List<ElementTypeSelector> etype = new List<ElementTypeSelector>();
             foreach (ElementId eid in elementTypes)
             {
-                Etype e = new Etype();
+                ElementTypeSelector e = new ElementTypeSelector();
                 ElementType el = doc.GetElement(eid) as ElementType;
                 e.elementtype = el;
                 e.family = el.FamilyName;
@@ -66,11 +49,7 @@ namespace Nina.Revit
                 etype.Add(e);
             }
 
-            //IList<ElementId> elementIds = walls.Select(x => x.Id).ToList();
-
-            //IList<ElementId> elementTypesId = elementIds.OrderBy(x => doc.GetElement(x).Name).ToList();
-
-            IList<Etype> elementTypesOrdered = etype.OrderBy(x => PadNumbers(x.key)).ToList();
+            IList<ElementTypeSelector> elementTypesOrdered = etype.OrderBy(x => PadNumbers(x.key)).ToList();
 
 
             int index = 0;
@@ -78,7 +57,7 @@ namespace Nina.Revit
             //up
             if (order)
             {
-                foreach (Etype et in elementTypesOrdered)
+                foreach (ElementTypeSelector et in elementTypesOrdered)
                 {
                     if (et.elementtype.Id == elementtypeid)
                     {
@@ -92,7 +71,7 @@ namespace Nina.Revit
             }
             else
             {
-                foreach (Etype et in elementTypesOrdered)
+                foreach (ElementTypeSelector et in elementTypesOrdered)
                 {
                     if (et.elementtype.Id == elementtypeid)
                     {
@@ -106,17 +85,10 @@ namespace Nina.Revit
             }
 
 
-
             ElementId newSelectedId = elementTypesOrdered.ToList()[index].elementtype.Id;
             ElementType selectedElementType = doc.GetElement(newSelectedId) as ElementType;
 
-
-            //ElementId selectedElementTypeId = elementTypesId.Where(x => x == elementTypeId).FirstOrDefault();
-            //WallType elementType = collector.Where(e => e.LookupParameter("Width").AsDouble() == measure).FirstOrDefault() as WallType;
-
-            //Element ElementE= doc.GetElement(newSelectedId);
-
-            using (Transaction t = new Transaction(doc, "Transaction Name"))
+            using (Transaction t = new Transaction(doc, "ElementType Switch"))
             {
                 t.Start();
                 // DO something
@@ -133,11 +105,8 @@ namespace Nina.Revit
                 
                 t.Commit();
             }
-
-
-            //uiDoc.PostRequestForElementTypePlacement(selectedElementType);
         }
-        public static void ElementSwitch2(UIDocument uiDoc, Document doc, bool order)
+        public static void WallSwitch(UIDocument uiDoc, Document doc, bool order)
         {
 
             #region Selection Stuff
@@ -149,8 +118,6 @@ namespace Nina.Revit
 
             Element element = doc.GetElement(selectedIds.FirstOrDefault());
             ElementId categoryId = element.Category.Id;
-
-            //ICollection<ElementId> elementTypesId = new FilteredElementCollector(doc).OfCategoryId(categoryId).WhereElementIsElementType().ToElementIds();
 
             ICollection<WallType> walls = new FilteredElementCollector(doc)
                                                 .OfCategoryId(categoryId).WhereElementIsElementType()
@@ -169,10 +136,6 @@ namespace Nina.Revit
 
                 wallTypeList.Add(w);
             }
-
-            //IList<ElementId> elementIds = walls.Select(x => x.Id).ToList();
-
-            //IList<ElementId> elementTypesId = elementIds.OrderBy(x => doc.GetElement(x).Name).ToList();
 
             IList<WallFamilyType> elementTypesOrdered = wallTypeList.OrderBy(x => x.key).ToList();
 
@@ -213,27 +176,15 @@ namespace Nina.Revit
                 }
             }
 
-
-
             ElementId newSelectedId = elementTypesOrdered.ToList()[index].walltype.Id;
             ElementType selectedElementType = doc.GetElement(newSelectedId) as ElementType;
 
-
-            //ElementId selectedElementTypeId = elementTypesId.Where(x => x == elementTypeId).FirstOrDefault();
-            //WallType elementType = collector.Where(e => e.LookupParameter("Width").AsDouble() == measure).FirstOrDefault() as WallType;
-
-            //Element ElementE= doc.GetElement(newSelectedId);
-
-            using (Transaction t = new Transaction(doc, "Transaction Name"))
+            using (Transaction t = new Transaction(doc, "Walltype Switch"))
             {
                 t.Start();
-                // DO something
                 wall.WallType = selectedElementType as WallType;
                 t.Commit();
             }
-
-
-            //uiDoc.PostRequestForElementTypePlacement(selectedElementType);
         }
     }
 }

@@ -134,7 +134,9 @@
     </Compile>
     <Compile Include="Revit\FluentRibbon.cs" />
     <Compile Include="Revit\Selection.cs" />
-    <Compile Include="Revit\Selector.cs" />
+    <Compile Include="Revit\Selector\ElementTypeSelector.cs" />
+    <Compile Include="Revit\Selector\Selector.cs" />
+    <Compile Include="Revit\Selector\WallFamilyType.cs" />
     <Compile Include="Revit\Validations.cs" />
     <Compile Include="Revit\Views.cs" />
     <Compile Include="Revit\Ribbon.cs" />
