@@ -36,7 +36,7 @@ namespace Nina
 
 
             RibbonPanel infoPanel = Ribbon.CreateRibbonPanel(application, INFO_PANEL, RIBBON_TAB);
-            RibbonPanel creationPanel = Ribbon.CreateRibbonPanel(application, CREATION_PANEL, RIBBON_TAB);
+            //RibbonPanel creationPanel = Ribbon.CreateRibbonPanel(application, CREATION_PANEL, RIBBON_TAB);
             RibbonPanel selectionPanel = Ribbon.CreateRibbonPanel(application, SELECTION_PANEL, RIBBON_TAB);
             RibbonPanel visibilityPanel = Ribbon.CreateRibbonPanel(application, VISIBILITY_PANEL, RIBBON_TAB);
             
@@ -114,15 +114,15 @@ namespace Nina
             #endregion
 
             #region Creation
-            const string wallTypesBatchCreation_name= "walltype_batchCreation";
-            const string wallTypesBatchCreation_desc = "WallType \n Batch Creation";
-            PushButtonData wallTypesBatchCreation_button = Ribbon.CreatePushButtonData(wallTypesBatchCreation_name,
-                                                                                wallTypesBatchCreation_desc,
-                                                                                "Nina.Creation.Batch.WallTypes");
+            //const string wallTypesBatchCreation_name= "walltype_batchCreation";
+            //const string wallTypesBatchCreation_desc = "WallType \n Batch Creation";
+            //PushButtonData wallTypesBatchCreation_button = Ribbon.CreatePushButtonData(wallTypesBatchCreation_name,
+            //                                                                    wallTypesBatchCreation_desc,
+            //                                                                    "Nina.Creation.Batch.WallTypes");
 
-            wallTypesBatchCreation_button.Image = icon8;
-            PushButton wallTypesBatchCreation_pushButton = creationPanel.AddItem(wallTypesBatchCreation_button) as PushButton;
-            wallTypesBatchCreation_pushButton.LargeImage = icon12;
+            //wallTypesBatchCreation_button.Image = icon8;
+            //PushButton wallTypesBatchCreation_pushButton = creationPanel.AddItem(wallTypesBatchCreation_button) as PushButton;
+            //wallTypesBatchCreation_pushButton.LargeImage = icon12;
 
 
             #endregion

@@ -117,13 +117,13 @@ namespace Nina.Revit
             #endregion
 
             Element element = doc.GetElement(selectedIds.FirstOrDefault());
-            ElementId categoryId = element.Category.Id;
+            if (!element.Category.Name.Contains("Wall"))
+                return;
 
-            ICollection<WallType> walls = new FilteredElementCollector(doc)
-                                                .OfCategoryId(categoryId).WhereElementIsElementType()
-                                                .Cast<WallType>()
-                                                //.Where(w => w.Kind == WallKind.Basic)
-                                                .ToList();
+
+            ElementId elementtypeid = element.GetTypeId();
+            List<ElementId> wallTypeId = element.GetValidTypes().ToList();
+            List<WallType> walls = wallTypeId.Select(x => ((WallType)doc.GetElement(x))).ToList();
 
             List<WallFamilyType> wallTypeList = new List<WallFamilyType>();
             foreach (WallType wallType in walls)
@@ -137,7 +137,7 @@ namespace Nina.Revit
                 wallTypeList.Add(w);
             }
 
-            IList<WallFamilyType> elementTypesOrdered = wallTypeList.OrderBy(x => x.key).ToList();
+            IList<WallFamilyType> elementTypesOrdered = wallTypeList.OrderBy(x => PadNumbers(x.key)).ToList();
 
             Wall wall = element as Wall;
             WallType elementType = wall.WallType;
