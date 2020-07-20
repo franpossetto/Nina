@@ -137,7 +137,6 @@
     <Compile Include="Revit\Selector.cs" />
     <Compile Include="Revit\Validations.cs" />
     <Compile Include="Revit\Views.cs" />
-    <Compile Include="Revit\ViewTemplate.cs" />
     <Compile Include="Revit\Ribbon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Revit\PointCloud.cs" />
