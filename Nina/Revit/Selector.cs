@@ -7,10 +7,16 @@ using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.DB.Plumbing;
 using Autodesk.Revit.DB.Mechanical;
+using System.Text.RegularExpressions;
+
 namespace Nina.Revit
 {
     public class Selector
     {
+        public static string PadNumbers(string input)
+        {
+            return Regex.Replace(input, "[0-9]+", match => match.Value.PadLeft(10, '0'));
+        }
         public class WallFamilyType
         {
             public WallType walltype { get; set; }
@@ -64,7 +70,7 @@ namespace Nina.Revit
 
             //IList<ElementId> elementTypesId = elementIds.OrderBy(x => doc.GetElement(x).Name).ToList();
 
-            IList<Etype> elementTypesOrdered = etype.OrderBy(x => x.key).ToList();
+            IList<Etype> elementTypesOrdered = etype.OrderBy(x => PadNumbers(x.key)).ToList();
 
 
             int index = 0;
