@@ -91,18 +91,7 @@ namespace Nina.Revit
             using (Transaction t = new Transaction(doc, "ElementType Switch"))
             {
                 t.Start();
-                // DO something
-                if (element.Category.Name.Contains("Wall"))
-                {
-                    Wall wall = element as Wall;
-                    wall.WallType = selectedElementType as WallType;
-                } else if(element.Category.Name == "Pipes")
-                {
-                    Pipe pipe = element as Pipe;
-                    PipeType pipeType = selectedElementType as PipeType;
-                    pipe.PipeType = pipeType;
-                }
-                
+                    element.ChangeTypeId(selectedElementType.Id);
                 t.Commit();
             }
         }
