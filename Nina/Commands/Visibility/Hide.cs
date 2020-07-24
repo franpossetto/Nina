@@ -34,21 +34,8 @@ namespace Nina.Visibility
 
             try
             {
-                //Check Revit Version
-                if (!commandData.Application.Application.VersionName.Contains("2020"))
-                {
-                    using (TaskDialog taskDialog = new TaskDialog("Cannot Continue"))
-                    {
-                        taskDialog.TitleAutoPrefix = false;
-                        taskDialog.MainInstruction = "Incompatible Version of Revit";
-                        taskDialog.MainContent = "Main Content";
-                        taskDialog.Show();
-                    }
-                    return Result.Cancelled;
-                }
-
-                PointCloud.Hide(doc, true);
-                return Result.Succeeded;
+            PointCloud.Hide(doc, true);
+            return Result.Succeeded;
             }
             catch (Exception ex)
             {
