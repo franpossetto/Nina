@@ -42,11 +42,9 @@ namespace Nina.Revit
 
 
 
-            PointCloudOverrideSettings pt_cloud_settings = new PointCloudOverrideSettings();
-            if (pt_cloud_settings.ColorMode == PointCloudColorMode.Intensity)
-            {
+            PointCloudOverrides pco = doc.ActiveView.GetPointCloudOverrides();
+            PointCloudOverrideSettings pt_cloud_settings = pco.GetPointCloudScanOverrideSettings(pointClouds.FirstOrDefault().Id);
 
-            }
             switch (colorMode)
             {
                 case 0:
