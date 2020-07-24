@@ -91,7 +91,7 @@ namespace Nina
             const string repo_desc = "Github Repository";
             PushButtonData repo_button = Ribbon.CreatePushButtonData(repo_name,
                                                                      repo_desc,
-                                                                     "Nina.About");
+                                                                     "Nina.Github");
             about_button.Image = icon1;
 
             const string docs_name = "Docs";
