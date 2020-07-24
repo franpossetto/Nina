@@ -34,17 +34,20 @@ namespace Nina.Revit
         }
         public static void SetColorMode(Document doc, int colorMode)
         {
-            
+            //add selection
+
             FilteredElementCollector collector = new FilteredElementCollector(doc);
             IEnumerable<PointCloudInstance> pointClouds = collector.OfCategory(BuiltInCategory.OST_PointClouds)
                                                                     .WhereElementIsNotElementType().ToList()
                                                                     .Cast<PointCloudInstance>();
-
-
-
             PointCloudOverrides pco = doc.ActiveView.GetPointCloudOverrides();
             PointCloudOverrideSettings pt_cloud_settings = pco.GetPointCloudScanOverrideSettings(pointClouds.FirstOrDefault().Id);
+           PointCloudOverrideSettings pt_cloud_settings2 = new PointCloudOverrideSettings();
 
+            if (pt_cloud_settings.ColorMode == PointCloudColorMode.Intensity)
+            {
+
+            }
             switch (colorMode)
             {
                 case 0:

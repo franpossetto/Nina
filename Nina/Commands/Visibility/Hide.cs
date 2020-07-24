@@ -34,8 +34,8 @@ namespace Nina.Visibility
 
             try
             {
-            PointCloud.Hide(doc, true);
-            return Result.Succeeded;
+                PointCloud.Hide(doc, true);
+                return Result.Succeeded;
             }
             catch (Exception ex)
             {

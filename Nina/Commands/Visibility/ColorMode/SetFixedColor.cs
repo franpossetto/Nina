@@ -32,10 +32,6 @@ namespace Nina.Visibility
             Application app = uiApp.Application;
             Document doc = uiDoc.Document;
 
-            //bool revitVersion = Validations.CheckRevitVersion(app, "2020");
-            //if (!revitVersion)
-            //    return Result.Failed;
-
             PointCloud.SetColorMode(doc, 1);
             return Result.Succeeded;
                 

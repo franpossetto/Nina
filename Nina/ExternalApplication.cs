@@ -135,19 +135,19 @@ namespace Nina
                                                                                 "Nina.Selection.WallByDimension");
             wall_byDimension_button.Image = icon8;
 
-            const string wall_switch_up_name = "wall_switch_up";
-            const string wall_switch_up_desc = "WallType \n switch-up";
-            PushButtonData wall_switch_up_button = Ribbon.CreatePushButtonData(wall_switch_up_name,
-                                                                                  wall_switch_up_desc,
+            const string elementType_switch_up_name = "elementType_switch_up";
+            const string elementType_switch_up_desc = "FamilyType \n switch-up";
+            PushButtonData elementType_switch_up_button = Ribbon.CreatePushButtonData(elementType_switch_up_name,
+                                                                                  elementType_switch_up_desc,
                                                                                   "Nina.Selection.WallSwitchUp");
-            wall_switch_up_button.Image = icon9;
+            elementType_switch_up_button.Image = icon9;
 
-            const string wall_switch_down_name = "wall_switch_down";
-            const string wall_switch_down_desc = "WallType \n switch-down";
-            PushButtonData wall_switch_down_button = Ribbon.CreatePushButtonData(wall_switch_down_name,
-                                                                                  wall_switch_down_desc,
+            const string elementType_switch_down_name = "elementType_switch_down";
+            const string elementType_switch_down_desc = "FamilyType \n switch-down";
+            PushButtonData elementType_switch_down_button = Ribbon.CreatePushButtonData(elementType_switch_down_name,
+                                                                                  elementType_switch_down_desc,
                                                                                   "Nina.Selection.WallSwitchDown");
-            wall_switch_down_button.Image = icon10;
+            elementType_switch_down_button.Image = icon10;
 
 
 
@@ -155,11 +155,11 @@ namespace Nina
             item16.LargeImage = icon8;
 
 
-            PushButton item17 = selectionPanel.AddItem(wall_switch_up_button) as PushButton;
+            PushButton item17 = selectionPanel.AddItem(elementType_switch_up_button) as PushButton;
             item17.LargeImage = icon9;
 
 
-            PushButton item18 = selectionPanel.AddItem(wall_switch_down_button) as PushButton;
+            PushButton item18 = selectionPanel.AddItem(elementType_switch_down_button) as PushButton;
             item18.LargeImage = icon10;
             #endregion
 
