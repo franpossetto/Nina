@@ -122,8 +122,8 @@
     <Compile Include="Commands\Visibility\ColorMode\SetFixedColor.cs" />
     <Compile Include="Commands\Visibility\ColorMode\SetNormals.cs" />
     <Compile Include="Commands\Selection\WallByDimension.cs" />
-    <Compile Include="Commands\Selection\WallSwitchUp.cs" />
-    <Compile Include="Commands\Selection\WallSwitchDown.cs" />
+    <Compile Include="Commands\Selection\ElementTypeSwitchUp.cs" />
+    <Compile Include="Commands\Selection\ElementTypeSwitchDown.cs" />
     <Compile Include="Revit\FamilyType.cs" />
     <Compile Include="ExternalApplication.cs" />
     <Compile Include="Commands\Visibility\Hide.cs" />

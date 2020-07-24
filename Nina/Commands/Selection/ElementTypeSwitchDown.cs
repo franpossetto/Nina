@@ -18,7 +18,7 @@ namespace Nina.Selection
 
                 Autodesk.Revit.UI.Selection.Selection selection = uidoc.Selection;
                 //Nina.FamilyType.WallSwitch(uidoc, doc, false);
-                Nina.Revit.Selector.WallSwitch(uidoc, doc, false);
+                Nina.Revit.Selector.ElementSwitch(uidoc, doc, false);
                 return Autodesk.Revit.UI.Result.Succeeded;
             }
             catch
