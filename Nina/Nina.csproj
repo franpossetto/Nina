@@ -112,6 +112,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\About\About.cs" />
+    <Compile Include="Commands\About\Docs.cs" />
+    <Compile Include="Commands\About\Github.cs" />
     <Compile Include="Commands\Creation\Batch\WallTypeBatchCreation.xaml.cs">
       <DependentUpon>WallTypeBatchCreation.xaml</DependentUpon>
     </Compile>
