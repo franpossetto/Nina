@@ -31,13 +31,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'R2019|AnyCPU'">
-    <OutputPath>bin\R2019\</OutputPath>
+    <OutputPath>bin\Nina.Bundle\Contents\2019\</OutputPath>
     <DefineConstants>TRACE;DEBUG;REVIT2019</DefineConstants>
     <DebugType>pdbonly</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'R2018|AnyCPU'">
-    <OutputPath>bin\R2018\</OutputPath>
+    <OutputPath>bin\Nina.Bundle\Contents\2018\</OutputPath>
     <DefineConstants>REVIT2018</DefineConstants>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
@@ -45,7 +45,7 @@
     <LangVersion>default</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'R2020|AnyCPU'">
-    <OutputPath>bin\R2020\</OutputPath>
+    <OutputPath>bin\Nina.Bundle\Contents\2020\</OutputPath>
     <DefineConstants>TRACE;DEBUG;REVIT2019</DefineConstants>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <LangVersion>7.3</LangVersion>

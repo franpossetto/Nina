@@ -16,14 +16,6 @@ namespace Nina.Visibility
 
     public class Hide : IExternalCommand
     {
-        /// <summary>
-        ///     External Command
-        /// </summary>
-        /// <param name ="commandData"></param>
-        /// <param name="message"></param>
-        /// <param name="elements"></param>
-        /// <returns></returns>
-
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
 
