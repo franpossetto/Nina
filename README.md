@@ -1,6 +1,5 @@
 # Revit Nina Extension
-A collection of shorcuts to work faster in Revit.
-Most of this work was done on Sunday mornings with Nina.
+## A collection of Shorcuts to work faster in Revit. Most of this work was done on Sunday mornings with Nina.
 
 ### 1. Hide - Show Point Cloud
 Show and Hide the Point Cloud category in the current view. If any template is active in the view, the tools does not run.
