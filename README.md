@@ -10,14 +10,17 @@ Show and Hide the Point Cloud category in the current view. If any template is a
 
 ![Hide/Unhide PointClouds](https://github.com/franpossetto/revit-nina-extension/blob/master/Nina/Demo/Hide-Unhide.gif)
 
+
 ### 2. Color Mode
 Switch the differents Point Cloud color mode.
 
 ![Color Mode](https://github.com/franpossetto/revit-nina-extension/blob/master/Nina/Demo/ColorMode.gif)
+
 ### 3. Wall Type by Dimension
 Automatic Wall Type selection based on Dimension. The tool return the more approximate wall type, comparing all Wall Type Thickness.
 
 ![WallType by dimension](https://github.com/franpossetto/revit-nina-extension/blob/master/Nina/Demo/WallByDimension.gif)
+
 
 ### 4. Switch Family Types
 Automatic Wall Type selection based on Dimension. The tool return the more approximate wall type, comparing all Wall Type Thickness.
