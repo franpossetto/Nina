@@ -25,6 +25,6 @@ Automatic Wall Type selection based on Dimension. The tool return the more appro
 
 
 ### 4. Switch Family Types
-Automatic Wall Type selection based on Dimension. The tool return the more approximate wall type, comparing all Wall Type Thickness.
+Automatic Wall Type selection based on Dimensions. The tool return the more approximate wall type, comparing all Wall Type Thickness.
 
 ![Switch FamilyType](https://github.com/franpossetto/revit-nina-extension/blob/master/Nina/Demo/Switchers.gif)
