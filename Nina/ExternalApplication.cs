@@ -32,7 +32,7 @@ namespace Nina
             const string INFO_PANEL = "Info";
             const string VISIBILITY_PANEL = "Visibility";
             const string SELECTION_PANEL = "Selection";
-            const string CREATION_PANEL = "Creation";
+            //const string CREATION_PANEL = "Creation";
 
 
             RibbonPanel infoPanel = Ribbon.CreateRibbonPanel(application, INFO_PANEL, RIBBON_TAB);
@@ -76,6 +76,19 @@ namespace Nina
 
             System.Drawing.Bitmap ico12 = Properties.Resources.walltype_creation;
             System.Windows.Media.Imaging.BitmapSource icon12 = Ribbon.Icon(ico12);
+
+            System.Drawing.Bitmap ico13 = Properties.Resources.pointcloud;
+            System.Windows.Media.Imaging.BitmapSource icon13 = Ribbon.Icon(ico13);
+
+            System.Drawing.Bitmap ico14 = Properties.Resources.pointcloud_yellow;
+            System.Windows.Media.Imaging.BitmapSource icon14 = Ribbon.Icon(ico14);
+
+            System.Drawing.Bitmap ico15 = Properties.Resources.pointcloud_red;
+            System.Windows.Media.Imaging.BitmapSource icon15 = Ribbon.Icon(ico15);
+
+            System.Drawing.Bitmap ico16 = Properties.Resources.links_hide;
+            System.Windows.Media.Imaging.BitmapSource icon16 = Ribbon.Icon(ico16);
+
             #endregion
 
             #region About Panel
@@ -176,14 +189,6 @@ namespace Nina
             pointcloud_hide_button.Image = icon1;
 
 
-            const string pointcloud_unhide_name = "pointcloud_unhide";
-            const string pointcloud_unhide_desc = "Show Point Cloud";
-            PushButtonData pointcloud_unhide_button = Ribbon.CreatePushButtonData(pointcloud_unhide_name,
-                                                                                  pointcloud_unhide_desc,
-                                                                                  "Nina.Visibility.Unhide");
-            pointcloud_unhide_button.Image = icon2;
-
-
             const string pointcloud_elevation_name = "pointcloud_elevation";
             const string pointcloud_elevation_desc = "Set Elevation";
             PushButtonData pointcloud_elevation_button = Ribbon.CreatePushButtonData(pointcloud_elevation_name,
@@ -214,16 +219,54 @@ namespace Nina
                                                                                    pointcloud_normals_desc,
                                                                                    "Nina.Visibility.SetNormals");
             // A PulldownButton data
-            PulldownButtonData ChangeModeGroup = new PulldownButtonData("ChangeMode", "Color Mode");
+            PulldownButtonData ChangeModeGroup = new PulldownButtonData("ChangeMode", "Point Clouds Color Mode");
             ChangeModeGroup.ToolTip = "PointCloud visibility change mode";
             ChangeModeGroup.Image = icon6;
 
+            const string links_show_name = "show_links";
+            const string links_show_desc = "Show/Hide \n Revit Links";
+            PushButtonData links_show_button = Ribbon.CreatePushButtonData(links_show_name,
+                                                                                links_show_desc,
+                                                                                "Nina.Visibility.HideRevitLinks");
 
-            IList<RibbonItem> changeModeGroup = visibilityPanel.AddStackedItems(pointcloud_hide_button,
-                                                                           pointcloud_unhide_button,
-                                                                           ChangeModeGroup);
+            PushButton item19 = visibilityPanel.AddItem(links_show_button) as PushButton;
+            item19.LargeImage = icon16;
+
+            const string pointCloud_show_name = "show_pointcloud";
+            const string pointCloud_show_desc = "Show/Hide\n Point Clouds";
+            PushButtonData pointCloud_show_button = Ribbon.CreatePushButtonData(pointCloud_show_name,
+                                                                                pointCloud_show_desc,
+                                                                                "Nina.Visibility.Hide");
+
+            pointCloud_show_button.Image = icon14;
+
+
+
+
+
+            //const string cad_show_name = "show_acad";
+            //const string cad_show_desc = "Show\n ACAD Links";
+            //PushButtonData cad_show_button = Ribbon.CreatePushButtonData(cad_show_name,
+            //                                                            cad_show_desc,
+            //                                                            "Nina.Visibility.Hide");
+
+            //cad_show_button.Image = icon5;
+
+            const string pointCloud_hideT_name = "hide_pointcloud";
+            const string pointCloud_hideT_desc = "Hide Temporary\n Point Clouds";
+            PushButtonData pointCloud_hideT_button = Ribbon.CreatePushButtonData(pointCloud_hideT_name,
+                                                                                pointCloud_hideT_desc,
+                                                                                "Nina.Visibility.HideTemporary");
+
+            pointCloud_hideT_button.Image = icon15;
+
+            IList<RibbonItem> changeModeGroup = visibilityPanel.AddStackedItems(pointCloud_show_button,
+                                                                                pointCloud_hideT_button,
+                                                                                ChangeModeGroup
+                                                                                );
 
             PulldownButton changeModeGrougPullDownButton = changeModeGroup[2] as PulldownButton;
+
 
             PushButton item1 = changeModeGrougPullDownButton.AddPushButton(pointcloud_elevation_button) as PushButton;
             item1.LargeImage = icon3;
@@ -242,7 +285,7 @@ namespace Nina
 
             #endregion
 
-                       
+
             return Result.Succeeded;
 
 

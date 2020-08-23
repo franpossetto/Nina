@@ -46,7 +46,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'R2020|AnyCPU'">
     <OutputPath>bin\Nina.Bundle\Contents\2020\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;REVIT2019</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;REVIT2020</DefineConstants>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <LangVersion>7.3</LangVersion>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
@@ -118,23 +118,26 @@
       <DependentUpon>WallTypeBatchCreation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Commands\Creation\Batch\WallTypes.cs" />
-    <Compile Include="Commands\Visibility\ColorMode\SetNoOverride.cs" />
-    <Compile Include="Commands\Visibility\ColorMode\SetIntensity.cs" />
-    <Compile Include="Commands\Visibility\ColorMode\SetElevation.cs" />
-    <Compile Include="Commands\Visibility\ColorMode\SetFixedColor.cs" />
-    <Compile Include="Commands\Visibility\ColorMode\SetNormals.cs" />
+    <Compile Include="Commands\Visibility\PointCloud\ColorMode\SetNoOverride.cs" />
+    <Compile Include="Commands\Visibility\PointCloud\ColorMode\SetIntensity.cs" />
+    <Compile Include="Commands\Visibility\PointCloud\ColorMode\SetElevation.cs" />
+    <Compile Include="Commands\Visibility\PointCloud\ColorMode\SetFixedColor.cs" />
+    <Compile Include="Commands\Visibility\PointCloud\ColorMode\SetNormals.cs" />
     <Compile Include="Commands\Selection\WallByDimension.cs" />
     <Compile Include="Commands\Selection\ElementTypeSwitchUp.cs" />
     <Compile Include="Commands\Selection\ElementTypeSwitchDown.cs" />
+    <Compile Include="Commands\Visibility\HideRevitLinks.cs" />
+    <Compile Include="Commands\Visibility\PointCloud\HideTemporary.cs" />
     <Compile Include="Revit\FamilyType.cs" />
     <Compile Include="ExternalApplication.cs" />
-    <Compile Include="Commands\Visibility\Hide.cs" />
+    <Compile Include="Commands\Visibility\PointCloud\Hide.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Revit\FluentRibbon.cs" />
+    <Compile Include="Revit\Links.cs" />
     <Compile Include="Revit\Selection.cs" />
     <Compile Include="Revit\Selector\ElementTypeSelector.cs" />
     <Compile Include="Revit\Selector\Selector.cs" />
@@ -144,7 +147,6 @@
     <Compile Include="Revit\Ribbon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Revit\PointCloud.cs" />
-    <Compile Include="Commands\Visibility\Unhide.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Nina.addin">
@@ -152,6 +154,10 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="prop-cmd.txt" />
+    <None Include="Resources\links_hide.png" />
+    <None Include="Resources\pointcloud_yellow.png" />
+    <None Include="Resources\pointcloud_red.png" />
+    <None Include="Resources\pointcloud.png" />
     <None Include="packages.config" />
     <None Include="Resources\walltype_creation.png" />
     <None Include="Resources\info.png" />

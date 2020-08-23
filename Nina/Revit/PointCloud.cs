@@ -11,21 +11,32 @@ namespace Nina.Revit
 {
     public class PointCloud
     {
-        public static void Hide(Document doc, bool hide)
+        public static void Hide(Document doc, bool temp)
         {
             Categories categories = doc.Settings.Categories;
             Category pointCloudCategory = categories.get_Item(BuiltInCategory.OST_PointClouds);
             View activeView = doc.ActiveView;
-            
+
+            bool hide = activeView.GetCategoryHidden(pointCloudCategory.Id) ? false : true;
             PointCloudOverrides pc_ovverides =  activeView.GetPointCloudOverrides();
 
             using(Transaction t = new Transaction(doc,"Point Clouds were hidden"))
             {
                 try
                 {
-                    t.Start();
-                        activeView.SetCategoryHidden(pointCloudCategory.Id, hide);
-                    t.Commit();
+                    if (!temp)
+                    {
+                        t.Start();
+                            activeView.SetCategoryHidden(pointCloudCategory.Id, hide);
+                        t.Commit();
+                    }
+                    if ( temp && hide)
+                    {
+                        t.Start();
+                        activeView.HideCategoryTemporary(pointCloudCategory.Id);
+                        t.Commit();
+                    }
+
                 } catch(Exception e)
                 {
                     TaskDialog.Show("Exception", e.StackTrace);

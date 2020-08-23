@@ -154,4 +154,16 @@
   <data name="wall_switch_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wall_switch_up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pointcloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pointcloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="links_hide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\links_hide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pointcloud_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pointcloud_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pointcloud_yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pointcloud_yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
