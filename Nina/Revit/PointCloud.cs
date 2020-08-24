@@ -24,20 +24,25 @@ namespace Nina.Revit
             {
                 try
                 {
-                    if (!temp)
+                    if (!temp && activeView.ViewTemplateId == ElementId.InvalidElementId)
                     {
                         t.Start();
                             activeView.SetCategoryHidden(pointCloudCategory.Id, hide);
                         t.Commit();
                     }
-                    if ( temp && hide)
+                    else if (!temp && activeView.ViewTemplateId != ElementId.InvalidElementId)
+                        TaskDialog.Show("Hide Point Clouds", "To use this tool, disable the View Template in the Active View");
+
+                    else if (temp && hide)
                     {
                         t.Start();
-                        activeView.HideCategoryTemporary(pointCloudCategory.Id);
+                            activeView.HideCategoryTemporary(pointCloudCategory.Id);
                         t.Commit();
                     }
+                    else { }
 
-                } catch(Exception e)
+                }
+                catch (Exception e)
                 {
                     TaskDialog.Show("Exception", e.StackTrace);
                 }

@@ -240,10 +240,6 @@ namespace Nina
 
             pointCloud_show_button.Image = icon14;
 
-
-
-
-
             //const string cad_show_name = "show_acad";
             //const string cad_show_desc = "Show\n ACAD Links";
             //PushButtonData cad_show_button = Ribbon.CreatePushButtonData(cad_show_name,
