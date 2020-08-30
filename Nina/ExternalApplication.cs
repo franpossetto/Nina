@@ -89,6 +89,15 @@ namespace Nina
             System.Drawing.Bitmap ico16 = Properties.Resources.links_hide;
             System.Windows.Media.Imaging.BitmapSource icon16 = Ribbon.Icon(ico16);
 
+            System.Drawing.Bitmap ico17 = Properties.Resources.select_model_elements;
+            System.Windows.Media.Imaging.BitmapSource icon17 = Ribbon.Icon(ico17);
+
+            System.Drawing.Bitmap ico18 = Properties.Resources.select_ann_elements;
+            System.Windows.Media.Imaging.BitmapSource icon18 = Ribbon.Icon(ico18);
+
+            System.Drawing.Bitmap ico19 = Properties.Resources.sel_all;
+            System.Windows.Media.Imaging.BitmapSource icon19 = Ribbon.Icon(ico19);
+
             #endregion
 
             #region About Panel
@@ -167,6 +176,7 @@ namespace Nina
             PushButton item16 = selectionPanel.AddItem(wall_byDimension_button) as PushButton;
             item16.LargeImage = icon8;
 
+            selectionPanel.AddSeparator();
 
             PushButton item17 = selectionPanel.AddItem(elementType_switch_up_button) as PushButton;
             item17.LargeImage = icon9;
@@ -174,7 +184,34 @@ namespace Nina
 
             PushButton item18 = selectionPanel.AddItem(elementType_switch_down_button) as PushButton;
             item18.LargeImage = icon10;
+
+            const string select_all_model_elements_name = "model_lements_active_view";
+            const string select_all_model_elements_desc = "Model Elements in active view";
+            PushButtonData select_all_model_elements_button = Ribbon.CreatePushButtonData(select_all_model_elements_name,
+                                                                                   select_all_model_elements_desc,
+                                                                                   "Nina.Selection.SelectAllModelElements");
+
+
+            select_all_model_elements_button.LargeImage = icon17;
+
+            const string select_all_model_elements_name2 = "annotative_elements_active_view";
+            const string select_all_model_elements_desc2 = "Annotative Elements in active view";
+            PushButtonData select_all_model_elements_button2 = Ribbon.CreatePushButtonData(select_all_model_elements_name2,
+                                                                                   select_all_model_elements_desc2,
+                                                                                   "Nina.Selection.SelectAllModelElements");
+
+            selectionPanel.AddSeparator();
+
+            select_all_model_elements_button2.LargeImage = icon18;
             #endregion
+
+            PulldownButtonData selectAllPullButton = new PulldownButtonData("selectAll", "Select \n All");
+            PulldownButton selectAllGroup = selectionPanel.AddItem(selectAllPullButton) as PulldownButton;
+            selectAllGroup.LargeImage = icon19;
+            
+            PushButton _item1 = selectAllGroup.AddPushButton(select_all_model_elements_button) as PushButton;
+            //selectAllGroup.AddSeparator();
+            PushButton _item2 = selectAllGroup.AddPushButton(select_all_model_elements_button2) as PushButton;
 
             #region Visibility Panel
             //PulldownButtonData changeModeGroup = new PulldownButtonData("PulldownGroup1", "Pulldown Group 1");
@@ -279,7 +316,12 @@ namespace Nina
             PushButton item5 = changeModeGrougPullDownButton.AddPushButton(pointcloud_normals_button) as PushButton;
             item5.LargeImage = icon7;
 
+
+
+
+
             #endregion
+
 
 
             return Result.Succeeded;

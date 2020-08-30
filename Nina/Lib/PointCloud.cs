@@ -93,7 +93,7 @@ namespace Nina.Revit
                 if (pt_cloud_settings.ColorMode == PointCloudColorMode.Intensity){
 
                 }
-                using (Transaction t = new Transaction(doc, "Point Clouds were hidden"))
+                using (Transaction t = new Transaction(doc, "Point Clouds color mode was changed"))
                 {
                     try
                     {

@@ -118,6 +118,7 @@
       <DependentUpon>WallTypeBatchCreation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Commands\Creation\Batch\WallTypes.cs" />
+    <Compile Include="Commands\Selection\SelectAllModelElements.cs" />
     <Compile Include="Commands\Visibility\PointCloud\ColorMode\SetNoOverride.cs" />
     <Compile Include="Commands\Visibility\PointCloud\ColorMode\SetIntensity.cs" />
     <Compile Include="Commands\Visibility\PointCloud\ColorMode\SetElevation.cs" />
@@ -128,7 +129,7 @@
     <Compile Include="Commands\Selection\ElementTypeSwitchDown.cs" />
     <Compile Include="Commands\Visibility\HideRevitLinks.cs" />
     <Compile Include="Commands\Visibility\PointCloud\HideTemporary.cs" />
-    <Compile Include="Revit\FamilyType.cs" />
+    <Compile Include="Lib\FamilyType.cs" />
     <Compile Include="ExternalApplication.cs" />
     <Compile Include="Commands\Visibility\PointCloud\Hide.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -136,17 +137,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Revit\FluentRibbon.cs" />
-    <Compile Include="Revit\Links.cs" />
-    <Compile Include="Revit\Selection.cs" />
-    <Compile Include="Revit\Selector\ElementTypeSelector.cs" />
-    <Compile Include="Revit\Selector\Selector.cs" />
-    <Compile Include="Revit\Selector\WallFamilyType.cs" />
-    <Compile Include="Revit\Validations.cs" />
-    <Compile Include="Revit\Views.cs" />
-    <Compile Include="Revit\Ribbon.cs" />
+    <Compile Include="Lib\FluentRibbon.cs" />
+    <Compile Include="Lib\Links.cs" />
+    <Compile Include="Lib\Selection.cs" />
+    <Compile Include="Lib\Selector\ElementTypeSelector.cs" />
+    <Compile Include="Lib\Selector\Selector.cs" />
+    <Compile Include="Lib\Selector\WallFamilyType.cs" />
+    <Compile Include="Lib\Validations.cs" />
+    <Compile Include="Lib\Views.cs" />
+    <Compile Include="Lib\Ribbon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Revit\PointCloud.cs" />
+    <Compile Include="Lib\PointCloud.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Nina.addin">
@@ -154,6 +155,10 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="prop-cmd.txt" />
+    <None Include="Resources\sel_all.png" />
+    <None Include="Resources\select-ann-elements.png" />
+    <None Include="Resources\select_all.png" />
+    <None Include="Resources\select-model-elements.png" />
     <None Include="Resources\links_hide.png" />
     <None Include="Resources\pointcloud_yellow.png" />
     <None Include="Resources\pointcloud_red.png" />
