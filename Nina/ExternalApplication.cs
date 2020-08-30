@@ -176,7 +176,6 @@ namespace Nina
             PushButton item16 = selectionPanel.AddItem(wall_byDimension_button) as PushButton;
             item16.LargeImage = icon8;
 
-            //selectionPanel.AddSeparator();
 
             PushButton item17 = selectionPanel.AddItem(elementType_switch_up_button) as PushButton;
             item17.LargeImage = icon9;
@@ -184,6 +183,8 @@ namespace Nina
 
             PushButton item18 = selectionPanel.AddItem(elementType_switch_down_button) as PushButton;
             item18.LargeImage = icon10;
+
+            selectionPanel.AddSeparator();
 
             const string select_all_model_elements_name = "model_lements_active_view";
             const string select_all_model_elements_desc = "Model Elements in active view";
@@ -205,7 +206,7 @@ namespace Nina
             select_all_model_elements_button2.LargeImage = icon18;
             #endregion
 
-            PulldownButtonData selectAllPullButton = new PulldownButtonData("selectAll", "Select \n All");
+            PulldownButtonData selectAllPullButton = new PulldownButtonData("selectAll", "All");
             PulldownButton selectAllGroup = selectionPanel.AddItem(selectAllPullButton) as PulldownButton;
             selectAllGroup.LargeImage = icon19;
             
