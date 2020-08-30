@@ -6,14 +6,18 @@ using System.Threading.Tasks;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 
-namespace Nina.Revit.Selection
+namespace Nina.Revit
 {
-    class Selection
+    public class Selection
     {
-        public static List<ElementId> All()
+        public static void All(Document doc, UIDocument uidoc, CategoryType categoryType)
         {
-            List<ElementId> elementIds = new List<ElementId>();
-            return elementIds;
+            IList<Element> elements = new FilteredElementCollector(doc, doc.ActiveView.Id).WhereElementIsNotElementType().ToElements();
+
+            IEnumerable<Element> modelElements = elements.Where(e => e.Category != null && e.Category.CategoryType == categoryType);
+
+            List<ElementId> modelElementsId = modelElements.Select(x => x.Id).ToList();
+            uidoc.Selection.SetElementIds(modelElementsId);
         }
     }
 }

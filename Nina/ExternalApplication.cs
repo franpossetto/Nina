@@ -176,7 +176,7 @@ namespace Nina
             PushButton item16 = selectionPanel.AddItem(wall_byDimension_button) as PushButton;
             item16.LargeImage = icon8;
 
-            selectionPanel.AddSeparator();
+            //selectionPanel.AddSeparator();
 
             PushButton item17 = selectionPanel.AddItem(elementType_switch_up_button) as PushButton;
             item17.LargeImage = icon9;
@@ -198,9 +198,9 @@ namespace Nina
             const string select_all_model_elements_desc2 = "Annotative Elements in active view";
             PushButtonData select_all_model_elements_button2 = Ribbon.CreatePushButtonData(select_all_model_elements_name2,
                                                                                    select_all_model_elements_desc2,
-                                                                                   "Nina.Selection.SelectAllModelElements");
+                                                                                   "Nina.Selection.SelectAllAnnotationElements");
 
-            selectionPanel.AddSeparator();
+            //selectionPanel.AddSeparator();
 
             select_all_model_elements_button2.LargeImage = icon18;
             #endregion

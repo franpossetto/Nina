@@ -118,7 +118,8 @@
       <DependentUpon>WallTypeBatchCreation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Commands\Creation\Batch\WallTypes.cs" />
-    <Compile Include="Commands\Selection\SelectAllModelElements.cs" />
+    <Compile Include="Commands\Selection\SelectAll\SelectAllAnnotationElements.cs" />
+    <Compile Include="Commands\Selection\SelectAll\SelectAllModelElements.cs" />
     <Compile Include="Commands\Visibility\PointCloud\ColorMode\SetNoOverride.cs" />
     <Compile Include="Commands\Visibility\PointCloud\ColorMode\SetIntensity.cs" />
     <Compile Include="Commands\Visibility\PointCloud\ColorMode\SetElevation.cs" />
