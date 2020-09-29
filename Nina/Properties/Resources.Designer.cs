@@ -193,6 +193,26 @@ namespace Nina.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sel_all_black {
+            get {
+                object obj = ResourceManager.GetObject("sel_all_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sel_all_white {
+            get {
+                object obj = ResourceManager.GetObject("sel_all_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap select_all {
             get {
                 object obj = ResourceManager.GetObject("select_all", resourceCulture);

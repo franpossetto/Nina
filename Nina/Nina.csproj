@@ -118,6 +118,7 @@
       <DependentUpon>WallTypeBatchCreation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Commands\Creation\Batch\WallTypes.cs" />
+    <Compile Include="Commands\Selection\PipeByDimension.cs" />
     <Compile Include="Commands\Selection\SelectAll\SelectAllAnnotationElements.cs" />
     <Compile Include="Commands\Selection\SelectAll\SelectAllModelElements.cs" />
     <Compile Include="Commands\Visibility\PointCloud\ColorMode\SetNoOverride.cs" />
@@ -156,6 +157,8 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="prop-cmd.txt" />
+    <None Include="Resources\sel_all_white.png" />
+    <None Include="Resources\sel_all_black.png" />
     <None Include="Resources\sel_all.png" />
     <None Include="Resources\select-ann-elements.png" />
     <None Include="Resources\select_all.png" />

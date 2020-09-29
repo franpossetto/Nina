@@ -57,35 +57,41 @@ namespace Nina.Revit
                                                                     .WhereElementIsNotElementType().ToList()
                                                                     .Cast<PointCloudInstance>();
             PointCloudOverrides pco = doc.ActiveView.GetPointCloudOverrides();
-            PointCloudOverrideSettings pt_cloud_settings = pco.GetPointCloudScanOverrideSettings(pointClouds.FirstOrDefault().Id);
-            if (pt_cloud_settings.ColorMode == PointCloudColorMode.Intensity)
-            {
+            
 
-            }
-            switch (colorMode)
-            {
-                case 0:
-                    pt_cloud_settings.ColorMode = PointCloudColorMode.Elevation;
-                    break;
-                case 1:
-                    pt_cloud_settings.ColorMode = PointCloudColorMode.FixedColor;
-                    break;
-                case 2:
-                    pt_cloud_settings.ColorMode = PointCloudColorMode.Intensity;
-                    break;
-                case 3:
-                    pt_cloud_settings.ColorMode = PointCloudColorMode.NoOverride;
-                    break;
-                case 4:
-                    pt_cloud_settings.ColorMode = PointCloudColorMode.Normals;
-                    break;
-
-                default:
-                    break;
-            }
+           
 
             foreach (PointCloudInstance pointCloud in pointClouds)
             {
+                PointCloudOverrideSettings pt_cloud_settings = pco.GetPointCloudScanOverrideSettings(pointCloud.Id);
+
+                if (pt_cloud_settings.ColorMode == PointCloudColorMode.Intensity)
+                {
+
+                }
+
+                switch (colorMode)
+                {
+                    case 0:
+                        pt_cloud_settings.ColorMode = PointCloudColorMode.Elevation;
+                        break;
+                    case 1:
+                        pt_cloud_settings.ColorMode = PointCloudColorMode.FixedColor;
+                        break;
+                    case 2:
+                        pt_cloud_settings.ColorMode = PointCloudColorMode.Intensity;
+                        break;
+                    case 3:
+                        pt_cloud_settings.ColorMode = PointCloudColorMode.NoOverride;
+                        break;
+                    case 4:
+                        pt_cloud_settings.ColorMode = PointCloudColorMode.Normals;
+                        break;
+
+                    default:
+                        break;
+                }
+
                 View activeView = doc.ActiveView;
                 PointCloudOverrides overrides = activeView.GetPointCloudOverrides();
                 PointCloudColorSettings pointCloudColorSettings = new PointCloudColorSettings();

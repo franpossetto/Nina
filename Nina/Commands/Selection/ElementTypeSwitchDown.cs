@@ -6,6 +6,7 @@ using Autodesk.Revit.UI.Selection;
 namespace Nina.Selection
 {
     [Transaction(TransactionMode.Manual)]
+    //generar boton
     public class WallSwitchDown : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
@@ -26,8 +27,6 @@ namespace Nina.Selection
                 message = "Unexpected Exception thrown.";
                 return Autodesk.Revit.UI.Result.Failed;
             }
-
-
         }
     }
 }

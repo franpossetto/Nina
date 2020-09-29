@@ -34,7 +34,7 @@ namespace Nina
             const string SELECTION_PANEL = "Selection";
             //const string CREATION_PANEL = "Creation";
 
-
+            
             RibbonPanel infoPanel = Ribbon.CreateRibbonPanel(application, INFO_PANEL, RIBBON_TAB);
             //RibbonPanel creationPanel = Ribbon.CreateRibbonPanel(application, CREATION_PANEL, RIBBON_TAB);
             RibbonPanel selectionPanel = Ribbon.CreateRibbonPanel(application, SELECTION_PANEL, RIBBON_TAB);
@@ -97,6 +97,12 @@ namespace Nina
 
             System.Drawing.Bitmap ico19 = Properties.Resources.sel_all;
             System.Windows.Media.Imaging.BitmapSource icon19 = Ribbon.Icon(ico19);
+
+            System.Drawing.Bitmap ico20 = Properties.Resources.sel_all_black;
+            System.Windows.Media.Imaging.BitmapSource icon20 = Ribbon.Icon(ico20);
+
+            System.Drawing.Bitmap ico21 = Properties.Resources.sel_all_white;
+            System.Windows.Media.Imaging.BitmapSource icon21 = Ribbon.Icon(ico21);
 
             #endregion
 
@@ -208,7 +214,7 @@ namespace Nina
 
             PulldownButtonData selectAllPullButton = new PulldownButtonData("selectAll", "All");
             PulldownButton selectAllGroup = selectionPanel.AddItem(selectAllPullButton) as PulldownButton;
-            selectAllGroup.LargeImage = icon19;
+            selectAllGroup.LargeImage = icon21;
             
             PushButton _item1 = selectAllGroup.AddPushButton(select_all_model_elements_button) as PushButton;
             //selectAllGroup.AddSeparator();
@@ -219,12 +225,12 @@ namespace Nina
             //changeModeGroup.ToolTip = changeModeGroup.Text;
             //changeModeGroup.Image = icon7;
 
-            const string pointcloud_hide_name = "pointcloud_hide";
-            const string pointcloud_hide_desc = "Hide Point Cloud";
-            PushButtonData pointcloud_hide_button = Ribbon.CreatePushButtonData(pointcloud_hide_name,
-                                                                                pointcloud_hide_desc,
-                                                                                "Nina.Visibility.Hide");
-            pointcloud_hide_button.Image = icon1;
+            //const string pointcloud_hide_name = "pointcloud_hide";
+            //const string pointcloud_hide_desc = "Hide Point Cloud";
+            //PushButtonData pointcloud_hide_button = Ribbon.CreatePushButtonData(pointcloud_hide_name,
+            //                                                                    pointcloud_hide_desc,
+            //                                                                    "Nina.Visibility.Hide");
+            //pointcloud_hide_button.Image = icon1;
 
 
             const string pointcloud_elevation_name = "pointcloud_elevation";
@@ -271,12 +277,12 @@ namespace Nina
             item19.LargeImage = icon16;
 
             const string pointCloud_show_name = "show_pointcloud";
-            const string pointCloud_show_desc = "Show/Hide\n Point Clouds";
+            const string pointCloud_show_desc = "Show/Hide Point Clouds";
             PushButtonData pointCloud_show_button = Ribbon.CreatePushButtonData(pointCloud_show_name,
                                                                                 pointCloud_show_desc,
                                                                                 "Nina.Visibility.Hide");
 
-            pointCloud_show_button.Image = icon14;
+            pointCloud_show_button.Image = icon1;
 
             //const string cad_show_name = "show_acad";
             //const string cad_show_desc = "Show\n ACAD Links";
@@ -292,7 +298,7 @@ namespace Nina
                                                                                 pointCloud_hideT_desc,
                                                                                 "Nina.Visibility.HideTemporary");
 
-            pointCloud_hideT_button.Image = icon15;
+            pointCloud_hideT_button.Image = icon2;
 
             IList<RibbonItem> changeModeGroup = visibilityPanel.AddStackedItems(pointCloud_show_button,
                                                                                 pointCloud_hideT_button,
@@ -324,6 +330,9 @@ namespace Nina
             #endregion
 
 
+            //No se borra
+
+            //Fin
 
             return Result.Succeeded;
 
