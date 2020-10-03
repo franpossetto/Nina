@@ -157,6 +157,8 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="prop-cmd.txt" />
+    <None Include="Resources\colormode2.png" />
+    <None Include="Resources\cloud-file.png" />
     <None Include="Resources\sel_all_white.png" />
     <None Include="Resources\sel_all_black.png" />
     <None Include="Resources\sel_all.png" />

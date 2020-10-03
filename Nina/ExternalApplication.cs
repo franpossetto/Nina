@@ -104,6 +104,13 @@ namespace Nina
             System.Drawing.Bitmap ico21 = Properties.Resources.sel_all_white;
             System.Windows.Media.Imaging.BitmapSource icon21 = Ribbon.Icon(ico21);
 
+            System.Drawing.Bitmap ico22 = Properties.Resources.colormode2;
+            System.Windows.Media.Imaging.BitmapSource icon22 = Ribbon.Icon(ico22);
+
+            System.Drawing.Bitmap ico23 = Properties.Resources.cloud_file;
+            System.Windows.Media.Imaging.BitmapSource icon23 = Ribbon.Icon(ico23);
+
+
             #endregion
 
             #region About Panel
@@ -262,11 +269,6 @@ namespace Nina
             PushButtonData pointcloud_normals_button = Ribbon.CreatePushButtonData(pointcloud_normals_name,
                                                                                    pointcloud_normals_desc,
                                                                                    "Nina.Visibility.SetNormals");
-            // A PulldownButton data
-            PulldownButtonData ChangeModeGroup = new PulldownButtonData("ChangeMode", "Point Clouds Color Mode");
-            ChangeModeGroup.ToolTip = "PointCloud visibility change mode";
-            ChangeModeGroup.Image = icon6;
-
             const string links_show_name = "show_links";
             const string links_show_desc = "Show/Hide \n Revit Links";
             PushButtonData links_show_button = Ribbon.CreatePushButtonData(links_show_name,
@@ -277,12 +279,25 @@ namespace Nina
             item19.LargeImage = icon16;
 
             const string pointCloud_show_name = "show_pointcloud";
-            const string pointCloud_show_desc = "Show/Hide Point Clouds";
+            const string pointCloud_show_desc = "Show/Hide \n Point Clouds";
             PushButtonData pointCloud_show_button = Ribbon.CreatePushButtonData(pointCloud_show_name,
                                                                                 pointCloud_show_desc,
                                                                                 "Nina.Visibility.Hide");
 
-            pointCloud_show_button.Image = icon1;
+            PushButton item23 = visibilityPanel.AddItem(pointCloud_show_button) as PushButton;
+            item23.LargeImage = icon23;
+            //pointCloud_show_button.Image = icon23;
+
+            // A PulldownButton data
+            PulldownButtonData ChangeModeGroup = new PulldownButtonData("ChangeMode", "Point Cloud \n Color Mode")
+            {
+                ToolTip = "PointCloud visibility change mode",
+                Image = icon6
+            };
+
+            PulldownButton item22 = visibilityPanel.AddItem(ChangeModeGroup) as PulldownButton;
+            item22.LargeImage = icon22;
+
 
             //const string cad_show_name = "show_acad";
             //const string cad_show_desc = "Show\n ACAD Links";
@@ -292,37 +307,51 @@ namespace Nina
 
             //cad_show_button.Image = icon5;
 
-            const string pointCloud_hideT_name = "hide_pointcloud";
-            const string pointCloud_hideT_desc = "Hide Temporary\n Point Clouds";
-            PushButtonData pointCloud_hideT_button = Ribbon.CreatePushButtonData(pointCloud_hideT_name,
-                                                                                pointCloud_hideT_desc,
-                                                                                "Nina.Visibility.HideTemporary");
+            //const string pointCloud_hideT_name = "hide_pointcloud";
+            //const string pointCloud_hideT_desc = "Hide Temporary\n Point Clouds";
+            //PushButtonData pointCloud_hideT_button = Ribbon.CreatePushButtonData(pointCloud_hideT_name,
+            //                                                                    pointCloud_hideT_desc,
+            //                                                                    "Nina.Visibility.HideTemporary");
 
-            pointCloud_hideT_button.Image = icon2;
+            //pointCloud_hideT_button.Image = icon2;
 
-            IList<RibbonItem> changeModeGroup = visibilityPanel.AddStackedItems(pointCloud_show_button,
-                                                                                pointCloud_hideT_button,
-                                                                                ChangeModeGroup
-                                                                                );
+            //IList<RibbonItem> changeModeGroup = visibilityPanel.AddStackedItems(pointCloud_show_button,
+            //                                                                    //pointCloud_hideT_button,
+            //                                                                    ChangeModeGroup
+            //                                                                    );
 
-            PulldownButton changeModeGrougPullDownButton = changeModeGroup[2] as PulldownButton;
+            //PulldownButton changeModeGrougPullDownButton = changeModeGroup[1] as PulldownButton;
 
 
-            PushButton item1 = changeModeGrougPullDownButton.AddPushButton(pointcloud_elevation_button) as PushButton;
+            //PushButton item1 = changeModeGrougPullDownButton.AddPushButton(pointcloud_elevation_button) as PushButton;
+            //item1.LargeImage = icon3;
+
+            //PushButton item2 = changeModeGrougPullDownButton.AddPushButton(pointcloud_fixedColor_button) as PushButton;
+            //item2.LargeImage = icon5;
+
+            //PushButton item3 = changeModeGrougPullDownButton.AddPushButton(pointcloud_intensity_button) as PushButton;
+            //item3.LargeImage = icon4;
+
+            //PushButton item4 = changeModeGrougPullDownButton.AddPushButton(pointcloud_noOverride_button) as PushButton;
+            //item4.LargeImage = icon6;
+
+            //PushButton item5 = changeModeGrougPullDownButton.AddPushButton(pointcloud_normals_button) as PushButton;
+            //item5.LargeImage = icon7;
+
+            PushButton item1 = item22.AddPushButton(pointcloud_elevation_button) as PushButton;
             item1.LargeImage = icon3;
 
-            PushButton item2 = changeModeGrougPullDownButton.AddPushButton(pointcloud_fixedColor_button) as PushButton;
+            PushButton item2 = item22.AddPushButton(pointcloud_fixedColor_button) as PushButton;
             item2.LargeImage = icon5;
 
-            PushButton item3 = changeModeGrougPullDownButton.AddPushButton(pointcloud_intensity_button) as PushButton;
+            PushButton item3 = item22.AddPushButton(pointcloud_intensity_button) as PushButton;
             item3.LargeImage = icon4;
 
-            PushButton item4 = changeModeGrougPullDownButton.AddPushButton(pointcloud_noOverride_button) as PushButton;
+            PushButton item4 = item22.AddPushButton(pointcloud_noOverride_button) as PushButton;
             item4.LargeImage = icon6;
 
-            PushButton item5 = changeModeGrougPullDownButton.AddPushButton(pointcloud_normals_button) as PushButton;
+            PushButton item5 = item22.AddPushButton(pointcloud_normals_button) as PushButton;
             item5.LargeImage = icon7;
-
 
 
 
