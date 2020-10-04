@@ -6,7 +6,7 @@ using Autodesk.Revit.UI.Selection;
 namespace Nina.Selection
 {
     [Transaction(TransactionMode.Manual)]
-    public class WallSwitchUp : IExternalCommand
+    public class SwitchUp : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
