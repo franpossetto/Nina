@@ -19,7 +19,7 @@ namespace Nina.Selection
 
                 double distance = p1.DistanceTo(p2);
 
-                Nina.FamilyType.SelectWall(uidoc, doc, distance);
+                Nina.Revit.FamilyType.SelectWall(uidoc, doc, distance);
                 return Autodesk.Revit.UI.Result.Succeeded;
             }
             catch

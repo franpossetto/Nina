@@ -17,7 +17,7 @@ namespace Nina.Creation.Batch
                 WallTypeBatchCreation wallTypeBatchCreation = new WallTypeBatchCreation();
                 wallTypeBatchCreation.ShowDialog();
 
-                Nina.FamilyType.WallTypeBatchCreation(doc, 8);
+                Nina.Revit.FamilyType.WallTypeBatchCreation(doc, 8);
                 return Autodesk.Revit.UI.Result.Succeeded;
             }
             catch

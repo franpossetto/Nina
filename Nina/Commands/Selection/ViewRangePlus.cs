@@ -13,7 +13,29 @@ namespace Nina.Selection
             {
                 Document doc = commandData.Application.ActiveUIDocument.Document;
                 UIDocument uidoc = commandData.Application.ActiveUIDocument;
-                return Autodesk.Revit.UI.Result.Succeeded;
+                View activeView = doc.ActiveView as View;
+
+                if (!(activeView is ViewPlan)) return Result.Cancelled;
+
+                ViewPlan viewPlan = activeView as ViewPlan;
+                PlanViewRange viewRange = viewPlan.GetViewRange();
+
+                double currentOffset = viewRange.GetOffset(PlanViewPlane.CutPlane);
+                double offsetValue = 1;
+
+                if ((currentOffset + offsetValue) < viewRange.GetOffset(PlanViewPlane.TopClipPlane))
+                    viewRange.SetOffset(PlanViewPlane.CutPlane, (currentOffset + offsetValue));
+                else
+                    TaskDialog.Show("Revit Nina Extension", "Top Clip plane is set below te cut plane");
+
+                using (Transaction t = new Transaction(doc, string.Format("View Range +{0}", offsetValue)))
+                {
+                    t.Start();
+                        viewPlan.SetViewRange(viewRange);
+                    t.Commit();
+                }
+
+                return Result.Succeeded;
             }
             catch
             {

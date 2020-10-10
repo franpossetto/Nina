@@ -21,11 +21,11 @@ namespace Nina
             };
 
             PushButtonData about_button = Ribbon
-                .CreatePushButtonData("about", "About", "Nina.About");
+                .CreatePushButtonData("about", "About", "Nina.Info.About");
             PushButtonData repo_button = Ribbon
-                .CreatePushButtonData("github", "Github Repository", "Nina.Github");
+                .CreatePushButtonData("github", "Github Repository", "Nina.Info.Github");
             PushButtonData docs_button = Ribbon
-                .CreatePushButtonData("docs", "Docs", "Nina.About");
+                .CreatePushButtonData("docs", "Docs", "Nina.Info.About");
         
             PulldownButton info_pullDownButton = ninaPanel.AddItem(info_button) as PulldownButton;
             info_pullDownButton.AddPushButton(about_button);

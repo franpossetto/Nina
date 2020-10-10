@@ -18,10 +18,10 @@ namespace Nina
 
         public Result OnStartup(UIControlledApplication application)
         {
+            AddinsPanel.Build(application);
+
             const string RIBBON_TAB = "Nina";
-
             Ribbon.CreateRibbonTab(application, RIBBON_TAB);
-
             NinaPanel.Build(application,RIBBON_TAB);
             SelectionPanel.Build(application, RIBBON_TAB);
             PointCloudPanel.Build(application, RIBBON_TAB);

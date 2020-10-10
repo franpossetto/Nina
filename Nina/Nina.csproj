@@ -111,13 +111,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application\AddinsPanel.cs" />
     <Compile Include="Application\LinksPanel.cs" />
     <Compile Include="Commands\Selection\ViewRangeMinor.cs" />
     <Compile Include="Commands\Selection\ViewRangePlus.cs" />
     <Compile Include="Icons.cs" />
-    <Compile Include="Commands\About\About.cs" />
-    <Compile Include="Commands\About\Docs.cs" />
-    <Compile Include="Commands\About\Github.cs" />
+    <Compile Include="Commands\Info\About.cs" />
+    <Compile Include="Commands\Info\Docs.cs" />
+    <Compile Include="Commands\Info\Github.cs" />
     <Compile Include="Commands\Creation\Batch\WallTypeBatchCreation.xaml.cs">
       <DependentUpon>WallTypeBatchCreation.xaml</DependentUpon>
     </Compile>

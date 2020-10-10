@@ -2,7 +2,7 @@
 using Autodesk.Revit.UI;
 using Autodesk.Revit.Attributes;
 
-namespace Nina
+namespace Nina.Info
 {
     [Transaction(TransactionMode.Manual)]
     public class About : IExternalCommand

@@ -28,9 +28,9 @@ namespace Nina.Revit
                 application.CreateRibbonTab(ribbonTabName);
         }
 
-        public static Autodesk.Revit.UI.RibbonPanel CreateRibbonPanel(UIControlledApplication application, 
-                                                                      string ribbonPanelName, 
-                                                                      string ribbonTabName = null)
+        public static Autodesk.Revit.UI.RibbonPanel CreateRibbonPanel(UIControlledApplication application,
+                                                                      string ribbonPanelName,
+                                                                      string ribbonTabName)
         {
             /// <summary>
             /// This metthod is used to create a new Ribbon panel.
@@ -38,15 +38,19 @@ namespace Nina.Revit
             /// <param name="application">An object that is passed to the external application 
             /// </summary>
 
-            Autodesk.Revit.UI.RibbonPanel panel = application.GetRibbonPanels(ribbonTabName)
-                                                             .FirstOrDefault(n => n.Name.Equals(ribbonTabName, StringComparison.InvariantCulture));
-            if (panel != null)
-                return panel;
-            else
-            {
-                panel = application.CreateRibbonPanel(ribbonTabName, ribbonPanelName);
-                return panel;
-            }
+            Autodesk.Revit.UI.RibbonPanel panel = application.GetRibbonPanels(ribbonTabName).FirstOrDefault(n => n.Name.Equals(ribbonTabName, StringComparison.InvariantCulture));
+
+            if (panel != null) return panel;
+            else return application.CreateRibbonPanel(ribbonTabName, ribbonPanelName);
+        }
+
+        public static Autodesk.Revit.UI.RibbonPanel CreateRibbonPanel(UIControlledApplication application,string ribbonPanelName)
+        {
+            List<Autodesk.Revit.UI.RibbonPanel> panels = application.GetRibbonPanels();
+
+            Autodesk.Revit.UI.RibbonPanel panel = panels.Where(p => p.Name == ribbonPanelName).FirstOrDefault();
+            if (panel != null) return panel;
+            else return application.CreateRibbonPanel(ribbonPanelName);
         }
 
         public static PushButtonData CreatePushButtonData(string pushButtonName, 

@@ -19,6 +19,7 @@ namespace Nina
 
             PushButton item19 = linksPanel.AddItem(links_hide_data) as PushButton;
             item19.LargeImage = Icons.links_hide_30;
+
         }
     }
 }
