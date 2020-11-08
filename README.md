@@ -1,4 +1,4 @@
-# Revit Nina Extension
+# Nina for Revit
 ![.NET](https://img.shields.io/badge/.NET-4.7-green.svg)
 ![Revit API](https://img.shields.io/badge/RevitAPI-2020-blue.svg)
 
