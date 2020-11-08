@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nina.Revit
 {
-    class Views
+    public class Views
     {
     }
 }
