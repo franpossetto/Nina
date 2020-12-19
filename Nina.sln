@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.960
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nina", "Nina\Nina.csproj", "{087ACF19-3757-4128-882E-184561FF227F}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{E373DA86-6131-45D9-BDCD-14FD9F41B69B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +26,11 @@ Global
 		{087ACF19-3757-4128-882E-184561FF227F}.R2020|Any CPU.Build.0 = R2020|Any CPU
 		{087ACF19-3757-4128-882E-184561FF227F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{087ACF19-3757-4128-882E-184561FF227F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E373DA86-6131-45D9-BDCD-14FD9F41B69B}.Debug|Any CPU.ActiveCfg = Debug
+		{E373DA86-6131-45D9-BDCD-14FD9F41B69B}.R2018|Any CPU.ActiveCfg = Release
+		{E373DA86-6131-45D9-BDCD-14FD9F41B69B}.R2019|Any CPU.ActiveCfg = Release
+		{E373DA86-6131-45D9-BDCD-14FD9F41B69B}.R2020|Any CPU.ActiveCfg = Release
+		{E373DA86-6131-45D9-BDCD-14FD9F41B69B}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
