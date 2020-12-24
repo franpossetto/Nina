@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nina", "Nina\Nina.csproj", 
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{E373DA86-6131-45D9-BDCD-14FD9F41B69B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging.Core", "Logging.Core\Logging.Core.csproj", "{8E355853-4C84-4A3C-8A4A-4989929C3287}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,16 @@ Global
 		{E373DA86-6131-45D9-BDCD-14FD9F41B69B}.R2019|Any CPU.ActiveCfg = Release
 		{E373DA86-6131-45D9-BDCD-14FD9F41B69B}.R2020|Any CPU.ActiveCfg = Release
 		{E373DA86-6131-45D9-BDCD-14FD9F41B69B}.Release|Any CPU.ActiveCfg = Release
+		{8E355853-4C84-4A3C-8A4A-4989929C3287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E355853-4C84-4A3C-8A4A-4989929C3287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E355853-4C84-4A3C-8A4A-4989929C3287}.R2018|Any CPU.ActiveCfg = Release|Any CPU
+		{8E355853-4C84-4A3C-8A4A-4989929C3287}.R2018|Any CPU.Build.0 = Release|Any CPU
+		{8E355853-4C84-4A3C-8A4A-4989929C3287}.R2019|Any CPU.ActiveCfg = Release|Any CPU
+		{8E355853-4C84-4A3C-8A4A-4989929C3287}.R2019|Any CPU.Build.0 = Release|Any CPU
+		{8E355853-4C84-4A3C-8A4A-4989929C3287}.R2020|Any CPU.ActiveCfg = Release|Any CPU
+		{8E355853-4C84-4A3C-8A4A-4989929C3287}.R2020|Any CPU.Build.0 = Release|Any CPU
+		{8E355853-4C84-4A3C-8A4A-4989929C3287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E355853-4C84-4A3C-8A4A-4989929C3287}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

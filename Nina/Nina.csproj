@@ -219,6 +219,12 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logging.Core\Logging.Core.csproj">
+      <Project>{8e355853-4c84-4a3c-8a4a-4989929c3287}</Project>
+      <Name>Logging.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

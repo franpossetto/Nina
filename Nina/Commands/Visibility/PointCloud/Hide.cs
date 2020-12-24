@@ -8,6 +8,7 @@ using Autodesk.Revit.UI;
 using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Nina.Revit;
+using Logging.Core;
 
 namespace Nina.Visibility
 {
@@ -27,11 +28,21 @@ namespace Nina.Visibility
             try
             {
                 PointCloud.Hide(doc, false);
+
+                LogDetail log = new LogDetail
+                {
+                    Message = "message"
+                };
+                Logger.WriteUsage(log);
+
                 return Result.Succeeded;
             }
             catch (Exception ex)
             {
+                LogDetail log = new LogDetail();
                 message = ex.Message;
+                log.Message = message;
+
                 return Result.Failed;
             }
         }
