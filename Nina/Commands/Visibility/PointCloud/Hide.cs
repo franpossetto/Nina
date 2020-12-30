@@ -25,15 +25,16 @@ namespace Nina.Visibility
             Application app = uiApp.Application;
             Document doc = uiDoc.Document;
 
+            Log.Information.Tool = "Show/Hide Point Clouds";
+            Log.Information.File = doc.Title;
+            Log.Information.Revit = commandData.Application.Application.VersionName;
+            Log.Information.UserName = commandData.Application.Application.Username;
+            Log.Information.Nina = Settings.Default.Nina;
+            Logger.Write(Log.Information);
+
             try
             {
                 PointCloud.Hide(doc, false);
-
-                LogDetail log = new LogDetail
-                {
-                    Message = "message"
-                };
-                Logger.WriteUsage(log);
                 return Result.Succeeded;
             }
             catch (Exception ex)

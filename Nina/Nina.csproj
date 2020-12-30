@@ -159,6 +159,11 @@
     <Compile Include="Application\NinaPanel.cs" />
     <Compile Include="Application\PointCloudPanel.cs" />
     <Compile Include="Application\SelectionPanel.cs" />
+    <Compile Include="Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Nina.addin">
@@ -212,6 +217,10 @@
     <None Include="Resources\gray.png" />
     <None Include="Resources\lila.png" />
     <None Include="Resources\green.png" />
+    <None Include="Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -226,9 +235,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Logging.Core\Logging.Core.csproj">
+    <ProjectReference Include="..\Logging.Core\Nina.Logging.csproj">
       <Project>{8e355853-4c84-4a3c-8a4a-4989929c3287}</Project>
-      <Name>Logging.Core</Name>
+      <Name>Nina.Logging</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

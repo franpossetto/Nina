@@ -8,6 +8,7 @@ using Autodesk.Revit.UI;
 using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Nina.Revit;
+using Logging.Core;
 
 namespace Nina.Visibility
 {
@@ -31,6 +32,14 @@ namespace Nina.Visibility
             UIDocument uiDoc = uiApp.ActiveUIDocument;
             Application app = uiApp.Application;
             Document doc = uiDoc.Document;
+
+
+            Log.Information.Tool = "Set Color Mode (No Override)";
+            Log.Information.File = doc.Title;
+            Log.Information.Revit = commandData.Application.Application.VersionName;
+            Log.Information.UserName = commandData.Application.Application.Username;
+            Log.Information.Nina = Settings.Default.Nina;
+            Logger.Write(Log.Information);
 
             PointCloud.SetColorMode(doc, 3);
             return Result.Succeeded;

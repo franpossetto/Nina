@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nina", "Nina\Nina.csproj", "{087ACF19-3757-4128-882E-184561FF227F}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{E373DA86-6131-45D9-BDCD-14FD9F41B69B}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Nina.Setup", "Setup\Setup.vdproj", "{E373DA86-6131-45D9-BDCD-14FD9F41B69B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging.Core", "Logging.Core\Logging.Core.csproj", "{8E355853-4C84-4A3C-8A4A-4989929C3287}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nina.Logging", "Logging.Core\Nina.Logging.csproj", "{8E355853-4C84-4A3C-8A4A-4989929C3287}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

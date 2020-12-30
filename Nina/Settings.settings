@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Nina" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LogDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\ProgramData\Autodesk\ApplicationPlugins\Nina.bundle\Logs</Value>
+    </Setting>
+    <Setting Name="Nina" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1.0.2</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,6 +1,7 @@
 ﻿using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.Attributes;
+using Logging.Core;
 
 namespace Nina.Info
 {
@@ -9,6 +10,15 @@ namespace Nina.Info
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
+            Document doc = commandData.Application.ActiveUIDocument.Document;
+
+            Log.Information.Tool = "Github Repository";
+            Log.Information.File = doc.Title;
+            Log.Information.Revit = commandData.Application.Application.VersionName;
+            Log.Information.UserName = commandData.Application.Application.Username;
+            Log.Information.Nina = Settings.Default.Nina;
+            Logger.Write(Log.Information);
+
             try
             {
                 System.Diagnostics.Process.Start("https://github.com/franpossetto/revit-nina-extension");

@@ -1,6 +1,7 @@
 ﻿using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.Attributes;
+using Logging.Core;
 
 namespace Nina.Selection
 {
@@ -13,6 +14,14 @@ namespace Nina.Selection
             {
                 Document doc = commandData.Application.ActiveUIDocument.Document;
                 UIDocument uidoc = commandData.Application.ActiveUIDocument;
+
+                Log.Information.Tool = "Set View Range (+)";
+                Log.Information.File = doc.Title;
+                Log.Information.Revit = commandData.Application.Application.VersionName;
+                Log.Information.UserName = commandData.Application.Application.Username;
+                Log.Information.Nina = Settings.Default.Nina;
+                Logger.Write(Log.Information);
+
                 View activeView = doc.ActiveView as View;
 
                 if (!(activeView is ViewPlan)) return Result.Cancelled;
