@@ -1,24 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Autodesk.Revit.ApplicationServices;
+using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
-using Autodesk.Revit.ApplicationServices;
-using Autodesk.Revit.Attributes;
 using Nina.Revit;
+using System;
 
 namespace Nina.Visibility
 {
     [Transaction(TransactionMode.Manual)]
-    [Regeneration(RegenerationOption.Manual)]
-
-    public class HideRevitLinks : IExternalCommand
+    public class HideCADLinks : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
-
             UIApplication uiApp = commandData.Application;
             UIDocument uiDoc = uiApp.ActiveUIDocument;
             Application app = uiApp.Application;
@@ -26,7 +19,7 @@ namespace Nina.Visibility
 
             try
             {
-                Links.HideRVT(doc);
+                Links.HideCAD(doc);
                 return Result.Succeeded;
             }
             catch (Exception ex)
@@ -34,6 +27,8 @@ namespace Nina.Visibility
                 message = ex.Message;
                 return Result.Failed;
             }
+
         }
     }
 }
+

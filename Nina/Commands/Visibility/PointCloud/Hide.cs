@@ -34,7 +34,6 @@ namespace Nina.Visibility
                     Message = "message"
                 };
                 Logger.WriteUsage(log);
-
                 return Result.Succeeded;
             }
             catch (Exception ex)

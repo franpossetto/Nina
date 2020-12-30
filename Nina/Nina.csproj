@@ -115,6 +115,7 @@
     <Compile Include="Application\LinksPanel.cs" />
     <Compile Include="Commands\Selection\ViewRangeMinor.cs" />
     <Compile Include="Commands\Selection\ViewRangePlus.cs" />
+    <Compile Include="Commands\Visibility\HideCADLinks.cs" />
     <Compile Include="Icons.cs" />
     <Compile Include="Commands\Info\About.cs" />
     <Compile Include="Commands\Info\Docs.cs" />
@@ -166,6 +167,11 @@
     </Content>
     <Content Include="PackageContents.xml" />
     <Content Include="prop-cmd.txt" />
+    <None Include="Resources\dwg.png" />
+    <None Include="Resources\log.png" />
+    <None Include="Resources\cad_link.png" />
+    <None Include="Resources\cad.png" />
+    <None Include="app.config" />
     <None Include="Resources\cloud-blue-29.png" />
     <None Include="Resources\cloud-blue-30.png" />
     <None Include="Resources\circle-30.png" />

@@ -77,6 +77,8 @@ namespace Nina
         public static System.Windows.Media.Imaging.BitmapSource viewrange_plus_16 = Ribbon.Icon(Properties.Resources.fluentplus16);
 
         public static System.Windows.Media.Imaging.BitmapSource viewrange_minor_16 = Ribbon.Icon(Properties.Resources.fuentminor16);
-        
+
+        public static System.Windows.Media.Imaging.BitmapSource cad_link = Ribbon.Icon(Properties.Resources.dwg);
+
     }
 }
