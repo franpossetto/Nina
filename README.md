@@ -5,7 +5,7 @@
 A collection of Shorcuts to work faster in Revit.
 Most of this work was done on Sunday mornings with Nina.
 
-## Type Selector and View Range
+## Tools
 
 ### Type up and Type down
 Change family types easily, following alphabetical order.
@@ -19,15 +19,11 @@ Select Wall types creating dimensions.
 ### Type by dimension (Pipes)
 Select Pipe types creating dimensions.
 
-## Point Clouds
-
 ### Show / Hide
 Show or Hide point clouds in the current view.
 
 ### Color Mode
 This tool allow users modify the view range in the active view.
-
-## Links
 
 ### Show / Hide (RVT)
 Show or Hide RVT links in the current view.
