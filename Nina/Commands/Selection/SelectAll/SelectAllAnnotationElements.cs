@@ -1,12 +1,15 @@
-﻿using Autodesk.Revit.DB;
+﻿using System;
+using System.Collections;
+using System.Linq;
+using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.Attributes;
-using Nina.Commands.Creation.Batch;
+using System.Collections.Generic;
 
-namespace Nina.Creation.Batch
+namespace Nina.Selection
 {
     [Transaction(TransactionMode.Manual)]
-    public class WallTypes : IExternalCommand
+    public class SelectAllAnnotationElements : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
@@ -14,19 +17,19 @@ namespace Nina.Creation.Batch
             {
                 Document doc = commandData.Application.ActiveUIDocument.Document;
                 UIDocument uidoc = commandData.Application.ActiveUIDocument;
-                WallTypeBatchCreation wallTypeBatchCreation = new WallTypeBatchCreation();
-                wallTypeBatchCreation.ShowDialog();
 
-                Nina.Revit.FamilyType.WallTypeBatchCreation(doc, 8);
+                Nina.Revit.Selection.All(doc, uidoc, CategoryType.Annotation);
+
                 return Autodesk.Revit.UI.Result.Succeeded;
             }
-            catch
+            catch (Exception e)
             {
-                message = "Unexpected Exception thrown.";
+                TaskDialog.Show("R", e.ToString());
                 return Autodesk.Revit.UI.Result.Failed;
             }
 
         }
     }
 }
+
 

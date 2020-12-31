@@ -1,45 +1,37 @@
 ﻿using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.Attributes;
-using Autodesk.Revit.UI.Selection;
 using Logging.Core;
 
-namespace Nina.Selection
+namespace Nina.Info
 {
     [Transaction(TransactionMode.Manual)]
-    public class SwitchUp : IExternalCommand
+    public class Github : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
             Document doc = commandData.Application.ActiveUIDocument.Document;
-            UIDocument uidoc = commandData.Application.ActiveUIDocument;
-
             Log log = new Log
             {
-                Tool = "Switch-up Element Type",
+                Tool = "Github Repository",
                 Document = doc.Title,
                 Revit = commandData.Application.Application.VersionName,
                 UserName = commandData.Application.Application.Username,
                 Nina = Settings.Default.Nina
             };
 
+            Logger.Write(log);
+
             try
             {
-
-                Autodesk.Revit.UI.Selection.Selection selection = uidoc.Selection;
-                //Nina.FamilyType.WallSwitch(uidoc, doc, true);
-                Nina.Revit.Selector.ElementSwitch(uidoc, doc, true);
+                System.Diagnostics.Process.Start("https://github.com/franpossetto/revit-nina-extension");
+                return Autodesk.Revit.UI.Result.Succeeded;
             }
-
-            catch (System.Exception exp)
+            catch
             {
-                log.Message = exp.Message;
-                log.Exception = exp;
+                message = "Unexpected Exception thrown.";
                 return Autodesk.Revit.UI.Result.Failed;
             }
-
-            Logger.Write(log);
-            return Autodesk.Revit.UI.Result.Succeeded;
 
         }
     }

@@ -1,12 +1,11 @@
 ﻿using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.Attributes;
-using Nina.Commands.Creation.Batch;
 
-namespace Nina.Creation.Batch
+namespace Nina.Info
 {
     [Transaction(TransactionMode.Manual)]
-    public class WallTypes : IExternalCommand
+    public class About : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
@@ -14,10 +13,12 @@ namespace Nina.Creation.Batch
             {
                 Document doc = commandData.Application.ActiveUIDocument.Document;
                 UIDocument uidoc = commandData.Application.ActiveUIDocument;
-                WallTypeBatchCreation wallTypeBatchCreation = new WallTypeBatchCreation();
-                wallTypeBatchCreation.ShowDialog();
+                TaskDialog taskDialog = new TaskDialog("About")
+                {
+                    MainContent = "Nina for Revit v 1.2.0",
+                };
 
-                Nina.Revit.FamilyType.WallTypeBatchCreation(doc, 8);
+                taskDialog.Show();
                 return Autodesk.Revit.UI.Result.Succeeded;
             }
             catch

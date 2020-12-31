@@ -1,13 +1,12 @@
 ﻿using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.Attributes;
-using Autodesk.Revit.UI.Selection;
 using Logging.Core;
 
 namespace Nina.Selection
 {
     [Transaction(TransactionMode.Manual)]
-    public class SwitchUp : IExternalCommand
+    public class ViewRangeMinor : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
@@ -16,7 +15,7 @@ namespace Nina.Selection
 
             Log log = new Log
             {
-                Tool = "Switch-up Element Type",
+                Tool = "Set View Range (-)",
                 Document = doc.Title,
                 Revit = commandData.Application.Application.VersionName,
                 UserName = commandData.Application.Application.Username,
@@ -25,10 +24,27 @@ namespace Nina.Selection
 
             try
             {
+                View activeView = doc.ActiveView as View;
 
-                Autodesk.Revit.UI.Selection.Selection selection = uidoc.Selection;
-                //Nina.FamilyType.WallSwitch(uidoc, doc, true);
-                Nina.Revit.Selector.ElementSwitch(uidoc, doc, true);
+                if (!(activeView is ViewPlan)) return Result.Cancelled;
+
+                ViewPlan viewPlan = activeView as ViewPlan;
+                PlanViewRange viewRange = viewPlan.GetViewRange();
+
+                double currentOffset = viewRange.GetOffset(PlanViewPlane.CutPlane);
+                double offsetValue = 1;
+
+                if ((currentOffset - offsetValue) > viewRange.GetOffset(PlanViewPlane.BottomClipPlane))
+                    viewRange.SetOffset(PlanViewPlane.CutPlane, (currentOffset - offsetValue));
+                else
+                    TaskDialog.Show("Revit Nina Extension", "Top Clip plane is set below te cut plane");
+
+                using (Transaction t = new Transaction(doc, string.Format("View Range -{0}", offsetValue)))
+                {
+                    t.Start();
+                    viewPlan.SetViewRange(viewRange);
+                    t.Commit();
+                }
             }
 
             catch (System.Exception exp)
