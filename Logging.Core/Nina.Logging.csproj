@@ -58,7 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Log.cs" />
-    <Compile Include="LogDetail.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="PerfTracker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
