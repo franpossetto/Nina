@@ -5,7 +5,14 @@
 A collection of Shorcuts to work faster in Revit.
 Most of this work was done on Sunday mornings with Nina.
 
-### Type Selector
+## Type Selector and View Range
 
-#### Type up and Type down
-These tools allow users change family types easily. I use this tool with the keyboard.
+### Type up and Type down
+This tool allow users change family types easily.
+
+### View Range (+) and View Range (-)
+This tool allow users modify the view range in the active view.
+
+### Type by dimension
+This tool allow users select family types creating dimensions.
+
