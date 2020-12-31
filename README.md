@@ -10,10 +10,7 @@ Most of this work was done on Sunday mornings with Nina.
 To install this addin, run the installer provided on this repo. 
 
 ## Installation
-
-Run the file Nina.msi provided in this repository, in the section Releases.
-
-https://github.com/franpossetto/Nina/releases
+Run the file Nina.msi provided in this repository
 
 ## Tools
 
