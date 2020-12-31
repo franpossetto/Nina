@@ -24,13 +24,13 @@ namespace Nina
                 .CreatePushButtonData("about", "About", "Nina.Info.About");
             PushButtonData repo_button = Ribbon
                 .CreatePushButtonData("github", "Github Repository", "Nina.Info.Github");
-            PushButtonData docs_button = Ribbon
-                .CreatePushButtonData("docs", "Docs", "Nina.Info.About");
+            PushButtonData logs_button = Ribbon
+                .CreatePushButtonData("logs", "Logs", "Nina.Info.Logs");
         
             PulldownButton info_pullDownButton = ninaPanel.AddItem(info_button) as PulldownButton;
             info_pullDownButton.AddPushButton(about_button);
             info_pullDownButton.AddPushButton(repo_button);
-            info_pullDownButton.AddPushButton(docs_button);
+            info_pullDownButton.AddPushButton(logs_button);
 
             #endregion
 
@@ -43,6 +43,7 @@ namespace Nina
             settings_button.LargeImage = Icons.settings_30;
 
             #endregion
+
         }
     }
 }

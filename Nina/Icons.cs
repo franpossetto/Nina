@@ -80,5 +80,7 @@ namespace Nina
 
         public static System.Windows.Media.Imaging.BitmapSource cad_link = Ribbon.Icon(Properties.Resources.dwg);
 
+        public static System.Windows.Media.Imaging.BitmapSource track = Ribbon.Icon(Properties.Resources.track);
+
     }
 }

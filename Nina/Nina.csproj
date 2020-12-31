@@ -118,7 +118,7 @@
     <Compile Include="Commands\Visibility\HideCADLinks.cs" />
     <Compile Include="Icons.cs" />
     <Compile Include="Commands\Info\About.cs" />
-    <Compile Include="Commands\Info\Docs.cs" />
+    <Compile Include="Commands\Info\Logs.cs" />
     <Compile Include="Commands\Info\Github.cs" />
     <Compile Include="Commands\Creation\Batch\WallTypeBatchCreation.xaml.cs">
       <DependentUpon>WallTypeBatchCreation.xaml</DependentUpon>
@@ -172,6 +172,7 @@
     </Content>
     <Content Include="PackageContents.xml" />
     <Content Include="prop-cmd.txt" />
+    <None Include="Resources\track.png" />
     <None Include="Resources\dwg.png" />
     <None Include="Resources\log.png" />
     <None Include="Resources\cad_link.png" />
@@ -239,6 +240,9 @@
       <Project>{8e355853-4c84-4a3c-8a4a-4989929c3287}</Project>
       <Name>Nina.Logging</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
