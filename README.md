@@ -7,9 +7,7 @@
 A collection of Shorcuts to work faster in Revit.
 Most of this work was done on Sunday mornings with Nina.
 
-## Installation
-Run the installer provided in this repo. 
-Files will be extracted in C:/ProgramData/Autodesk/ApplicationPlugins/
+To install this addin, run the installer provided in this repo. 
 
 ## Tools
 
