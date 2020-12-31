@@ -10,7 +10,7 @@ Most of this work was done on Sunday mornings with Nina.
 To install this addin, run the installer provided on this repo. 
 
 ## Installation
-Run the file Nina.msi provided in this repository
+Run the file Nina.msi provided in this repository.
 
 ## Tools
 
