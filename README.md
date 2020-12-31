@@ -13,17 +13,20 @@ Change family types easily, following alphabetical order.
 ### View Range (+) and View Range (-)
 Modify the view range in the active view.
 
-### Type by dimension (Walls)
-Select Wall types creating dimensions.
-
-### Type by dimension (Pipes)
-Select Pipe types creating dimensions.
+### Type by dimension
+- Select Wall types creating dimensions.
+- Select Pipe types creating dimensions.
 
 ### Show / Hide Point Clouds
 Show or Hide point clouds in the current view.
 
-### Color Mode
+### Point Cloud Color Mode
 This tool allow users modify the view range in the active view.
+- Set Elevation.
+- Set Fixed Color.
+- Set Intensity.
+- Set No override.
+- Set Normals
 
 ### Show / Hide RVT Links
 Show or Hide RVT links in the current view.
