@@ -7,7 +7,8 @@
 A collection of Shorcuts to work faster in Revit.
 Most of this work was done on Sunday mornings with Nina.
 
-To install this addin, run the installer provided in this repo. 
+To install this addin, run the installer provided on this repo. 
+
 
 ## Tools
 
