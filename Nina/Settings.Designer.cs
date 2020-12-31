@@ -37,7 +37,7 @@ namespace Nina {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1.0.2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1.2.0")]
         public string Nina {
             get {
                 return ((string)(this["Nina"]));

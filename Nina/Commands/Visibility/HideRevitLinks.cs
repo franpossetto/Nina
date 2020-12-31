@@ -25,23 +25,28 @@ namespace Nina.Visibility
             Application app = uiApp.Application;
             Document doc = uiDoc.Document;
 
-            Log.Information.Tool = "Hide RVT Links";
-            Log.Information.File = doc.Title;
-            Log.Information.Revit = commandData.Application.Application.VersionName;
-            Log.Information.UserName = commandData.Application.Application.Username;
-            Log.Information.Nina = Settings.Default.Nina;
-            Logger.Write(Log.Information);
+            Log log = new Log
+            {
+                Tool = "Hide RVT Links",
+                Document = doc.Title,
+                Revit = commandData.Application.Application.VersionName,
+                UserName = commandData.Application.Application.Username,
+                Nina = Settings.Default.Nina
+            };
 
             try
             {
                 Links.HideRVT(doc);
-                return Result.Succeeded;
             }
-            catch (Exception ex)
+            catch (System.Exception exp)
             {
-                message = ex.Message;
-                return Result.Failed;
+                log.Message = exp.Message;
+                log.Exception = exp;
+                return Autodesk.Revit.UI.Result.Failed;
             }
+
+            Logger.Write(log);
+            return Autodesk.Revit.UI.Result.Succeeded;
         }
     }
 }

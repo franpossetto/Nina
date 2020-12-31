@@ -25,17 +25,30 @@ namespace Nina.Visibility
             Application app = uiApp.Application;
             Document doc = uiDoc.Document;
 
-            Log.Information.Tool = "Set Color Mode (Normals)";
-            Log.Information.File = doc.Title;
-            Log.Information.Revit = commandData.Application.Application.VersionName;
-            Log.Information.UserName = commandData.Application.Application.Username;
-            Log.Information.Nina = Settings.Default.Nina;
-            Logger.Write(Log.Information);
+            Log log = new Log
+            {
+                Tool = "Set Color Mode (Normals)",
+                Document = doc.Title,
+                Revit = commandData.Application.Application.VersionName,
+                UserName = commandData.Application.Application.Username,
+                Nina = Settings.Default.Nina
+            };
 
-            PointCloud.SetColorMode(doc, 4);
-            return Result.Succeeded;
-                
-            
+            try
+            {
+                PointCloud.SetColorMode(doc, 4);
+            }
+
+            catch (System.Exception exp)
+            {
+                log.Message = exp.Message;
+                log.Exception = exp;
+                return Autodesk.Revit.UI.Result.Failed;
+            }
+
+            Logger.Write(log);
+            return Autodesk.Revit.UI.Result.Succeeded;
+
         }
     }
 }

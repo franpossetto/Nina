@@ -13,10 +13,9 @@ namespace Logging.Core
             Timestamp = DateTime.Now;
             HostName = Environment.MachineName;
         }
-        public static Log Information = new Log();
         public DateTime Timestamp { get; private set; }
         public string Revit { get; set; }
-        public string File { get; set; }
+        public string Document { get; set; }
         public string UserName { get; set; }
         public string Tool { get; set; }
         public string Message { get; set; }

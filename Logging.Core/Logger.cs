@@ -18,53 +18,10 @@ namespace Logging.Core
                         .CreateLogger();
         }
 
-        public static void Write(Log information)
+        public static void Write(Log log)
         {
-            _rvtLogger.Write(Serilog.Events.LogEventLevel.Information, "{@Log}", information);
+            if (log.Exception == null) _rvtLogger.Write(Serilog.Events.LogEventLevel.Information, "{@Log}", log);
+            else _rvtLogger.Write(Serilog.Events.LogEventLevel.Error, "{@Log}", log);
         }
     }
-    //public static class Logger
-    //{
-    //    private static readonly ILogger _perfLogger;
-    //    private static readonly ILogger _usageLogger;
-    //    private static readonly ILogger _errorLogger;
-    //    private static readonly ILogger _diagnosticLogger;
-
-    //    static Logger()
-    //    {
-    //        _perfLogger = new LoggerConfiguration()
-    //            .WriteTo.File(path: @"C:\Logs\Logs\perf.txt")
-    //            .CreateLogger();
-    //        _usageLogger = new LoggerConfiguration()
-    //            .WriteTo.File(path: @"C:\Logs\Logs\usage.txt")
-    //            .CreateLogger();
-    //        _errorLogger = new LoggerConfiguration()
-    //            .WriteTo.File(path: @"C:\Logs\Logs\error.txt")
-    //            .CreateLogger();
-    //        _diagnosticLogger = new LoggerConfiguration()
-    //            .WriteTo.File(path: @"C:\Logs\Logs\diagnostic.txt")
-    //            .CreateLogger();
-    //    }
-
-    //    public static void WritePerf(LogDetail infoToLog)
-    //    {
-    //        _perfLogger.Write(Serilog.Events.LogEventLevel.Information, "{@LogDetail}", infoToLog);
-    //    }
-    //    public static void WriteUsage(LogDetail infoToLog)
-    //    {
-    //        _usageLogger.Write(Serilog.Events.LogEventLevel.Information, "{@LogDetail}", infoToLog);
-    //    }
-    //    public static void WriteError(LogDetail infoToLog)
-    //    {
-    //        _errorLogger.Write(Serilog.Events.LogEventLevel.Information, "{@LogDetail}", infoToLog);
-    //    }
-    //    public static void WriteDiagnostic(LogDetail infoToLog)
-    //    {
-    //        var writeDiagnostics = Convert.ToBoolean(ConfigurationManager.AppSettings["EnableDiagnostics"]);
-    //        if (!writeDiagnostics)
-    //            return;
-
-    //        _diagnosticLogger.Write(Serilog.Events.LogEventLevel.Information, "{@LogDetail}", infoToLog);
-    //    }
-    //}
 }

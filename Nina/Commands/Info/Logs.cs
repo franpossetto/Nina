@@ -23,12 +23,16 @@ namespace Nina.Info
             UIDocument uiDoc = uiApp.ActiveUIDocument;
             Document doc = uiDoc.Document;
 
-            Log.Information.Tool = "Open Logs Directory";
-            Log.Information.File = doc.Title;
-            Log.Information.Revit = commandData.Application.Application.VersionName;
-            Log.Information.UserName = commandData.Application.Application.Username;
-            Log.Information.Nina = Settings.Default.Nina;
-            Logger.Write(Log.Information);
+            Log log = new Log
+            {
+                Tool = "Open Logs Directory",
+                Document = doc.Title,
+                Revit = commandData.Application.Application.VersionName,
+                UserName = commandData.Application.Application.Username,
+                Nina = Settings.Default.Nina
+            };
+
+            Logger.Write(log);
         
             try
             {

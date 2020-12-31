@@ -33,18 +33,30 @@ namespace Nina.Visibility
             Application app = uiApp.Application;
             Document doc = uiDoc.Document;
 
+            Log log = new Log
+            {
+                Tool = "Set Color Mode (No Override)",
+                Document = doc.Title,
+                Revit = commandData.Application.Application.VersionName,
+                UserName = commandData.Application.Application.Username,
+                Nina = Settings.Default.Nina
+            };
 
-            Log.Information.Tool = "Set Color Mode (No Override)";
-            Log.Information.File = doc.Title;
-            Log.Information.Revit = commandData.Application.Application.VersionName;
-            Log.Information.UserName = commandData.Application.Application.Username;
-            Log.Information.Nina = Settings.Default.Nina;
-            Logger.Write(Log.Information);
+            try
+            {
+                PointCloud.SetColorMode(doc, 3);
+            }
 
-            PointCloud.SetColorMode(doc, 3);
-            return Result.Succeeded;
-                
-            
+            catch (System.Exception exp)
+            {
+                log.Message = exp.Message;
+                log.Exception = exp;
+                return Autodesk.Revit.UI.Result.Failed;
+            }
+
+            Logger.Write(log);
+            return Autodesk.Revit.UI.Result.Succeeded;
+
         }
     }
 }

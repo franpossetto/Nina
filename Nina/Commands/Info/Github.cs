@@ -11,13 +11,16 @@ namespace Nina.Info
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
             Document doc = commandData.Application.ActiveUIDocument.Document;
+            Log log = new Log
+            {
+                Tool = "Github Repository",
+                Document = doc.Title,
+                Revit = commandData.Application.Application.VersionName,
+                UserName = commandData.Application.Application.Username,
+                Nina = Settings.Default.Nina
+            };
 
-            Log.Information.Tool = "Github Repository";
-            Log.Information.File = doc.Title;
-            Log.Information.Revit = commandData.Application.Application.VersionName;
-            Log.Information.UserName = commandData.Application.Application.Username;
-            Log.Information.Nina = Settings.Default.Nina;
-            Logger.Write(Log.Information);
+            Logger.Write(log);
 
             try
             {

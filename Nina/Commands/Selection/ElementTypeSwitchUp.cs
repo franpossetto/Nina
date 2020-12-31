@@ -11,29 +11,35 @@ namespace Nina.Selection
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
+            Document doc = commandData.Application.ActiveUIDocument.Document;
+            UIDocument uidoc = commandData.Application.ActiveUIDocument;
+
+            Log log = new Log
+            {
+                Tool = "Switch-up Element Type",
+                Document = doc.Title,
+                Revit = commandData.Application.Application.VersionName,
+                UserName = commandData.Application.Application.Username,
+                Nina = Settings.Default.Nina
+            };
+
             try
             {
-                Document doc = commandData.Application.ActiveUIDocument.Document;
-                UIDocument uidoc = commandData.Application.ActiveUIDocument;
-
-                Log.Information.Tool = "Switch-up Element Type";
-                Log.Information.File = doc.Title;
-                Log.Information.Revit = commandData.Application.Application.VersionName;
-                Log.Information.UserName = commandData.Application.Application.Username;
-                Log.Information.Nina = Settings.Default.Nina;
-                Logger.Write(Log.Information);
 
                 Autodesk.Revit.UI.Selection.Selection selection = uidoc.Selection;
                 //Nina.FamilyType.WallSwitch(uidoc, doc, true);
                 Nina.Revit.Selector.ElementSwitch(uidoc, doc, true);
-                return Autodesk.Revit.UI.Result.Succeeded;
             }
-            catch
+
+            catch (System.Exception exp)
             {
-                message = "Unexpected Exception thrown.";
+                log.Message = exp.Message;
+                log.Exception = exp;
                 return Autodesk.Revit.UI.Result.Failed;
             }
 
+            Logger.Write(log);
+            return Autodesk.Revit.UI.Result.Succeeded;
 
         }
     }

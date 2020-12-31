@@ -6,7 +6,7 @@
       <Value Profile="(Default)">C:\ProgramData\Autodesk\ApplicationPlugins\Nina.bundle\Logs</Value>
     </Setting>
     <Setting Name="Nina" Type="System.String" Scope="User">
-      <Value Profile="(Default)">1.0.2</Value>
+      <Value Profile="(Default)">1.2.0</Value>
     </Setting>
   </Settings>
 </SettingsFile>
