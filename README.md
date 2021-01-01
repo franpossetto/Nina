@@ -9,6 +9,8 @@ Most of this work was done on Sunday mornings with Nina.
 
 To install this addin, run the installer provided on this repo. 
 
+## Installation
+Run the file Nina.msi provided in this repository.
 
 ## Tools
 
@@ -40,5 +42,5 @@ Show or Hide RVT links in the current view.
 Show or Hide DWG links in the current view.
 
 ## Contributors
-- Paloma Wilberger - Type Selector tools.
-- Federico Schmidt - Point Cloud visualization tools and Testing.
+- Paloma Wilberger
+- Federico Schmidt
