@@ -14,22 +14,24 @@ Run the file Nina.msi provided in this repository.
 
 ## Tools
 
-### Type up and Type down
+### 1. Type up and Type down
 Change family types easily, following alphabetical order.
 
-### View Range (+) and View Range (-)
+![Type Selector](Nina/Demo/TypeSelector.gif)
+
+### 2. View Range (+) and View Range (-)
 Modify the view range in the active view.
 
-### Type by dimension
+### 3. Type by dimension
 - Select Wall types creating dimensions.
 - Select Pipe types creating dimensions.
 
 ![Wall By Dimension](Nina/Demo/WallByDimension.gif)
 
-### Show / Hide Point Clouds
+### 4. Show / Hide Point Clouds
 Show or Hide point clouds in the current view.
 
-### Point Cloud Color Mode
+### 5. Point Cloud Color Mode
 This tool allow users modify the view range in the active view.
 - Set Elevation.
 - Set Fixed Color.
@@ -37,11 +39,14 @@ This tool allow users modify the view range in the active view.
 - Set No override.
 - Set Normals
 
-### Show / Hide RVT Links
+### 6. Show / Hide RVT Links
 Show or Hide RVT links in the current view.
 
-### Show / Hide DWG Links
+### 7. Show / Hide DWG Links
 Show or Hide DWG links in the current view.
+
+## Recommendation.
+Add keyboard shorcuts to call this commands.
 
 ## Contributors
 - Paloma Wilberger
