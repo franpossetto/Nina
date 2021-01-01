@@ -22,7 +22,7 @@ Change Types quickly. The order of the Types is the same you see in the Type Sel
 ### 2. View Range (+) and View Range (-)
 Modify the view range in the active view.
 
-### 3. Type by dimension
+### 3. Type Selector by dimension
 - Pipe types by dimensions.
 - Wall types by dimensions.
 
