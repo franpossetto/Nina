@@ -4,10 +4,10 @@
 ![Revit API](https://img.shields.io/badge/RevitAPI-2019-blue.svg)
 ![Revit API](https://img.shields.io/badge/RevitAPI-2020-blue.svg)
 
-A collection of Shorcuts to work faster in Revit.
-Most of this work was done on Sunday mornings with Nina.
+A collection of tiny tools to work faster in Revit.
+Most of these commands are availables in Revit but as options in second windows. As they are actions that the users repeats very often, the goal is to be able to access them quickly, using keyboard shorcuts.
 
-To install this addin, run the installer provided on this repo. 
+Most of this work was done on Sunday mornings with Nina.
 
 ## Installation
 Run the file Nina.msi provided in this repository.
@@ -45,9 +45,8 @@ Show or Hide RVT links in the current view.
 ### 7. Show / Hide DWG Links
 Show or Hide DWG links in the current view.
 
-## Recommendation.
-Add keyboard shorcuts to call this commands.
-
+For correct use, use these commands as keyboard shorcuts.
+ 
 ## Contributors
 - Paloma Wilberger
 - Federico Schmidt
