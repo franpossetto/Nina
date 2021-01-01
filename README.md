@@ -15,7 +15,7 @@ Run the file Nina.msi provided in this repository.
 ## Tools
 
 ### 1. Type up and Type down
-Change family types easily, following alphabetical order.
+Change Types quickly. The order of the Types is the same you see in the Type Selector UI.
 
 ![Type Selector](Nina/Demo/TypeSelector.gif)
 
