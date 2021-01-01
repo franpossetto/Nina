@@ -24,6 +24,8 @@ Modify the view range in the active view.
 - Select Wall types creating dimensions.
 - Select Pipe types creating dimensions.
 
+![Wall By Dimension](Nina/Demo/WallByDimension.gif)
+
 ### Show / Hide Point Clouds
 Show or Hide point clouds in the current view.
 
