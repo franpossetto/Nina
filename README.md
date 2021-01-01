@@ -25,6 +25,7 @@ Modify the view range in the active view.
 ### 3. Type by dimension
 - Pipe types creating dimensions.
 - Wall types creating dimensions.
+
 ![Wall By Dimension](Nina/Demo/WallByDimension.gif)
 
 ### 4. Show / Hide Point Clouds
