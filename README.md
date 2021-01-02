@@ -46,22 +46,25 @@ Show or Hide DWG links in the current view.
 
 
 ## Recommentation
-For correct use, use these commands as keyboard shorcuts.
-
-This is my personal configuration
+For correct use, use these commands as keyboard shorcuts. This is my personal configuration:
 
 |Panel| Tool | Keyboard Shortcut  | 
 |-----|-----|-----|
-|Type Selector|Type-up| `tt`|
-|Type Selector|Type-down| `yy`|
-|Type Selector|View Range (+)| `qq`|
-|Type Selector|View Range (-)| `ww`|
-|Type Selector|WallType by Dimension| `dd`|
-|Point Clouds|Show Hide Point Clouds| `hp`|
-|Point Clouds|Color Mode: Set Normals| `nn`|
-|Links|Show Hide RVT Links| `hk`|
-|Links|Show Hide RVT Links| `hc`|
+|Type Selector|`Type-up`| `tt`|
+|Type Selector|`Type-down`| `yy`|
+|Type Selector|`View Range (+)`| `qq`|
+|Type Selector|`View Range (-)`| `ww`|
+|Type Selector|`WallType by Dimension`| `dd`|
+|Point Clouds|`Show Hide Point Clouds`| `hp`|
+|Point Clouds|`Color Mode: Set Normals`| `nn`|
+|Links|`Show Hide RVT Links`| `hk`|
+|Links|`Show Hide RVT Links`| `hc`|
 
-## Contributors
+## Contributoions
+
+### Ideas and testing
 - Paloma Wilberger
 - Federico Schmidt
+
+### Would you like to contribute on this repo?
+Send me an email to `franciscopossetto@hotmail.com`
