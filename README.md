@@ -33,12 +33,8 @@ WalType and PipeType By Dimension.
 ### 4. Show / Hide Point Clouds
 Show or Hide point clouds in the current view.
 
-![Wall By Dimension](Nina/Demo/v110/ShowHide.gif)
-
 ### 5. Point Cloud Color Mode
 This tool allow users modify the view range in the active view.
-
-![Wall By Dimension](Nina/Demo/v120/WallByDimension.gif)
 
 ### 6. Show / Hide RVT Links
 Show or Hide RVT links in the current view.
