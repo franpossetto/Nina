@@ -60,11 +60,8 @@ For correct use, use these commands as keyboard shorcuts. This is my personal co
 |Links|`Show Hide RVT Links`| `hk`|
 |Links|`Show Hide RVT Links`| `hc`|
 
-## Contributoions
+## Contriutions
 
 ### Ideas and testing
 - Paloma Wilberger
 - Federico Schmidt
-
-### Would you like to contribute on this repo?
-Send me an email to `franciscopossetto@hotmail.com`
