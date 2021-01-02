@@ -48,7 +48,7 @@ Show or Hide DWG links in the current view.
 ## Recommentation
 For correct use, use these commands as keyboard shorcuts. This is my personal configuration:
 
-|Panel| Tool | Keyboard Shortcut  | 
+|Panel| Tool | Shortcut  | 
 |-----|-----|-----|
 |Type Selector|`Type-up`| `tt`|
 |Type Selector|`Type-down`| `yy`|
