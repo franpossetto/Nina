@@ -32,7 +32,11 @@ Show or Hide point clouds in the current view.
 
 ### 5. Point Cloud Color Mode
 This tool allow users modify the view range in the active view.
-Set Elevation, Set Fixed Color, Set Intensity, Set No override and Set Normals.
+- Set Elevation
+- Set Fixed Color
+- Set Intensity
+- Set No override
+- Set Normals.
 
 ### 6. Show / Hide RVT Links
 Show or Hide RVT links in the current view.
