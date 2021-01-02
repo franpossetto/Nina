@@ -7,25 +7,6 @@
 A collection of tiny tools to work faster in Revit.
 Most of these commands are availables in Revit but as options in second windows. As they are actions that the users repeats very often, the goal is to be able to access them quickly, using keyboard shorcuts.
 
-### My configuration
-
-|Panel| Tool | Keyboard Shortcut  | 
-|-----|-----|-----|
-|Type Selector|Type-up| `tt`|
-|Type Selector|Type-down| `yy`|
-|Type Selector|View Range (+)| `qq`|
-|Type Selector|View Range (-)| `ww`|
-|Type Selector|WallType by Dimension| `dd`|
-|Point Clouds|Show Hide Point Clouds| `hp`|
-|Point Clouds|Color Mode: Set Elevation| `ne`|
-|Point Clouds|Color Mode: Set Fixed Color| `nd`|
-|Point Clouds|Color Mode: Set Intensity| `ns`|
-|Point Clouds|Color Mode: Set No Override| `no`|
-|Point Clouds|Color Mode: Set Normals| `nn`|
-|Links|Show Hide RVT Links| `hk`|
-|Links|Show Hide RVT Links| `hc`|
-
-
 Most of this work was done on Sunday mornings with [Nina](Nina.png).
 
 ## Installation
@@ -63,8 +44,23 @@ Show or Hide RVT links in the current view.
 ### 7. Show / Hide DWG Links
 Show or Hide DWG links in the current view.
 
+### Recommentation
 For correct use, use these commands as keyboard shorcuts.
- 
+
+This is my personal configuration
+
+|Panel| Tool | Keyboard Shortcut  | 
+|-----|-----|-----|
+|Type Selector|Type-up| `tt`|
+|Type Selector|Type-down| `yy`|
+|Type Selector|View Range (+)| `qq`|
+|Type Selector|View Range (-)| `ww`|
+|Type Selector|WallType by Dimension| `dd`|
+|Point Clouds|Show Hide Point Clouds| `hp`|
+|Point Clouds|Color Mode: Set Normals| `nn`|
+|Links|Show Hide RVT Links| `hk`|
+|Links|Show Hide RVT Links| `hc`|
+
 ## Contributors
 - Paloma Wilberger
 - Federico Schmidt
