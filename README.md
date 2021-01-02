@@ -10,7 +10,7 @@ Most of these commands are availables in Revit but as options in second windows.
 Most of this work was done on Sunday mornings with [Nina](Nina.png).
 
 ## Installation
-Run the file Nina.msi provided in this repository.
+Run the file [Nina.msi](https://github.com/franpossetto/Nina/releases/tag/v1.2) provided in this repository.
 
 ## Tools
 
@@ -23,8 +23,7 @@ Change Types quickly. The order of the Types is the same you see in the Type Sel
 Modify the view range in the active view.
 
 ### 3. Type Selector by dimension
-- WalType by dimensions.
-- PipeType by dimensions.
+WalType by dimension and Pipe By Dimension.
 
 ![Wall By Dimension](Nina/Demo/WallByDimension.gif)
 
@@ -33,11 +32,7 @@ Show or Hide point clouds in the current view.
 
 ### 5. Point Cloud Color Mode
 This tool allow users modify the view range in the active view.
-- Set Elevation.
-- Set Fixed Color.
-- Set Intensity.
-- Set No override.
-- Set Normals
+Set Elevation, Set Fixed Color, Set Intensity, Set No override and Set Normals.
 
 ### 6. Show / Hide RVT Links
 Show or Hide RVT links in the current view.
