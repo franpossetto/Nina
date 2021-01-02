@@ -44,7 +44,8 @@ Show or Hide RVT links in the current view.
 ### 7. Show / Hide DWG Links
 Show or Hide DWG links in the current view.
 
-### Recommentation
+
+## Recommentation
 For correct use, use these commands as keyboard shorcuts.
 
 This is my personal configuration
