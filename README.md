@@ -10,7 +10,7 @@ Most of these commands are availables in Revit but as options in second windows.
 ## Overview
 Most of this work was done on Sunday mornings with [Nina](Nina.png).
 
-![NinaRibbon](Nina/Demo/v120.png)
+![NinaRibbon](Nina/Demo/v120/ribbon.png)
 
 ## Installation
 Run the file [Nina.msi](https://github.com/franpossetto/Nina/releases/tag/v1.2) provided in this repository.
