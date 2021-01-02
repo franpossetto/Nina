@@ -9,7 +9,7 @@ Most of these commands are availables in Revit but as options in second windows.
 
 ### My configuration
 
-|Panel| Tool | Shortcut  | 
+|Panel| Tool | Keyboard Shortcut  | 
 |-----|-----|-----|
 |Type Selector|Type-up| `tt`|
 |Type Selector|Type-down| `yy`|
@@ -17,6 +17,10 @@ Most of these commands are availables in Revit but as options in second windows.
 |Type Selector|View Range (-)| `ww`|
 |Type Selector|WallType by Dimension| `dd`|
 |Point Clouds|Show Hide Point Clouds| `hp`|
+|Point Clouds|Color Mode: Set Elevation| `ne`|
+|Point Clouds|Color Mode: Set Fixed Color| `nd`|
+|Point Clouds|Color Mode: Set Intensity| `ns`|
+|Point Clouds|Color Mode: Set No Override| `no`|
 |Point Clouds|Color Mode: Set Normals| `nn`|
 |Links|Show Hide RVT Links| `hk`|
 |Links|Show Hide RVT Links| `hc`|
