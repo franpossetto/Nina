@@ -65,3 +65,6 @@ For correct use, use these commands as keyboard shorcuts. This is my personal co
 ### Ideas and testing
 - Paloma Wilberger
 - Federico Schmidt
+
+### To contribute
+Send me an email to `franciscopossetto@hotmail.com`
