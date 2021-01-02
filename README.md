@@ -4,11 +4,12 @@
 ![Revit API](https://img.shields.io/badge/RevitAPI-2019-blue.svg)
 ![Revit API](https://img.shields.io/badge/RevitAPI-2020-blue.svg)
 
-A collection of tiny tools to work faster in Revit.
-Most of these commands are availables in Revit but as options in second windows. As they are actions that the users repeats very often, the goal is to be able to access them quickly, using keyboard shorcuts.
+Most of this work was done on Sunday mornings with [Nina](Nina.png).
 
 ## Overview
-Most of this work was done on Sunday mornings with [Nina](Nina.png).
+
+A collection of tiny tools to work faster in Revit.
+Most of these commands are availables in Revit but as options in second windows. As they are actions that the users repeats very often, the goal is to be able to access them quickly, using keyboard shorcuts.
 
 ![NinaRibbon](Nina/Demo/v120/ribbon.png)
 
