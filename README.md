@@ -8,11 +8,10 @@ A collection of tiny tools to work faster in Revit.
 Most of these commands are availables in Revit but as options in second windows. As they are actions that the users repeats very often, the goal is to be able to access them quickly, using keyboard shorcuts.
 
 Most of this work was done on Sunday mornings with [Nina](Nina.png).
+![NinaRibbon](Nina/Demo/v120.png)
 
 ## Installation
 Run the file [Nina.msi](https://github.com/franpossetto/Nina/releases/tag/v1.2) provided in this repository.
-
-![NinaRibbon](Nina/Demo/v120.png)
 
 ## Tools
 
