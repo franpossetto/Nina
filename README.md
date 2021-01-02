@@ -10,9 +10,10 @@ Most of these commands are availables in Revit but as options in second windows.
 Most of this work was done on Sunday mornings with [Nina](Nina.png).
 
 ## Installation
-Run the file [Nina.msi](https://github.com/franpossetto/Nina/releases/tag/v1.2) provided in this repository.
+![Nina.msi](Nina/Demo/v120)
 
 ## Tools
+![NinaRibbon](https://github.com/franpossetto/Nina/releases/tag/v1.2)
 
 ### 1. Type up and Type down
 Change Types quickly. The order of the Types is the same you see in the Type Selector UI.
