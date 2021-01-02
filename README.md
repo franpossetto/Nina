@@ -23,7 +23,7 @@ Change Types quickly. The order of the Types is the same you see in the Type Sel
 Modify the view range in the active view.
 
 ### 3. Type Selector by dimension
-WalType by dimension and Pipe By Dimension.
+WalType and PipeType By Dimension.
 
 ![Wall By Dimension](Nina/Demo/WallByDimension.gif)
 
