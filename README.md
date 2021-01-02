@@ -20,7 +20,7 @@ Run the file [Nina.msi](https://github.com/franpossetto/Nina/releases/tag/v1.2) 
 ### 1. Type up and Type down
 Change Types quickly. The order of the Types is the same you see in the Type Selector UI.
 
-![Type Selector](Nina/Demo/TypeSelector.gif)
+![Type Selector](Nina/Demo/v120/TypeSelector.gif)
 
 ### 2. View Range (+) and View Range (-)
 Modify the view range in the active view.
@@ -28,18 +28,17 @@ Modify the view range in the active view.
 ### 3. Type Selector by dimension
 WalType and PipeType By Dimension.
 
-![Wall By Dimension](Nina/Demo/WallByDimension.gif)
+![Wall By Dimension](Nina/Demo/v120/WallByDimension.gif)
 
 ### 4. Show / Hide Point Clouds
 Show or Hide point clouds in the current view.
 
+![Wall By Dimension](Nina/Demo/v110/ShowHide.gif)
+
 ### 5. Point Cloud Color Mode
 This tool allow users modify the view range in the active view.
-- Set Elevation
-- Set Fixed Color
-- Set Intensity
-- Set No override
-- Set Normals.
+
+![Wall By Dimension](Nina/Demo/v120/WallByDimension.gif)
 
 ### 6. Show / Hide RVT Links
 Show or Hide RVT links in the current view.
