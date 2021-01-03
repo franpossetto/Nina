@@ -60,8 +60,6 @@ For correct use, use these commands as keyboard shorcuts. This is my personal co
 |Links|`Show Hide RVT Links`| `hc`|
 
 ## Contributions
-
-### Ideas and Testing
 - Paloma Wilberger
 - Federico Schmidt
 
