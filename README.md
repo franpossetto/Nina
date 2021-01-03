@@ -21,6 +21,8 @@ Most of these commands are availables in Revit but as options in second windows.
 ### 1. Type up and Type down
 Change selected types quickly. The order of the Types is the same you see in the Type Selector UI.
 
+![Type Selector](Nina/Demo/v120/TypeSelector.gif)
+
 ### 2. View Range (+) and View Range (-)
 Modify the view range in the active view.
 
