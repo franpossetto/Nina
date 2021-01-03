@@ -18,14 +18,16 @@ Most of these commands are availables in Revit but as options in second windows.
 
 ## Tools
 
-### 1. UI Type Selector
-[Type up and Type down](Nina/Demo/v120/TypeSelector.gif) change the selected Type. The order of the Types is the same you see in the Type Selector UI.
+### 1. Type up and Type down
+Change selected types quickly. The order of the Types is the same you see in the Type Selector UI.
 
 ### 2. View Range (+) and View Range (-)
 Modify the view range in the active view.
 
 ### 3. Type Selector by dimension
-[WallType by Dimension](Nina/Demo/v120/WallByDimension.gif) and PipeType By Dimension.
+WalType and PipeType By Dimension.
+
+![Wall By Dimension](Nina/Demo/v120/WallByDimension.gif)
 
 ### 4. Show / Hide Point Clouds
 Show or Hide point clouds in the current view.
