@@ -14,22 +14,16 @@ Run the file [Nina.msi](https://github.com/franpossetto/Nina/releases/tag/v1.2) 
 A collection of tiny tools to work faster in Revit.
 Most of these commands are availables in Revit but as options in second windows. As they are actions that the users repeats very often, the goal is to be able to access them quickly, using keyboard shorcuts.
 
-![NinaRibbon](Nina/Demo/v120/ribbon.png)
-
 ## Tools
 
 ### 1. Type up and Type down
 Change selected types quickly. The order of the Types is the same you see in the Type Selector UI.
-
-![Type Selector](Nina/Demo/v120/TypeSelector.gif)
 
 ### 2. View Range (+) and View Range (-)
 Modify the view range in the active view.
 
 ### 3. Type Selector by dimension
 WalType and PipeType By Dimension.
-
-![Wall By Dimension](Nina/Demo/v120/WallByDimension.gif)
 
 ### 4. Show / Hide Point Clouds
 Show or Hide point clouds in the current view.
