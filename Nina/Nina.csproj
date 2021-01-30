@@ -31,13 +31,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'R2019|AnyCPU'">
-    <OutputPath>bin\Nina.Bundle\Contents\2019\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\ProgramData\Autodesk\ApplicationPlugins\Nina.bundle\Contents\2019\</OutputPath>
     <DefineConstants>TRACE;DEBUG;REVIT2019</DefineConstants>
     <DebugType>pdbonly</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'R2018|AnyCPU'">
-    <OutputPath>bin\Nina.Bundle\Contents\2018\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\ProgramData\Autodesk\ApplicationPlugins\Nina.bundle\Contents\2018\</OutputPath>
     <DefineConstants>REVIT2018</DefineConstants>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
@@ -45,13 +45,22 @@
     <LangVersion>default</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'R2020|AnyCPU'">
-    <OutputPath>bin\Nina.Bundle\Contents\2020\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\ProgramData\Autodesk\ApplicationPlugins\Nina.bundle\Contents\2020\</OutputPath>
     <DefineConstants>TRACE;DEBUG;REVIT2020</DefineConstants>
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <LangVersion>7.3</LangVersion>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <DebugType>pdbonly</DebugType>
     <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Setup|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Setup\</OutputPath>
+    <DefineConstants>REVIT2018</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>default</LangVersion>
+    <ErrorReport>none</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AdWindows">
@@ -115,9 +124,10 @@
     <Compile Include="Application\LinksPanel.cs" />
     <Compile Include="Commands\Selection\ViewRangeMinor.cs" />
     <Compile Include="Commands\Selection\ViewRangePlus.cs" />
+    <Compile Include="Commands\Visibility\HideCADLinks.cs" />
     <Compile Include="Icons.cs" />
     <Compile Include="Commands\Info\About.cs" />
-    <Compile Include="Commands\Info\Docs.cs" />
+    <Compile Include="Commands\Info\Logs.cs" />
     <Compile Include="Commands\Info\Github.cs" />
     <Compile Include="Commands\Creation\Batch\WallTypeBatchCreation.xaml.cs">
       <DependentUpon>WallTypeBatchCreation.xaml</DependentUpon>
@@ -158,13 +168,25 @@
     <Compile Include="Application\NinaPanel.cs" />
     <Compile Include="Application\PointCloudPanel.cs" />
     <Compile Include="Application\SelectionPanel.cs" />
+    <Compile Include="Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Nina.addin">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="PackageContents.xml" />
     <Content Include="prop-cmd.txt" />
+    <None Include="Resources\track.png" />
+    <None Include="Resources\dwg.png" />
+    <None Include="Resources\log.png" />
+    <None Include="Resources\cad_link.png" />
+    <None Include="Resources\cad.png" />
+    <None Include="app.config" />
     <None Include="Resources\cloud-blue-29.png" />
     <None Include="Resources\cloud-blue-30.png" />
     <None Include="Resources\circle-30.png" />
@@ -205,6 +227,10 @@
     <None Include="Resources\gray.png" />
     <None Include="Resources\lila.png" />
     <None Include="Resources\green.png" />
+    <None Include="Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -217,6 +243,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logging.Core\Nina.Logging.csproj">
+      <Project>{8e355853-4c84-4a3c-8a4a-4989929c3287}</Project>
+      <Name>Nina.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

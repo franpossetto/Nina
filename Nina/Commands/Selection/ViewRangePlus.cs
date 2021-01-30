@@ -1,6 +1,7 @@
 ﻿using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.Attributes;
+using Logging.Core;
 
 namespace Nina.Selection
 {
@@ -9,10 +10,20 @@ namespace Nina.Selection
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
+            Document doc = commandData.Application.ActiveUIDocument.Document;
+            UIDocument uidoc = commandData.Application.ActiveUIDocument;
+
+            Log log = new Log
+            {
+                Tool = "Set View Range (+)",
+                Document = doc.Title,
+                Revit = commandData.Application.Application.VersionName,
+                UserName = commandData.Application.Application.Username,
+                Nina = Settings.Default.Nina
+            };
+
             try
             {
-                Document doc = commandData.Application.ActiveUIDocument.Document;
-                UIDocument uidoc = commandData.Application.ActiveUIDocument;
                 View activeView = doc.ActiveView as View;
 
                 if (!(activeView is ViewPlan)) return Result.Cancelled;
@@ -31,17 +42,20 @@ namespace Nina.Selection
                 using (Transaction t = new Transaction(doc, string.Format("View Range +{0}", offsetValue)))
                 {
                     t.Start();
-                        viewPlan.SetViewRange(viewRange);
+                    viewPlan.SetViewRange(viewRange);
                     t.Commit();
                 }
-
-                return Result.Succeeded;
             }
-            catch
+
+            catch (System.Exception exp)
             {
-                message = "Unexpected Exception thrown.";
+                log.Message = exp.Message;
+                log.Exception = exp;
                 return Autodesk.Revit.UI.Result.Failed;
             }
+
+            Logger.Write(log);
+            return Autodesk.Revit.UI.Result.Succeeded;
 
         }
     }

@@ -14,11 +14,21 @@ namespace Nina
         {
             RibbonPanel linksPanel = Ribbon.CreateRibbonPanel(application, "Links", tabName);
 
-            PushButtonData links_hide_data = Ribbon
-                .CreatePushButtonData("links_hide", "Show\nHide", "Nina.Visibility.HideRevitLinks");
+            PulldownButtonData hide_links = new PulldownButtonData("hideLinks", "Show\nHide")
+            {
+                LargeImage = Icons.links_hide_30
+            };
 
-            PushButton item19 = linksPanel.AddItem(links_hide_data) as PushButton;
-            item19.LargeImage = Icons.links_hide_30;
+            PushButtonData rvt_links_hide = Ribbon
+                .CreatePushButtonData("links_hide", "Show\nHide RVT Links", "Nina.Visibility.HideRevitLinks");
+
+            PushButtonData dwg_links_hide = Ribbon
+                .CreatePushButtonData("cad_links_hide", "Show\nHide DWG Links", "Nina.Visibility.HideCADLinks");
+
+            PulldownButton info_pullDownButton = linksPanel.AddItem(hide_links) as PulldownButton;
+            info_pullDownButton.AddPushButton(rvt_links_hide);
+            info_pullDownButton.AddPushButton(dwg_links_hide);
+
 
         }
     }

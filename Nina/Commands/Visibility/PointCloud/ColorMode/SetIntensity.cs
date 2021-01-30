@@ -8,6 +8,7 @@ using Autodesk.Revit.UI;
 using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Nina.Revit;
+using Logging.Core;
 
 namespace Nina.Visibility
 {
@@ -32,10 +33,31 @@ namespace Nina.Visibility
             Application app = uiApp.Application;
             Document doc = uiDoc.Document;
 
-            PointCloud.SetColorMode(doc, 2);
-            return Result.Succeeded;
-                
-            
+            Log log = new Log
+            {
+                Tool = "Set Color Mode (Intensity)",
+                Document = doc.Title,
+                Revit = commandData.Application.Application.VersionName,
+                UserName = commandData.Application.Application.Username,
+                Nina = Settings.Default.Nina
+            };
+
+            try
+            {
+                PointCloud.SetColorMode(doc, 2);
+            }
+
+            catch (System.Exception exp)
+            {
+                log.Message = exp.Message;
+                log.Exception = exp;
+                return Autodesk.Revit.UI.Result.Failed;
+            }
+
+            Logger.Write(log);
+            return Autodesk.Revit.UI.Result.Succeeded;
+
+
         }
     }
 }

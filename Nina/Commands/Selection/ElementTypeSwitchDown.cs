@@ -2,6 +2,7 @@
 using Autodesk.Revit.UI;
 using Autodesk.Revit.Attributes;
 using Autodesk.Revit.UI.Selection;
+using Logging.Core;
 
 namespace Nina.Selection
 {
@@ -11,22 +12,33 @@ namespace Nina.Selection
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
+            Document doc = commandData.Application.ActiveUIDocument.Document;
+            UIDocument uidoc = commandData.Application.ActiveUIDocument;
+
+            Log log = new Log
+            {
+                Tool = "Switch-down Element Type",
+                Document = doc.Title,
+                Revit = commandData.Application.Application.VersionName,
+                UserName = commandData.Application.Application.Username,
+                Nina = Settings.Default.Nina
+            };
+
             try
             {
-                Document doc = commandData.Application.ActiveUIDocument.Document;
-                UIDocument uidoc = commandData.Application.ActiveUIDocument;
-
-
                 Autodesk.Revit.UI.Selection.Selection selection = uidoc.Selection;
-                //Nina.FamilyType.WallSwitch(uidoc, doc, false);
                 Nina.Revit.Selector.ElementSwitch(uidoc, doc, false);
-                return Autodesk.Revit.UI.Result.Succeeded;
             }
-            catch
+
+            catch(System.Exception exp)
             {
-                message = "Unexpected Exception thrown.";
+                log.Message = exp.Message;
+                log.Exception = exp;
                 return Autodesk.Revit.UI.Result.Failed;
             }
+
+            Logger.Write(log);
+            return Autodesk.Revit.UI.Result.Succeeded;
         }
     }
 }

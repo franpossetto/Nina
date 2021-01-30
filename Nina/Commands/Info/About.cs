@@ -13,7 +13,12 @@ namespace Nina.Info
             {
                 Document doc = commandData.Application.ActiveUIDocument.Document;
                 UIDocument uidoc = commandData.Application.ActiveUIDocument;
-                TaskDialog.Show("Revit Nina Extension", "This page is in progress");
+                TaskDialog taskDialog = new TaskDialog("About")
+                {
+                    MainContent = "Nina for Revit v 1.2.0",
+                };
+
+                taskDialog.Show();
                 return Autodesk.Revit.UI.Result.Succeeded;
             }
             catch

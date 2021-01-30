@@ -8,6 +8,7 @@ using Autodesk.Revit.UI;
 using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Nina.Revit;
+using Logging.Core;
 
 namespace Nina.Visibility
 {
@@ -24,16 +25,29 @@ namespace Nina.Visibility
             Application app = uiApp.Application;
             Document doc = uiDoc.Document;
 
+            Log log = new Log
+            {
+                Tool = "Hide Point Clouds temporary",
+                Document = doc.Title,
+                Revit = commandData.Application.Application.VersionName,
+                UserName = commandData.Application.Application.Username,
+                Nina = Settings.Default.Nina
+            };
+
             try
             {
                 PointCloud.Hide(doc, true);
-                return Result.Succeeded;
             }
-            catch (Exception ex)
+
+            catch (System.Exception exp)
             {
-                message = ex.Message;
-                return Result.Failed;
+                log.Message = exp.Message;
+                log.Exception = exp;
+                return Autodesk.Revit.UI.Result.Failed;
             }
+
+            Logger.Write(log);
+            return Autodesk.Revit.UI.Result.Succeeded;
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Nina.Revit
 {
     public class Links
     {
-        public static void Hide(Document doc)
+        public static void HideRVT(Document doc)
         {
             Categories categories = doc.Settings.Categories;
             BuiltInCategory revitLinkCategory = BuiltInCategory.OST_RvtLinks;
@@ -33,6 +33,23 @@ namespace Nina.Revit
                 {
                     TaskDialog.Show("Exception", e.StackTrace);
                 }
+            }
+        }
+
+        public static void HideCAD(Document doc)
+        {
+           
+            IEnumerable<ImportInstance> cads = new FilteredElementCollector(doc).OfClass(typeof(ImportInstance)).Cast<ImportInstance>().Where(i => i.IsLinked == true);
+
+            Boolean anyHiddenElement = cads.Any(c => c.IsHidden(doc.ActiveView));
+            using (Transaction t = new Transaction(doc, "CADs were hidden"))
+            {
+                FamilyElementVisibility cadVisibility = new FamilyElementVisibility(FamilyElementVisibilityType.ViewSpecific);
+                List<ElementId> cadsId = cads.Select(c => c.Id).ToList();
+                t.Start();
+                    if (anyHiddenElement) doc.ActiveView.UnhideElements(cadsId);
+                    else doc.ActiveView.HideElements(cadsId);
+                t.Commit();
             }
         }
     }

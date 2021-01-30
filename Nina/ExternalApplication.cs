@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 using Autodesk.Revit.UI;
+using Logging.Core;
 using Nina.Revit;
 namespace Nina
 {
@@ -27,7 +28,7 @@ namespace Nina
             PointCloudPanel.Build(application, RIBBON_TAB);
             LinksPanel.Build(application, RIBBON_TAB);
 
-
+        
             return Result.Succeeded;
 
 
