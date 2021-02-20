@@ -53,6 +53,15 @@
     <DebugType>pdbonly</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'R2021|AnyCPU'">
+    <OutputPath>..\..\..\..\..\..\ProgramData\Autodesk\ApplicationPlugins\Nina.bundle\Contents\2021\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;REVIT2021</DefineConstants>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Setup|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\Setup\</OutputPath>
@@ -101,6 +110,14 @@
       <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files\Autodesk\Revit 2020\RevitAPIUI.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="RevitAPI" Condition="'$(Configuration)' == 'R2021'">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files\Autodesk\Revit 2020\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'R2021'">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files\Autodesk\Revit 2020\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -122,6 +139,10 @@
   <ItemGroup>
     <Compile Include="Application\AddinsPanel.cs" />
     <Compile Include="Application\LinksPanel.cs" />
+    <Compile Include="Commands\Config\Config.cs" />
+    <Compile Include="Commands\Config\ConfigUI.xaml.cs">
+      <DependentUpon>ConfigUI.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Commands\Selection\ViewRangeMinor.cs" />
     <Compile Include="Commands\Selection\ViewRangePlus.cs" />
     <Compile Include="Commands\Visibility\HideCADLinks.cs" />
@@ -149,6 +170,7 @@
     <Compile Include="Lib\FamilyType.cs" />
     <Compile Include="ExternalApplication.cs" />
     <Compile Include="Commands\Visibility\PointCloud\Hide.cs" />
+    <Compile Include="Lib\Units.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -239,6 +261,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Commands\Config\ConfigUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Commands\Creation\Batch\WallTypeBatchCreation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -253,6 +279,7 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

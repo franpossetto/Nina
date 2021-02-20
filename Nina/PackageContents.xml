@@ -44,4 +44,14 @@
                     ModuleName="./Contents/2020/Nina.addin"
                     AppDescription="Nina for Revit" />
   </Components>
+  <Components Description="2021">
+    <RuntimeRequirements OS="Win64"
+                         Platform="Revit"
+                         SeriesMin="R2021"
+                         SeriesMax="R2021" />
+    <ComponentEntry AppName="Nina for Revit"
+                    Version="2021"
+                    ModuleName="./Contents/2021/Nina.addin"
+                    AppDescription="Nina for Revit" />
+  </Components>
 </ApplicationPackage>
