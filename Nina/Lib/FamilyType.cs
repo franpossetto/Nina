@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.DB;
+using Autodesk.Revit.DB.Plumbing;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.UI.Selection;
 
@@ -14,6 +15,10 @@ namespace Nina.Revit
     {
         public static void SelectWall(UIDocument uiDoc, Document doc, double measure)
         {
+
+            bool exist = FamilyType.WallTypeExist(doc, measure);
+            if (!exist && Settings.Default.CreateWallType) FamilyType.CreateWall(uiDoc, doc, measure);
+
             ElementClassFilter filter = new ElementClassFilter(typeof(WallType));
             FilteredElementCollector collector = new FilteredElementCollector(doc);
             collector.WherePasses(filter);
@@ -27,29 +32,63 @@ namespace Nina.Revit
                 WallType wt = elements[i] as WallType;
                 double w = wt.Width;
                 double dist = Math.Abs(w - measure);
-                if(i == 0 || dist < min)
+                if (i == 0 || dist < min)
                 {
                     min = dist;
                     wallType = wt;
                 }
             }
 
-            //WallType elementType = collector.Where(e => e.LookupParameter("Width").AsDouble() == measure).FirstOrDefault() as WallType;
-
-
             uiDoc.PostRequestForElementTypePlacement(wallType);
         }
 
         public static void CreateWall(UIDocument uiDoc, Document doc, double measure)
         {
-            //Create wall interface
+            FilteredElementCollector collector = new FilteredElementCollector(doc);
+            ElementClassFilter filter = new ElementClassFilter(typeof(WallType));
+            collector.WherePasses(filter);
 
-            //naming convention
-            //properties
-            //copy from
+            List<WallType> types = collector.Cast<WallType>().ToList();
+            WallType selectedWallType = types.Where(t => t.FamilyName == Settings.Default.WallTypeSelected).FirstOrDefault();
+            if (selectedWallType == null) selectedWallType = types.Where(t => t.FamilyName.Contains("Basic")).FirstOrDefault();
 
-            //Select it.
+            string name = Settings.Default.WallTypePrefix;
+            string m = Units.TransformValueIfNecessary(doc, measure);
+            string newWallTypeName = name + m;
+            using (Transaction t = new Transaction(doc, "Create WallType"))
+            {
+                t.Start();
 
+                WallType newWallType = selectedWallType.Duplicate(newWallTypeName) as WallType;
+                CompoundStructure compoundStructure = newWallType.GetCompoundStructure();
+                int layerIndex = compoundStructure.GetFirstCoreLayerIndex();
+                IList<CompoundStructureLayer> csLayers = compoundStructure.GetLayers();
+                foreach (CompoundStructureLayer csl in csLayers)
+                {
+                    if (csl.Function.ToString() == "Structure")
+                    {
+                        if (csl.Width == newWallType.Width) compoundStructure.SetLayerWidth(layerIndex, measure);
+                        else compoundStructure.SetLayerWidth(layerIndex, measure - (newWallType.Width - csl.Width));
+                    }
+                }
+                newWallType.SetCompoundStructure(compoundStructure);
+                t.Commit();
+            }
+
+        }
+
+        public static bool WallTypeExist(Document doc, double measure)
+        {
+            FilteredElementCollector collector = new FilteredElementCollector(doc);
+            ElementClassFilter filter = new ElementClassFilter(typeof(WallType));
+            collector.WherePasses(filter);
+
+            List<WallType> types = collector.Cast<WallType>().ToList();
+            double tolerance = Settings.Default.Tolerance;
+            double a = UnitUtils.Convert(tolerance, DisplayUnitType.DUT_METERS, DisplayUnitType.DUT_DECIMAL_FEET);
+
+            bool exist = types.Any(w => (w.Width - tolerance) <= measure && (w.Width + tolerance) >= measure);
+            return exist;
         }
 
         public static void WallSwitch(UIDocument uiDoc, Document doc, bool order)
@@ -80,7 +119,7 @@ namespace Nina.Revit
 
 
             Wall wall = element as Wall;
-            WallType elementType = wall.WallType ;
+            WallType elementType = wall.WallType;
             ElementId elementTypeId = elementType.Id;
 
 
@@ -100,7 +139,8 @@ namespace Nina.Revit
 
                     n++;
                 }
-            } else
+            }
+            else
             {
                 foreach (ElementId eid in elementTypesId)
                 {
@@ -114,7 +154,7 @@ namespace Nina.Revit
                     n++;
                 }
             }
-            
+
 
 
             ElementId newSelectedId = elementTypesId.ToList()[index];
@@ -134,7 +174,7 @@ namespace Nina.Revit
                 t.Commit();
             }
 
-            
+
             //uiDoc.PostRequestForElementTypePlacement(selectedElementType);
         }
 
@@ -147,7 +187,7 @@ namespace Nina.Revit
                 .ToElements()
                 .Cast<WallType>();
 
-            
+
 
             using (Transaction t = new Transaction(doc, "Transaction Name"))
             {
@@ -164,9 +204,9 @@ namespace Nina.Revit
                     int layerIndex = compoundStructure.GetFirstCoreLayerIndex();
                     IList<CompoundStructureLayer> csLayers = compoundStructure.GetLayers();
                     double k = 1.0 * i;
-                    foreach(CompoundStructureLayer csl in csLayers)
+                    foreach (CompoundStructureLayer csl in csLayers)
                     {
-                        if(csl.Function.ToString() == "Structure")
+                        if (csl.Function.ToString() == "Structure")
                         {
                             compoundStructure.SetLayerWidth(layerIndex, k);
                         }
@@ -174,13 +214,14 @@ namespace Nina.Revit
                     layerIndex++;
                     newWallType.SetCompoundStructure(compoundStructure);
                 }
-                    
+
                 t.Commit();
             }
 
-           
+
 
         }
 
     }
 }
+

@@ -122,6 +122,10 @@
   <ItemGroup>
     <Compile Include="Application\AddinsPanel.cs" />
     <Compile Include="Application\LinksPanel.cs" />
+    <Compile Include="Commands\Config\Config.cs" />
+    <Compile Include="Commands\Config\ConfigUI.xaml.cs">
+      <DependentUpon>ConfigUI.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Commands\Selection\ViewRangeMinor.cs" />
     <Compile Include="Commands\Selection\ViewRangePlus.cs" />
     <Compile Include="Commands\Visibility\HideCADLinks.cs" />
@@ -149,6 +153,7 @@
     <Compile Include="Lib\FamilyType.cs" />
     <Compile Include="ExternalApplication.cs" />
     <Compile Include="Commands\Visibility\PointCloud\Hide.cs" />
+    <Compile Include="Lib\Units.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -239,6 +244,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Commands\Config\ConfigUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Commands\Creation\Batch\WallTypeBatchCreation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -253,6 +262,7 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
