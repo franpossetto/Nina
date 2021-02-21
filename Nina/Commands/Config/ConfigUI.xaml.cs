@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,8 @@ namespace Nina.Info
         public ConfigUI(Document doc, List<WallType> types)
         {
             InitializeComponent();
+
+            this.Topmost = true;
 
             Checkbox_CreateWallType.IsChecked = Settings.Default.CreateWallType;
 
@@ -55,6 +58,8 @@ namespace Nina.Info
             WallType wallTypeSelected = null;
             List<string> typeNames = types.Select(type => type.Name).ToList();
             ComboBox_WallTypes.ItemsSource = typeNames;
+
+
             wallTypeSelected = types.Where(type => type.Name == Settings.Default.WallTypeSelected).FirstOrDefault();
             if (wallTypeSelected != null) ComboBox_WallTypes.SelectedIndex = (int)typeNames.IndexOf(wallTypeSelected.Name);
             else
@@ -63,6 +68,8 @@ namespace Nina.Info
                 if (wallTypeSelected == null) ComboBox_WallTypes.SelectedIndex = 0;
             }
 
+            if(ComboBox_WallTypes.SelectedIndex == -1) ComboBox_WallTypes.SelectedIndex = 0;
+            
             double ViewRangeStep = Settings.Default.ViewRangeStep;
             if (ViewRangeStep == null || ViewRangeStep < 0) ViewRangeStep = 0.5;
             TextBox_ViewRangeStep.Text = ViewRangeStep.ToString();
@@ -98,11 +105,6 @@ namespace Nina.Info
             this.Close();
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void createWallType_Checked(object sender, RoutedEventArgs e)
         {
             Settings.Default.CreateWallType = true;
@@ -117,6 +119,14 @@ namespace Nina.Info
             TextBox_prefix.IsEnabled = false;
             TextBox_tolerance.IsEnabled = false;
             ComboBox_WallTypes.IsEnabled = false;
+        }
+
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            // for .NET Core you need to add UseShellExecute = true
+            // see https://docs.microsoft.com/dotnet/api/system.diagnostics.processstartinfo.useshellexecute#property-value
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+            e.Handled = true;
         }
     }
 }

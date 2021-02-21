@@ -139,6 +139,7 @@
   <ItemGroup>
     <Compile Include="Application\AddinsPanel.cs" />
     <Compile Include="Application\LinksPanel.cs" />
+    <Compile Include="Application\ViewPanel.cs" />
     <Compile Include="Commands\Config\Config.cs" />
     <Compile Include="Commands\Config\ConfigUI.xaml.cs">
       <DependentUpon>ConfigUI.xaml</DependentUpon>
@@ -146,6 +147,7 @@
     <Compile Include="Commands\Selection\ViewRangeMinor.cs" />
     <Compile Include="Commands\Selection\ViewRangePlus.cs" />
     <Compile Include="Commands\Visibility\HideCADLinks.cs" />
+    <Compile Include="Commands\Visibility\OpenMultipleViews.cs" />
     <Compile Include="Icons.cs" />
     <Compile Include="Commands\Info\About.cs" />
     <Compile Include="Commands\Info\Logs.cs" />
@@ -203,6 +205,7 @@
     </Content>
     <Content Include="PackageContents.xml" />
     <Content Include="prop-cmd.txt" />
+    <None Include="Resources\views.png" />
     <None Include="Resources\track.png" />
     <None Include="Resources\dwg.png" />
     <None Include="Resources\log.png" />

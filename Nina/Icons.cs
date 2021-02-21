@@ -82,5 +82,8 @@ namespace Nina
 
         public static System.Windows.Media.Imaging.BitmapSource track = Ribbon.Icon(Properties.Resources.track);
 
+        public static System.Windows.Media.Imaging.BitmapSource openMultipleViews = Ribbon.Icon(Properties.Resources.views);
+
+
     }
 }

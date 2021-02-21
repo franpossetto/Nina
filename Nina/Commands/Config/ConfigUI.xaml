@@ -21,7 +21,7 @@
             <CheckBox x:Name ="Checkbox_CreateWallType" Content="Create Walltype by tolerance" HorizontalAlignment="Left" Margin="12,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.134,0.167"  Checked="createWallType_Checked" Unchecked="createWallType_Unchecked"/>
         </GroupBox>
         <TextBox x:Name ="TextBox_prefix" Height="24" Margin="28,106,115,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <ComboBox x:Name="ComboBox_WallTypes" Margin="28,169,28,0" VerticalAlignment="Top" Height="24" SelectionChanged="ComboBox_SelectionChanged" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="ComboBox_WallTypes" Margin="28,169,28,0" VerticalAlignment="Top" Height="24" Grid.ColumnSpan="2"/>
         <TextBlock HorizontalAlignment="Left" Margin="28,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2"><Run Text="Select base "/><Run Text="WallT"/><Run Text="ype"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="28,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Prefix" Grid.ColumnSpan="2"/>
         <GroupBox Header="View range" Height="114" VerticalAlignment="Top" Margin="10,241,10,0" Grid.ColumnSpan="2"/>
@@ -29,7 +29,11 @@
         <TextBlock HorizontalAlignment="Left" Margin="21,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="View Range Step" Grid.ColumnSpan="2"/>
         <Button Content="OK" Margin="0,0,115,14" Click="Button_Ok" BorderBrush="#FF0078D7" BorderThickness="2" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="95" Grid.Column="1"/>
         <Button Content="Cancel" Margin="0,0,13,14" Click="Button_Cancel" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="95" Grid.Column="1"/>
-        <TextBlock HorizontalAlignment="Left" Margin="16,0,0,19" TextWrapping="Wrap" Text="Help..." Foreground="#FF0078D7" TextDecorations="Underline" Height="16" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name ="help" HorizontalAlignment="Left" Margin="16,0,0,19" TextWrapping="Wrap" TextDecorations="Underline" Height="16" VerticalAlignment="Bottom">
+            <Hyperlink NavigateUri="https://github.com/franpossetto/Nina/tree/master" RequestNavigate="Hyperlink_RequestNavigate">
+        Help...
+    </Hyperlink>
+        </TextBlock>
         <TextBox x:Name ="TextBox_tolerance" Height="24" Margin="119,106,28,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="119,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Tolerance" Grid.Column="1"/>
 
