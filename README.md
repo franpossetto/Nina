@@ -57,6 +57,8 @@ For correct use, use these commands as keyboard shorcuts. This is my personal co
 |Links|`Show Hide RVT Links`| `hc`|
 |Views|`Open Multiple View(s)`| `om`|
 
+*Before using Open Multiple View(s) as shorcut you have to click some empty space on the Ribbon bar.*
+
 ## Contributions
 - Paloma Wilberger
 - Federico Schmidt
