@@ -3,6 +3,7 @@
 ![Revit API](https://img.shields.io/badge/RevitAPI-2018-blue.svg)
 ![Revit API](https://img.shields.io/badge/RevitAPI-2019-blue.svg)
 ![Revit API](https://img.shields.io/badge/RevitAPI-2020-blue.svg)
+![Revit API](https://img.shields.io/badge/RevitAPI-2021-blue.svg)
 
 Most of this work was done on Sunday mornings with [Nina](Nina.png).
 
@@ -22,8 +23,8 @@ Change selected types quickly. The order of the Types is the same you see in the
 ### 2. View Range (+) and View Range (-)
 Modify the view range in the active view.
 
-### 3. Type Selector by dimension
-WalType and PipeType By Dimension.
+### 3. WallType Selector by dimension
+This tool allows users to select WallTypes by drawing a dimension. The dimension will be compared with every WallType Width, by selecting the one that is most similar.
 
 ### 4. Show / Hide Point Clouds
 Show or Hide point clouds in the current view.
@@ -37,8 +38,10 @@ Show or Hide RVT links in the current view.
 ### 7. Show / Hide DWG Links
 Show or Hide DWG links in the current view.
 
+### 8. Open Multiple View(s)
+Open one or multiple views doing the selection from the Project Browser.
 
-## Recommentation
+### Recommentation
 For correct use, use these commands as keyboard shorcuts. This is my personal configuration:
 
 |Panel| Tool | Shortcut  | 
@@ -52,6 +55,7 @@ For correct use, use these commands as keyboard shorcuts. This is my personal co
 |Point Clouds|`Color Mode: Set Normals`| `nn`|
 |Links|`Show Hide RVT Links`| `hk`|
 |Links|`Show Hide RVT Links`| `hc`|
+|Views|`Open Multiple View(s)`| `om`|
 
 ## Contributions
 - Paloma Wilberger
