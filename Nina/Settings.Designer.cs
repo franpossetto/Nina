@@ -37,13 +37,73 @@ namespace Nina {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1.2.0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1.3.0")]
         public string Nina {
             get {
                 return ((string)(this["Nina"]));
             }
             set {
                 this["Nina"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool CreateWallType {
+            get {
+                return ((bool)(this["CreateWallType"]));
+            }
+            set {
+                this["CreateWallType"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Nina_")]
+        public string WallTypePrefix {
+            get {
+                return ((string)(this["WallTypePrefix"]));
+            }
+            set {
+                this["WallTypePrefix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public double ViewRangeStep {
+            get {
+                return ((double)(this["ViewRangeStep"]));
+            }
+            set {
+                this["ViewRangeStep"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string WallTypeSelected {
+            get {
+                return ((string)(this["WallTypeSelected"]));
+            }
+            set {
+                this["WallTypeSelected"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public double Tolerance {
+            get {
+                return ((double)(this["Tolerance"]));
+            }
+            set {
+                this["Tolerance"] = value;
             }
         }
     }
