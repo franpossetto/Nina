@@ -8,7 +8,7 @@
 Most of this work was done on Sunday mornings with [Nina](Nina.png).
 
 ## Installation
-Run the file [Nina.msi](https://github.com/franpossetto/Nina/releases/tag/v1.2) provided in this repository.
+Run the file [Nina.msi](https://github.com/fpossetto/Nina/releases/latest/download/Nina.msi) provided in this repository.
 
 ## Overview
 
