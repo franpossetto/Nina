@@ -26,5 +26,38 @@ namespace Nina.Revit
                 }
             }
         }
+
+        public static void OpenFromViewPort(Document doc, UIDocument uiDoc, List<ElementId> viewPortIds)
+        {
+            foreach (ElementId id in viewPortIds)
+            {
+                try
+                {
+                    Viewport viewport = doc.GetElement(id) as Viewport;
+                    ElementId viewId = viewport.ViewId;
+                    View view = doc.GetElement(viewId) as View;
+                    uiDoc.RequestViewChange(view);
+                }
+                catch
+                {
+                    // cannot do it.
+                }
+            }
+        }
+
+        public static void OpenActiveView(Document doc, UIDocument uiDoc, View activeView)
+        {
+            try
+            {
+                Element e = new FilteredElementCollector(doc).OfClass(typeof(View)).WhereElementIsNotElementType().ToElements().FirstOrDefault();
+                View v = e as View;
+                uiDoc.RequestViewChange(v);
+                uiDoc.RequestViewChange(activeView);
+            }
+            catch
+            {
+                // cannot do it.
+            }
+        }
     }
 }

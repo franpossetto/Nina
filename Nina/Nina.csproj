@@ -148,6 +148,7 @@
     <Compile Include="Commands\Selection\ViewRangePlus.cs" />
     <Compile Include="Commands\Visibility\HideCADLinks.cs" />
     <Compile Include="Commands\Visibility\OpenMultipleViews.cs" />
+    <Compile Include="Commands\Visibility\OpenViewFromViewPort.cs" />
     <Compile Include="Icons.cs" />
     <Compile Include="Commands\Info\About.cs" />
     <Compile Include="Commands\Info\Logs.cs" />
