@@ -36,7 +36,7 @@ namespace Nina.Visibility
             try
             {
                 Autodesk.Revit.UI.Selection.Selection selection = uiDoc.Selection;
-                List<ElementId> viewPortIds = selection.GetElementIds().ToList();
+                ICollection<ElementId> viewPortIds = selection.GetElementIds();
 
                 Nina.Revit.Views.OpenFromViewPort(doc, uiDoc, viewPortIds);
             }

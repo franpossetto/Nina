@@ -39,18 +39,18 @@ namespace Nina.Info
             TextBox_tolerance.Text = wallTypeTolerance.ToString();
 
             if (wallTypePrefix == null) wallTypePrefix = "Ninin";
-            TextBox_prefix.Text = wallTypePrefix;
+            WallTypeName.Text = wallTypePrefix;
 
 
             if (Checkbox_CreateWallType.IsChecked == true)
             {
-                TextBox_prefix.IsEnabled = true;
+                WallTypeName.IsEnabled = true;
                 TextBox_tolerance.IsEnabled = true;
                 ComboBox_WallTypes.IsEnabled = true;
             }
             else
             {
-                TextBox_prefix.IsEnabled = false;
+                WallTypeName.IsEnabled = false;
                 TextBox_tolerance.IsEnabled = false;
                 ComboBox_WallTypes.IsEnabled = false;
             }
@@ -69,7 +69,8 @@ namespace Nina.Info
             }
 
             if(ComboBox_WallTypes.SelectedIndex == -1) ComboBox_WallTypes.SelectedIndex = 0;
-            
+
+            Checkbox_ViewRangeTopBottom.IsChecked = Settings.Default.ViewRangeTopBottom;
             double ViewRangeStep = Settings.Default.ViewRangeStep;
             if (ViewRangeStep == null || ViewRangeStep < 0) ViewRangeStep = 0.5;
             TextBox_ViewRangeStep.Text = ViewRangeStep.ToString();
@@ -78,6 +79,16 @@ namespace Nina.Info
         private void Button_Ok(object sender, RoutedEventArgs e)
         {
             Settings.Default.WallTypeSelected = ComboBox_WallTypes.SelectedItem as string;
+
+            try
+            {
+                Settings.Default.WallTypePrefix = WallTypeName.Text;
+            }
+            catch (Exception ex)
+            {
+                // write the error here    
+            } // Save Wall type selected
+
             try
             {
                 Settings.Default.Tolerance = Convert.ToDouble(TextBox_tolerance.Text);
@@ -85,7 +96,7 @@ namespace Nina.Info
             catch (Exception ex)
             {
                 // write the error here    
-            }
+            } // Save Wall type selected
 
             try
             {
@@ -94,7 +105,25 @@ namespace Nina.Info
             catch (Exception ex)
             {
                 // write the error here    
+            } // Save View Range Step
+
+            try
+            {
+                Settings.Default.ViewRangeTopBottom = (bool) Checkbox_ViewRangeTopBottom.IsChecked;
             }
+            catch (Exception ex)
+            {
+                // write the error here    
+            } // Move View Range Top and Bottom
+
+            try
+            {
+                Settings.Default.CreateWallType = (bool)Checkbox_CreateWallType.IsChecked;
+            }
+            catch (Exception ex)
+            {
+                // write the error here    
+            } // Create Wall Type
 
             Settings.Default.Save();
             this.Close();
@@ -108,7 +137,7 @@ namespace Nina.Info
         private void createWallType_Checked(object sender, RoutedEventArgs e)
         {
             Settings.Default.CreateWallType = true;
-            TextBox_prefix.IsEnabled = true;
+            WallTypeName.IsEnabled = true;
             TextBox_tolerance.IsEnabled = true;
             ComboBox_WallTypes.IsEnabled = true;
         }
@@ -116,17 +145,26 @@ namespace Nina.Info
         private void createWallType_Unchecked(object sender, RoutedEventArgs e)
         {
             Settings.Default.CreateWallType = false;
-            TextBox_prefix.IsEnabled = false;
+            WallTypeName.IsEnabled = false;
             TextBox_tolerance.IsEnabled = false;
             ComboBox_WallTypes.IsEnabled = false;
         }
 
+        private void MoveTopBottom_Checked(object sender, RoutedEventArgs e)
+        {
+            Settings.Default.ViewRangeTopBottom = true;
+        }
+
+        private void MoveTopBottom_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Settings.Default.CreateWallType = false;
+        }
+
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
-            // for .NET Core you need to add UseShellExecute = true
-            // see https://docs.microsoft.com/dotnet/api/system.diagnostics.processstartinfo.useshellexecute#property-value
             Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
             e.Handled = true;
         }
+
     }
 }

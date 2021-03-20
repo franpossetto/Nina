@@ -31,11 +31,18 @@ namespace Nina.Selection
                 ViewPlan viewPlan = activeView as ViewPlan;
                 PlanViewRange viewRange = viewPlan.GetViewRange();
 
-                double currentOffset = viewRange.GetOffset(PlanViewPlane.CutPlane);
+                double currentOffsetCutPlane = viewRange.GetOffset(PlanViewPlane.CutPlane);
+                double currentOffsetBottom = viewRange.GetOffset(PlanViewPlane.BottomClipPlane);
+                double currentOffsetTop = viewRange.GetOffset(PlanViewPlane.TopClipPlane);
+
                 double offsetValue = 1;
 
-                if ((currentOffset + offsetValue) < viewRange.GetOffset(PlanViewPlane.TopClipPlane))
-                    viewRange.SetOffset(PlanViewPlane.CutPlane, (currentOffset + offsetValue));
+                if (Settings.Default.ViewRangeTopBottom)
+                {
+                    viewRange.SetOffset(PlanViewPlane.CutPlane, (currentOffsetCutPlane + offsetValue));
+                    viewRange.SetOffset(PlanViewPlane.TopClipPlane, (currentOffsetTop + offsetValue));
+                    viewRange.SetOffset(PlanViewPlane.BottomClipPlane, (currentOffsetBottom + offsetValue));
+                } else if (!Settings.Default.ViewRangeTopBottom && (currentOffsetCutPlane + offsetValue) < viewRange.GetOffset(PlanViewPlane.TopClipPlane)) viewRange.SetOffset(PlanViewPlane.CutPlane, (currentOffsetCutPlane + offsetValue));
                 else
                     TaskDialog.Show("Revit Nina Extension", "Top Clip plane is set below te cut plane");
 

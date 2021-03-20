@@ -27,7 +27,7 @@ namespace Nina.Revit
             }
         }
 
-        public static void OpenFromViewPort(Document doc, UIDocument uiDoc, List<ElementId> viewPortIds)
+        public static void OpenFromViewPort(Document doc, UIDocument uiDoc, ICollection<ElementId> viewPortIds)
         {
             foreach (ElementId id in viewPortIds)
             {
