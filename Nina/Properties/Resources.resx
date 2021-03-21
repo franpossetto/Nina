@@ -253,4 +253,28 @@
   <data name="views" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\views.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="open_multiple_views" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\open-multiple-views.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="open_viewport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\open-viewport.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wall_by_dim" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wall-by-dim.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wall_by_dim2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wall-by-dim2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wall_by_dim3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wall-by-dim3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wall_by_dim4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wall-by-dim4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wall_by_dim5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wall-by-dim5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

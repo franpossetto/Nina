@@ -12,11 +12,11 @@ namespace Nina
         public static void Build(UIControlledApplication application, string tabName)
         {
 
-            RibbonPanel selectionPanel = Ribbon.CreateRibbonPanel(application, "Type Selector and View Range ", tabName);
+            RibbonPanel selectionPanel = Ribbon.CreateRibbonPanel(application, "Type Selector", tabName);
 
             PushButtonData wall_byDimension_data = Ribbon
                 .CreatePushButtonData("wall_byDimension", // button name
-                                      "WallType by Dimension", // name in Revit UI
+                                      "WallType\nby Dim", // name in Revit UI
                                       "Nina.Selection.WallByDimension"); //cmd
 
             //PushButtonData pipe_byDimension_data = Ribbon
@@ -45,38 +45,19 @@ namespace Nina
                                      "Nina.Selection.SelectAllAnnotationElements");
 
 
-            PushButtonData viewrange_plus_data = Ribbon
-               .CreatePushButtonData("viewrange_plus", // button name
-                                     "View Range up", // name in Revit UI
-                                     "Nina.Selection.ViewRangePlus"); //cmd
-
-            PushButtonData viewrange_minor_data = Ribbon
-                .CreatePushButtonData("viewrange_down",
-                                      "View Range down",
-                                      "Nina.Selection.ViewRangeMinor");
+            
 
             //Panel Selection
-            PulldownButtonData elementByDimension_data = new PulldownButtonData("byDimension", "Type by dimension");
+            PulldownButtonData elementByDimension_data = new PulldownButtonData("byDimension", "WallType by dimension");
 
             PushButton switchup_button = selectionPanel.AddItem(elementType_switch_up_data) as PushButton;
             PushButton switchdown_button = selectionPanel.AddItem(elementType_switch_down_data) as PushButton;
+            PushButton WallByDimension_button = selectionPanel.AddItem(wall_byDimension_data) as PushButton;
 
             switchup_button.LargeImage = Icons.switchdown_30;
             switchdown_button.LargeImage = Icons.switchup_30;
-            selectionPanel.AddSeparator();
-            viewrange_plus_data.Image = Icons.viewrange_plus_16;
-            viewrange_minor_data.Image = Icons.viewrange_minor_16;
-            wall_byDimension_data.Image = Icons.byDimension_16;
+            WallByDimension_button.LargeImage = Icons.wallbydim;
 
-            IList<RibbonItem> revitselector_button = selectionPanel.AddStackedItems(viewrange_plus_data,
-                                                                                    viewrange_minor_data,
-                                                                                    wall_byDimension_data
-                                                                                    );
-
-
-            //PulldownButton elementByDimension_pulldownbutton = revitselector_button[2] as PulldownButton;
-            //elementByDimension_pulldownbutton.AddPushButton(wall_byDimension_data);
-            //elementByDimension_pulldownbutton.Image = Icons.byDimension_16;
         }
     }
 }
