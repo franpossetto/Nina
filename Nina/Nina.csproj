@@ -206,6 +206,12 @@
     </Content>
     <Content Include="PackageContents.xml" />
     <Content Include="prop-cmd.txt" />
+    <None Include="Resources\wall-by-dim11.png" />
+    <None Include="Resources\wall-by-dim10.png" />
+    <None Include="Resources\wall-by-dim9.png" />
+    <None Include="Resources\wall-by-dim8.png" />
+    <None Include="Resources\wall-by-dim7.png" />
+    <None Include="Resources\wall-by-dim6.png" />
     <None Include="Resources\wall-by-dim5.png" />
     <None Include="Resources\wall-by-dim5.gif" />
     <None Include="Resources\wall-by-dim4.png" />

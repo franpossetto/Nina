@@ -277,4 +277,22 @@
   <data name="wall_by_dim5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wall-by-dim5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="wall_by_dim10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wall-by-dim10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wall_by_dim11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wall-by-dim11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wall_by_dim6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wall-by-dim6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wall_by_dim7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wall-by-dim7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wall_by_dim8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wall-by-dim8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wall_by_dim9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wall-by-dim9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

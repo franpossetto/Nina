@@ -39,11 +39,11 @@ namespace Nina
             
 
 
-            PulldownButtonData actions_pulldownbutton_data = new PulldownButtonData("viewActions", "Open Views");
+            PulldownButtonData actions_pulldownbutton_data = new PulldownButtonData("viewActions", "Open views");
 
             viewrange_plus_data.Image = Icons.viewrange_plus_16;
             viewrange_minor_data.Image = Icons.viewrange_minor_16;
-            actions_pulldownbutton_data.Image = Icons.actions;
+            actions_pulldownbutton_data.Image = Icons.openViewport;
 
             IList<RibbonItem> view_actions = viewPanel.AddStackedItems(viewrange_plus_data,
                                                                                viewrange_minor_data,

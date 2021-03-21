@@ -513,6 +513,26 @@ namespace Nina.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap wall_by_dim10 {
+            get {
+                object obj = ResourceManager.GetObject("wall_by_dim10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wall_by_dim11 {
+            get {
+                object obj = ResourceManager.GetObject("wall_by_dim11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap wall_by_dim2 {
             get {
                 object obj = ResourceManager.GetObject("wall_by_dim2", resourceCulture);
@@ -546,6 +566,46 @@ namespace Nina.Properties {
         internal static System.Drawing.Bitmap wall_by_dim5 {
             get {
                 object obj = ResourceManager.GetObject("wall_by_dim5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wall_by_dim6 {
+            get {
+                object obj = ResourceManager.GetObject("wall_by_dim6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wall_by_dim7 {
+            get {
+                object obj = ResourceManager.GetObject("wall_by_dim7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wall_by_dim8 {
+            get {
+                object obj = ResourceManager.GetObject("wall_by_dim8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wall_by_dim9 {
+            get {
+                object obj = ResourceManager.GetObject("wall_by_dim9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

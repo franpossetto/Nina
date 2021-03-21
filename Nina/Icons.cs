@@ -87,7 +87,7 @@ namespace Nina
 
         public static System.Windows.Media.Imaging.BitmapSource openViewport = Ribbon.Icon(Properties.Resources.open_viewport);
 
-        public static System.Windows.Media.Imaging.BitmapSource wallbydim = Ribbon.Icon(Properties.Resources.wall_by_dim3);
+        public static System.Windows.Media.Imaging.BitmapSource wallbydim = Ribbon.Icon(Properties.Resources.wall_by_dim11);
 
         public static System.Windows.Media.Imaging.BitmapSource actions = Ribbon.Icon(Properties.Resources.star_16);
 
