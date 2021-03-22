@@ -533,6 +533,16 @@ namespace Nina.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap wall_by_dim12 {
+            get {
+                object obj = ResourceManager.GetObject("wall_by_dim12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap wall_by_dim2 {
             get {
                 object obj = ResourceManager.GetObject("wall_by_dim2", resourceCulture);
