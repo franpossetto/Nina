@@ -7144,70 +7144,6 @@
                 }
             }
         }
-        "Revit2021"
-        {
-        "DisplayName" = "8:Revit2021"
-        "IsDebugOnly" = "11:FALSE"
-        "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Revit2021\\Setup.msi"
-        "PackageFilesAs" = "3:2"
-        "PackageFileSize" = "3:-2147483648"
-        "CabType" = "3:1"
-        "Compression" = "3:2"
-        "SignOutput" = "11:FALSE"
-        "CertificateFile" = "8:"
-        "PrivateKeyFile" = "8:"
-        "TimeStampServer" = "8:"
-        "InstallerBootstrapper" = "3:2"
-            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
-            {
-            "Enabled" = "11:TRUE"
-            "PromptEnabled" = "11:TRUE"
-            "PrerequisitesLocation" = "2:1"
-            "Url" = "8:"
-            "ComponentsUrl" = "8:"
-                "Items"
-                {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
-                    {
-                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
-                    }
-                }
-            }
-        }
-        "Setup"
-        {
-        "DisplayName" = "8:Setup"
-        "IsDebugOnly" = "11:FALSE"
-        "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Setup\\Setup.msi"
-        "PackageFilesAs" = "3:2"
-        "PackageFileSize" = "3:-2147483648"
-        "CabType" = "3:1"
-        "Compression" = "3:2"
-        "SignOutput" = "11:FALSE"
-        "CertificateFile" = "8:"
-        "PrivateKeyFile" = "8:"
-        "TimeStampServer" = "8:"
-        "InstallerBootstrapper" = "3:2"
-            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
-            {
-            "Enabled" = "11:TRUE"
-            "PromptEnabled" = "11:TRUE"
-            "PrerequisitesLocation" = "2:1"
-            "Url" = "8:"
-            "ComponentsUrl" = "8:"
-                "Items"
-                {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
-                    {
-                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
-                    }
-                }
-            }
-        }
     }
     "Deployable"
     {
@@ -12837,15 +12773,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Nina"
-        "ProductCode" = "8:{A43B1E4D-8B4A-4B37-92C5-28C68D47B970}"
-        "PackageCode" = "8:{BC60C0A9-D905-4A1F-A8AA-689BAAD7EDEA}"
+        "ProductCode" = "8:{EC994DBB-800C-4ED4-9E42-174BC2927C6A}"
+        "PackageCode" = "8:{FF2A09C1-E7C8-45E2-B523-72AF416FBF1A}"
         "UpgradeCode" = "8:{C5102866-23FF-4EC2-B050-06185169D198}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.3.0"
+        "ProductVersion" = "8:1.4.1"
         "Manufacturer" = "8:Nina"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -12859,7 +12795,7 @@
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
-        "TargetPlatform" = "3:0"
+        "TargetPlatform" = "3:1"
         "PreBuildEvent" = "8:"
         "PostBuildEvent" = "8:"
         "RunPostBuildEvent" = "3:0"
@@ -13324,7 +13260,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_300350BCD9E84AEFB0D9E8CCD0535D83"
             {
-            "SourcePath" = "8:..\\Nina\\obj\\R2018\\Nina.dll"
+            "SourcePath" = "8:..\\Nina\\obj\\R2021\\Nina.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_F8195823E6AD46169B9CB74B448508D4"
@@ -13352,7 +13288,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3ECB85A0944A45A893E0EC93EFD2A234"
             {
-            "SourcePath" = "8:..\\Nina\\obj\\R2018\\Nina.dll"
+            "SourcePath" = "8:..\\Nina\\obj\\R2021\\Nina.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3A63AFCC6EEE4189974FCA79E6DAB42F"
@@ -13380,7 +13316,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_463EAA4021A64983B0D055839C5DA1F4"
             {
-            "SourcePath" = "8:..\\Nina\\obj\\R2018\\Nina.dll"
+            "SourcePath" = "8:..\\Nina\\obj\\R2021\\Nina.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_EBEA2C0D119D48209A2E9DA468361EC5"
@@ -13520,7 +13456,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_F4AC8C285E25411EB63AF5AB57956111"
             {
-            "SourcePath" = "8:..\\Nina\\obj\\R2018\\Nina.dll"
+            "SourcePath" = "8:..\\Nina\\obj\\R2021\\Nina.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3999F2FC38EE416EBC9C4E55094BFA78"

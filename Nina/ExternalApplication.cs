@@ -25,7 +25,7 @@ namespace Nina
             Ribbon.CreateRibbonTab(application, RIBBON_TAB);
             NinaPanel.Build(application,RIBBON_TAB);
             SelectionPanel.Build(application, RIBBON_TAB);
-            Nina.Views.Build(application, RIBBON_TAB);
+            Views.Build(application, RIBBON_TAB);
             PointCloudPanel.Build(application, RIBBON_TAB);
             LinksPanel.Build(application, RIBBON_TAB);
 
