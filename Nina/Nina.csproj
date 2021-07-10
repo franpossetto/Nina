@@ -45,7 +45,7 @@
     <LangVersion>default</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'R2020|AnyCPU'">
-    <OutputPath>..\..\..\..\..\..\ProgramData\Autodesk\ApplicationPlugins\Nina.bundle\Contents\2020\</OutputPath>
+    <OutputPath>bin\R2020\</OutputPath>
     <DefineConstants>TRACE;DEBUG;REVIT2020</DefineConstants>
     <PlatformTarget>x64</PlatformTarget>
     <LangVersion>7.3</LangVersion>
