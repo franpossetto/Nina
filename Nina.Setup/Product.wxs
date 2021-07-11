@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="Nina.Setup" Language="1033" Version="1.0.0.0" Manufacturer="" UpgradeCode="09f9b530-be4d-4c07-a09f-afe9cd4d865a">
-		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
-		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
-		<MediaTemplate />
+  <?if $(var.Platform)=x64?>
+  <?define ProductCode = "{0D6D13AD-E7E9-4D38-8058-ECA9034CA1D7}"?>
+  <?else?>
+  <?define ProductCode ="{5C76D420-90CB-4211-9BA4-7AA1443DEB9A}"?>
+  <?endif?>
 
-		<Feature Id="ProductFeature" Title="Nina.Setup" Level="1">
-			<ComponentGroupRef Id="ProductComponents" />
-		</Feature>
-	</Product>
+  <?define buildVersion = 1.0.0.0?>
+  <?define UpgradeCode ="{5C76D420-90CB-4211-9BA4-7AA1443DEB9A}"?>
 
-	<Fragment>
-		<Directory Id="TARGETDIR" Name="SourceDir">
-			<Directory Id="ProgramFilesFolder">
-				<Directory Id="INSTALLFOLDER" Name="Nina.Setup" />
-			</Directory>
-		</Directory>
-	</Fragment>
+  <Product Id="$(var.ProductCode)"
+				 Name="!(loc.ProductName_$(var.Platform))"
+				 Language="!(loc.Language)"
+         Version="$(var.buildVersion)"
+         Manufacturer="!(loc.CompanyName)"
+         UpgradeCode="$(var.UpgradeCode)"
+>
+    <Package InstallerVersion="200"
+             Compressed="yes"
+             InstallScope="perMachine"
+             Manufacturer ="!(loc.CompanyName)"
+             Description ="!(loc.Description)"
+             Keywords ="!(loc.Keywords)"
+             Languages ="!(loc.Language)"/>
 
-	<Fragment>
-		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
-			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
-			<!-- <Component Id="ProductComponent"> -->
-				<!-- TODO: Insert files, registry keys, and other resources here. -->
-			<!-- </Component> -->
-		</ComponentGroup>
-	</Fragment>
+    <MajorUpgrade DowngradeErrorMessage="A newer version of !(loc.ProductName_) is already installed." />
+    <MediaTemplate
+      EmbedCab ="yes"
+    />
+    <Feature Id="ProductFeature" Title="ProductName_ Setup" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+    </Feature>
+  </Product>
 </Wix>

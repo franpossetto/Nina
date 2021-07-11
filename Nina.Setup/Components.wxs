@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <?define bin2018Path = ..\Nina\bin\R2018\?>
+    <?define bin2019Path = ..\Nina\bin\R2019\?>
+    <?define bin2020Path = ..\Nina\bin\R2020\?>
+    <?define bin2021Path = ..\Nina\bin\R2021\?>
+
+    <ComponentGroup Id="ProductComponents">
+
+      <ComponentRef Id="RevitAddin_2018"></ComponentRef>
+      <ComponentRef Id="RevitAddin_2019"></ComponentRef>
+      <ComponentRef Id="RevitAddin_2020"></ComponentRef>
+      <ComponentRef Id="RevitAddin_2021"></ComponentRef>
+
+      <ComponentRef Id="NinaDll2018"></ComponentRef>
+      <ComponentRef Id="NinaDll2019"></ComponentRef>
+      <ComponentRef Id="NinaDll2020"></ComponentRef>
+      <ComponentRef Id="NinaDll2021"></ComponentRef>
+
+      <ComponentRef Id="RevitDllConfig_2018"></ComponentRef>
+      <ComponentRef Id="RevitDllConfig_2019"></ComponentRef>
+      <ComponentRef Id="RevitDllConfig_2020"></ComponentRef>
+      <ComponentRef Id="RevitDllConfig_2021"></ComponentRef>
+
+      <ComponentRef Id="NinaLoggingDll2018"></ComponentRef>
+      <ComponentRef Id="NinaLoggingDll2019"></ComponentRef>
+      <ComponentRef Id="NinaLoggingDll2020"></ComponentRef>
+      <ComponentRef Id="NinaLoggingDll2021"></ComponentRef>
+
+      <ComponentRef Id="SerilogDll_2018"></ComponentRef>
+      <ComponentRef Id="SerilogSinksFileDll_2018"></ComponentRef>
+      <ComponentRef Id="SerilogDll_2019"></ComponentRef>
+      <ComponentRef Id="SerilogSinksFileDll_2019"></ComponentRef>
+      <ComponentRef Id="SerilogDll_2020"></ComponentRef>
+      <ComponentRef Id="SerilogSinksFileDll_2020"></ComponentRef>
+      <ComponentRef Id="SerilogDll_2021"></ComponentRef>
+      <ComponentRef Id="SerilogSinksFileDll_2021"></ComponentRef>
+
+      <ComponentRef Id="PkgContents"></ComponentRef>
+
+    </ComponentGroup>
+    <DirectoryRef Id ="R2018FOLDER" FileSource="$(var.bin2018Path)">
+      <Component Id="RevitAddin_2018" Guid="{A3638DD8-E4E7-4376-9B70-46B634D0ECAF}">
+        <File Id="RevitAddinFile_2018" Name="Nina.addin" />
+      </Component>
+      <Component Id="NinaDll2018" Guid="{2EDD6C5A-4A86-44AF-A71E-084373B1CE9E}">
+        <File Id="NinaDllFile_2018" Name="Nina.dll" />
+      </Component>
+      <Component Id="RevitDllConfig_2018" Guid="{AAAA0F3A-BFB4-4F74-A448-EBBCE4FCB901}">
+        <File Id="RevitDllConfigFile_2018" Name="Nina.dll.config" />
+      </Component>
+      <Component Id="NinaLoggingDll2018" Guid="{20481389-5EDE-40B6-A172-E9E77333222A}">
+        <File Id="NinaLoggingDllFile_2018" Name="Nina.Logging.dll" />
+      </Component>
+      <Component Id="SerilogDll_2018" Guid="{DEF38B3E-CCF4-46A6-9CDE-05B0920DEAFF}">
+        <File Id="SerilogDllFile_2018" Name="Serilog.dll" />
+      </Component>
+      <Component Id="SerilogSinksFileDll_2018" Guid="{0734505C-C68A-433C-B2E8-3BA6A7FFF717}">
+        <File Id="SerilogSinksFileDllFile_2018" Name="Serilog.Sinks.File.dll" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id ="R2019FOLDER" FileSource="$(var.bin2019Path)">
+      <Component Id="RevitAddin_2019" Guid="{48C8AB31-6256-4EF4-92A5-D3FEB09BFD31}">
+        <File Id="RevitAddinFile_2019" Name="Nina.addin" />
+      </Component>
+      <Component Id="NinaDll2019" Guid="{471B07BB-E876-4F34-BA2E-98C2B722A8C9}">
+        <File Id="NinaDllFile_2019" Name="Nina.dll" />
+      </Component>
+      <Component Id="RevitDllConfig_2019" Guid="{FA0FC8EE-62D1-4308-9389-522B2004108D}">
+        <File Id="RevitDllConfigFile_2019" Name="Nina.dll.config" />
+      </Component>
+      <Component Id="NinaLoggingDll2019" Guid="{B4F5E55C-CF94-4BF8-B1E1-1865011853DB}">
+        <File Id="NinaLoggingDllFile_2019" Name="Nina.Logging.dll" />
+      </Component>
+      <Component Id="SerilogDll_2019" Guid="{D4B92E3E-5379-4261-9E38-B013832A5840}">
+        <File Id="SerilogDllFile_2019" Name="Serilog.dll" />
+      </Component>
+      <Component Id="SerilogSinksFileDll_2019" Guid="{082FA575-00E2-4B13-B64C-2D493C3DC15E}">
+        <File Id="SerilogSinksFileDllFile_2019" Name="Serilog.Sinks.File.dll" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id ="R2020FOLDER" FileSource="$(var.bin2020Path)">
+      <Component Id="RevitAddin_2020" Guid="{F48D6EDF-D776-4DB8-8643-44A81A6AEBFB}">
+        <File Id="RevitAddinFile_2020" Name="Nina.addin" />
+      </Component>
+      <Component Id="NinaDll2020" Guid="{515DD51C-5E2B-4FA9-9B49-B223AAB2198C}">
+        <File Id="NinaDllFile_2020" Name="Nina.dll" />
+      </Component>
+      <Component Id="RevitDllConfig_2020" Guid="{5C7AC620-5F8D-4978-83E8-D4C08E6FACF1}">
+        <File Id="RevitDllConfigFile_2020" Name="Nina.dll.config" />
+      </Component>
+      <Component Id="NinaLoggingDll2020" Guid="{27BF834F-8C62-40CA-B574-015B13542BC9}">
+        <File Id="NinaLoggingDllFile_2020" Name="Nina.Logging.dll" />
+      </Component>
+      <Component Id="SerilogDll_2020" Guid="{49DC45B6-9C59-46D0-8FF9-3B2C86879AEB}">
+        <File Id="SerilogDllFile_2020" Name="Serilog.dll" />
+      </Component>
+      <Component Id="SerilogSinksFileDll_2020" Guid="{2CD74885-305F-4001-9C97-D37D826CBB8C}">
+        <File Id="SerilogSinksFileDllFile_2020" Name="Serilog.Sinks.File.dll" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id ="R2021FOLDER" FileSource="$(var.bin2021Path)">
+      <Component Id="RevitAddin_2021" Guid="{99B41979-8BBB-4702-8A8E-CC52D2370515}">
+        <File Id="RevitAddinFile_2021" Name="Nina.addin" />
+      </Component>
+      <Component Id="NinaDll2021" Guid="{5FDFB035-F453-4D5E-A78B-5BF8A777C1D1}">
+        <File Id="NinaDllFile_2021" Name="Nina.dll" />
+      </Component>
+      <Component Id="RevitDllConfig_2021" Guid="{637A5747-F71B-4323-A483-EFE5DA900900}">
+        <File Id="RevitDllConfigFile_2021" Name="Nina.dll.config" />
+      </Component>
+      <Component Id="NinaLoggingDll2021" Guid="{ED93ACF6-A22F-4EC5-8289-64B28FF5D35B}">
+        <File Id="NinaLoggingDllFile_2021" Name="Nina.Logging.dll" />
+      </Component>
+      <Component Id="SerilogDll_2021" Guid="{978ACA7C-8D52-4859-AF4F-811754CCF719}">
+        <File Id="SerilogDllFile_2021" Name="Serilog.dll" />
+      </Component>
+      <Component Id="SerilogSinksFileDll_2021" Guid="{E7622DBC-D03B-4911-95EB-4A75C8FB389F}">
+        <File Id="SerilogSinksFileDllFile_2021" Name="Serilog.Sinks.File.dll" />
+      </Component>
+    </DirectoryRef>
+    <!--<DirectoryRef Id ="R2022FOLDER" FileSource="$(var.bin2022Path)">
+      <Component Id="RevitAddin_2022" Guid="{437DF36D-7902-4A10-8AF4-0A4F873503F9}">
+        <File Id="RevitAddinFile_2022" Name="Nina.addin" />
+      </Component>
+      <Component Id="NinaDll2022" Guid="{8D7F159E-DEF0-4531-8623-AF9EC9E7B5C3}">
+        <File Id="NinaDllFile_2022" Name="Nina.dll" />
+      </Component>
+      <Component Id="RevitDllConfig_2022" Guid="{A7291395-7093-4E55-9386-A1E9A6FF3FC4}">
+        <File Id="RevitDllConfigFile_2022" Name="Nina.dll.config" />
+      </Component>
+    </DirectoryRef>-->
+      <DirectoryRef Id ="ADDINFOLDER" FileSource="$(var.Nina.ProjectDir)">
+        <Component Id="PkgContents" Guid="{FB373D20-7F54-4A03-9A3F-DF7665DAA23A}">
+          <File Id="PkgContentsFile" Name="PackageContents.xml" />
+        </Component>
+      </DirectoryRef>
+  </Fragment>
+</Wix>
