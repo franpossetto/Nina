@@ -7,7 +7,7 @@
   <?define ProductCode ="{5C76D420-90CB-4211-9BA4-7AA1443DEB9A}"?>
   <?endif?>
 
-  <?define buildVersion = 1.0.0.0?>
+  <?define buildVersion = 1.4.2.0?>
   <?define UpgradeCode ="{5C76D420-90CB-4211-9BA4-7AA1443DEB9A}"?>
 
   <Product Id="$(var.ProductCode)"
