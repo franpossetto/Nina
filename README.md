@@ -41,7 +41,7 @@ Show or Hide DWG links in the current view.
 ### 8. Open Multiple View(s)
 Open one or multiple views doing the selection from the Project Browser.
 
-### Recommentation
+### Recommendation
 For correct use, use these commands as keyboard shorcuts. This is my personal configuration:
 
 |Panel| Tool | Shortcut  | 
