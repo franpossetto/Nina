@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>d0407110-0248-4bb3-a50c-7be272db42b3</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Nina.Ribbon</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ExternalApplication.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tabs\AddinsPanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tabs\LinksPanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tabs\NinaPanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tabs\PointCloudPanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tabs\SelectionPanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tabs\ViewPanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Ribbon.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\nina_view_range_plus_16.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\nina_view_range_minor_16.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\nina_color_mode_30.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\nina_show_hide_point_cloud_30.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\nina_info_30.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\nina_hide_links_30.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\nina_open_multiple_views_16.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\nina_open_multiple_views_from_viewport_16.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\nina_settings_30.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\nina_actions_16.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\nina_wall_by_dimension_30.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\nina_wall_switch_down_30.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\nina_wall_switch_up_30.png" />
+  </ItemGroup>
+</Project>
