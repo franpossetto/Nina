@@ -15,6 +15,10 @@ Run the file [Nina.msi](https://github.com/franpossetto/Nina/releases/latest/dow
 A collection of tiny tools to work faster in Revit.
 Most of these commands are availables in Revit but as options in second windows. As they are actions that the users repeats very often, the goal is to be able to access them quickly, using keyboard shorcuts.
 
+## Development
+
+This project is developed using [Revit API Extension](https://github.com/franpossetto/RevitAPIExtension). Both projects feed back to each other. Every feature on [Revit API Extension](https://github.com/franpossetto/RevitAPIExtension) is (normally) a pattern extracted from [Nina](https://github.com/franpossetto/Nina). 
+
 ## Tools
 
 ### 1. Type up and Type down
@@ -62,3 +66,5 @@ For correct use, use these commands as keyboard shorcuts. This is my personal co
 ## Contributions
 - Paloma Wilberger
 - Federico Schmidt
+- Exer Romero
+- [Jean Marc Couffin](https://github.com/jmcouffin)
