@@ -19,11 +19,11 @@ namespace Nina.Tabs
             info_button.LargeImage = Ribbon.GetIcon("nina_info_30");
 
             PushButtonData about_button = Ribbon
-                .CreatePushButtonData("about", "About", "Nina.Info.About");
+                .CreatePushButtonData("about", "About", "Nina.Common.About");
             PushButtonData repo_button = Ribbon
-                .CreatePushButtonData("github", "Github Repository", "Nina.Info.Github");
+                .CreatePushButtonData("github", "Github Repository", "Nina.Common.Github");
             PushButtonData logs_button = Ribbon
-                .CreatePushButtonData("logs", "Logs", "Nina.Info.Logs");
+                .CreatePushButtonData("logs", "Logs", "Nina.Common.Logs");
 
             PulldownButton info_pullDownButton = ninaPanel.AddItem(info_button) as PulldownButton;
             info_pullDownButton.AddPushButton(about_button);

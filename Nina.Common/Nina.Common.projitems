@@ -8,4 +8,9 @@
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>Nina.Common</Import_RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Github.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)About.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logs.cs" />
+  </ItemGroup>
 </Project>
