@@ -21,14 +21,35 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nina.R2018", "Nina.R2018\Ni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nina.R2017", "Nina.R2017\Nina.R2017.csproj", "{115F6477-2CAC-4BF5-B7A6-BA77086A5573}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Nina.Visibility", "Nina.Visibility\Nina.Visibility.shproj", "{69F27C35-99DB-4218-86FA-C56E3CB8DF86}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Nina.Common\Nina.Common.projitems*{115f6477-2cac-4bf5-b7a6-ba77086a5573}*SharedItemsImports = 4
+		Nina.Ribbon\Nina.Ribbon.projitems*{115f6477-2cac-4bf5-b7a6-ba77086a5573}*SharedItemsImports = 4
+		Nina.Visibility\Nina.Visibility.projitems*{115f6477-2cac-4bf5-b7a6-ba77086a5573}*SharedItemsImports = 4
 		Nina.Common\Nina.Common.projitems*{2d838553-d6a4-4f38-8369-4232d7cba9a1}*SharedItemsImports = 13
+		Nina.Common\Nina.Common.projitems*{40303a00-f9fa-49c1-bb31-bc5cc5de7f7f}*SharedItemsImports = 4
+		Nina.Ribbon\Nina.Ribbon.projitems*{40303a00-f9fa-49c1-bb31-bc5cc5de7f7f}*SharedItemsImports = 4
+		Nina.Visibility\Nina.Visibility.projitems*{40303a00-f9fa-49c1-bb31-bc5cc5de7f7f}*SharedItemsImports = 4
 		Nina.Common\Nina.Common.projitems*{41715ff6-b8f0-4b59-bc88-98d00244df92}*SharedItemsImports = 4
 		Nina.Ribbon\Nina.Ribbon.projitems*{41715ff6-b8f0-4b59-bc88-98d00244df92}*SharedItemsImports = 4
+		Nina.Visibility\Nina.Visibility.projitems*{41715ff6-b8f0-4b59-bc88-98d00244df92}*SharedItemsImports = 4
 		Nina\Nina.projitems*{41715ff6-b8f0-4b59-bc88-98d00244df92}*SharedItemsImports = 4
 		Nina\Nina.projitems*{5063b465-5bec-495a-92b6-304f7f094475}*SharedItemsImports = 13
+		Nina.Visibility\Nina.Visibility.projitems*{69f27c35-99db-4218-86fa-c56e3cb8df86}*SharedItemsImports = 13
+		Nina.Common\Nina.Common.projitems*{af077125-ed5a-43d0-8c65-57f83fb837f6}*SharedItemsImports = 4
+		Nina.Ribbon\Nina.Ribbon.projitems*{af077125-ed5a-43d0-8c65-57f83fb837f6}*SharedItemsImports = 4
+		Nina.Visibility\Nina.Visibility.projitems*{af077125-ed5a-43d0-8c65-57f83fb837f6}*SharedItemsImports = 4
+		Nina\Nina.projitems*{af077125-ed5a-43d0-8c65-57f83fb837f6}*SharedItemsImports = 4
 		Nina.Ribbon\Nina.Ribbon.projitems*{d0407110-0248-4bb3-a50c-7be272db42b3}*SharedItemsImports = 13
+		Nina.Common\Nina.Common.projitems*{da685808-e83e-40bc-bb9d-f0dcd072727f}*SharedItemsImports = 4
+		Nina.Ribbon\Nina.Ribbon.projitems*{da685808-e83e-40bc-bb9d-f0dcd072727f}*SharedItemsImports = 4
+		Nina.Visibility\Nina.Visibility.projitems*{da685808-e83e-40bc-bb9d-f0dcd072727f}*SharedItemsImports = 4
+		Nina\Nina.projitems*{da685808-e83e-40bc-bb9d-f0dcd072727f}*SharedItemsImports = 4
+		Nina.Common\Nina.Common.projitems*{e72eb623-16a7-4a68-bc8a-62ccbe8550bf}*SharedItemsImports = 4
+		Nina.Ribbon\Nina.Ribbon.projitems*{e72eb623-16a7-4a68-bc8a-62ccbe8550bf}*SharedItemsImports = 4
+		Nina.Visibility\Nina.Visibility.projitems*{e72eb623-16a7-4a68-bc8a-62ccbe8550bf}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

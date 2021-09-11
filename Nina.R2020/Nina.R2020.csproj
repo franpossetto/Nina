@@ -74,5 +74,6 @@
   <Import Project="..\Nina.Ribbon\Nina.Ribbon.projitems" Label="Shared" />
   <Import Project="..\Nina.Common\Nina.Common.projitems" Label="Shared" />
   <Import Project="..\Nina\Nina.projitems" Label="Shared" />
+  <Import Project="..\Nina.Visibility\Nina.Visibility.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
