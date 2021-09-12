@@ -3,16 +3,17 @@
   <PropertyGroup>
     <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>69f27c35-99db-4218-86fa-c56e3cb8df86</SharedGUID>
+    <SharedGUID>2543cbbe-2002-452d-b8e2-77fe6c95823c</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>Nina.Visibility</Import_RootNamespace>
+    <Import_RootNamespace>Nina.Selection</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)HideCADLinks.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)HideRVTLinks.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ElementTypeSwitchDown.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ElementTypeSwitchUp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\ElementTypeSelector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\WallFamilyType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewRangeMinor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewRangePlus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WallByDimension.cs" />
   </ItemGroup>
 </Project>

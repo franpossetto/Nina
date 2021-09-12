@@ -12,5 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Github.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)About.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Logs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Settings\Preferences.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Settings\Settings.cs" />
   </ItemGroup>
 </Project>
