@@ -9,10 +9,20 @@
     <Import_RootNamespace>Nina.Common</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Config\Config.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Config\Config.xaml.cs">
+      <DependentUpon>Config.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Github.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)About.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Logs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Settings\Preferences.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Settings\Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Config\Config.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>
