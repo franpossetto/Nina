@@ -17,7 +17,7 @@ namespace Nina.Common
 
         public Preferences()
         {
-            Nina = "";
+            Nina = "Nina_";
             LogDirectory = "";
             CreateWallType = false;
             WallTypePrefix = "";

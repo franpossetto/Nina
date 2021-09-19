@@ -33,13 +33,13 @@ namespace Nina.Tabs
             PushButtonData viewrange_plus_data = Ribbon
                   .CreatePushButtonData("viewrange_plus",
                                         "View Range up",
-                                        "Nina.Selection.ViewRangePlus");
+                                        "Nina.Visibility.ViewRangePlus");
 
 
             PushButtonData viewrange_minor_data = Ribbon
                   .CreatePushButtonData("viewrange_down",
                                         "View Range down",
-                                        "Nina.Selection.ViewRangeMinor");
+                                        "Nina.Visibility.ViewRangeMinor");
 
 
 

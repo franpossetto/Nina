@@ -7,7 +7,7 @@ using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.UI.Selection;
 
-namespace Nina.Info
+namespace Nina.Common
 {
     [Transaction(TransactionMode.Manual)]
     public class Logs : IExternalCommand
@@ -17,8 +17,12 @@ namespace Nina.Info
             UIApplication uiApp = commandData.Application;
             UIDocument uiDoc = uiApp.ActiveUIDocument;
             Document doc = uiDoc.Document;
+       
 
             return Result.Succeeded;
         }
     }
+
+   
+
 }

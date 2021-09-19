@@ -1,7 +1,6 @@
 ﻿using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.Attributes;
-using Autodesk.Revit.UI.Selection;
 
 namespace Nina.Selection
 {
@@ -16,18 +15,15 @@ namespace Nina.Selection
             try
             {
                 Autodesk.Revit.UI.Selection.Selection selection = uidoc.Selection;
-                //Nina.FamilyType.WallSwitch(uidoc, doc, true);
                 Utils.ElementSwitch(uidoc, doc, true);
             }
 
             catch (System.Exception exp)
             {
-
                 return Autodesk.Revit.UI.Result.Failed;
             }
 
             return Autodesk.Revit.UI.Result.Succeeded;
-
         }
     }
 }

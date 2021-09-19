@@ -5,6 +5,7 @@ using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using System.Text.RegularExpressions;
 using Nina.Selection.Model;
+using Settings = Nina.Common.Settings;
 
 namespace Nina.Selection
 {
@@ -170,6 +171,87 @@ namespace Nina.Selection
                 t.Commit();
             }
         }
+        public static void SelectWall(UIDocument uiDoc, Document doc, double measure)
+        {
 
+            bool exist = WallTypeExist(doc, measure);
+            if (!exist && Settings.Preferences.CreateWallType) CreateWall(uiDoc, doc, measure);
+
+            ElementClassFilter filter = new ElementClassFilter(typeof(WallType));
+            FilteredElementCollector collector = new FilteredElementCollector(doc);
+            collector.WherePasses(filter);
+
+            IList<Element> elements = collector.ToElements();
+            WallType wallType = null;
+            double min = 0;
+            //Get Family Type door from ribbon
+            for (int i = 0; i < elements.Count(); i++)
+            {
+                WallType wt = elements[i] as WallType;
+                double w = wt.Width;
+                double dist = Math.Abs(w - measure);
+                if (i == 0 || dist < min)
+                {
+                    min = dist;
+                    wallType = wt;
+                }
+            }
+
+            uiDoc.PostRequestForElementTypePlacement(wallType);
+        }
+        public static void CreateWall(UIDocument uiDoc, Document doc, double measure)
+        {
+            FilteredElementCollector collector = new FilteredElementCollector(doc);
+            ElementClassFilter filter = new ElementClassFilter(typeof(WallType));
+            collector.WherePasses(filter);
+
+            List<WallType> types = collector.Cast<WallType>().ToList();
+            WallType selectedWallType = types.Where(t => t.FamilyName == Settings.Preferences.WallTypeSelected).FirstOrDefault();
+            if (selectedWallType == null) selectedWallType = types.Where(t => t.FamilyName.Contains("Basic")).FirstOrDefault();
+
+            string name = Settings.Preferences.WallTypePrefix;
+            string m = Units.TransformValueIfNecessary(doc, measure);
+            string newWallTypeName = name + m;
+            using (Transaction t = new Transaction(doc, "Create WallType"))
+            {
+                t.Start();
+
+                WallType newWallType = selectedWallType.Duplicate(newWallTypeName) as WallType;
+                CompoundStructure compoundStructure = newWallType.GetCompoundStructure();
+                int layerIndex = compoundStructure.GetFirstCoreLayerIndex();
+                IList<CompoundStructureLayer> csLayers = compoundStructure.GetLayers();
+                foreach (CompoundStructureLayer csl in csLayers)
+                {
+                    if (csl.Function.ToString() == "Structure")
+                    {
+                        if (csl.Width == newWallType.Width) compoundStructure.SetLayerWidth(layerIndex, measure);
+                        else compoundStructure.SetLayerWidth(layerIndex, measure - (newWallType.Width - csl.Width));
+                    }
+                }
+                newWallType.SetCompoundStructure(compoundStructure);
+                t.Commit();
+            }
+
+        }
+        public static bool WallTypeExist(Document doc, double measure)
+        {
+            FilteredElementCollector collector = new FilteredElementCollector(doc);
+            ElementClassFilter filter = new ElementClassFilter(typeof(WallType));
+            collector.WherePasses(filter);
+
+            List<WallType> types = collector.Cast<WallType>().ToList();
+            double tolerance = Settings.Preferences.Tolerance;
+
+#if R2017 || R2018 || R2019 || R2020
+            double a = UnitUtils.Convert(tolerance, DisplayUnitType.DUT_METERS, DisplayUnitType.DUT_DECIMAL_FEET);
+#endif
+
+#if R2021 || R2022
+                double a = UnitUtils.Convert(tolerance, UnitTypeId.Meters, UnitTypeId.Feet);
+#endif
+
+            bool exist = types.Any(w => (w.Width - tolerance) <= measure && (w.Width + tolerance) >= measure);
+            return exist;
+        }
     }
 }

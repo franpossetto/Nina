@@ -21,7 +21,7 @@ namespace Nina.Selection
 
                 double distance = p1.DistanceTo(p2);
 
-                Nina.FamilyType.SelectWall(uidoc, doc, distance);
+                Utils.SelectWall(uidoc, doc, distance);
 
             }
 

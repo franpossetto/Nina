@@ -16,42 +16,33 @@ namespace Nina.Tabs
             PushButtonData pointcloud_fixedColor_data = Ribbon
                 .CreatePushButtonData("pointcloud_fixedColor",
                                       "Set Fixed Color",
-                                      "Nina.Visibility.SetFixedColor");
+                                      "Nina.PointCloud.ColorMode.SetFixedColor");
 
             PushButtonData pointcloud_intensity_data = Ribbon
                 .CreatePushButtonData("pointcloud_intensity",
                                       "Set Intensity",
-                                      "Nina.Visibility.SetIntensity");
+                                      "Nina.PointCloud.ColorMode.SetIntensity");
 
             PushButtonData pointcloud_noOverride_data = Ribbon
                 .CreatePushButtonData("pointcloud_noOverride",
                                       "Set No Override",
-                                      "Nina.Visibility.SetNoOverride");
+                                      "Nina.PointCloud.ColorMode.SetNoOverride");
 
             PushButtonData pointcloud_normals_data = Ribbon
                 .CreatePushButtonData("pointcloud_normals",
                                       "Set Normals",
-                                      "Nina.Visibility.SetNormals");
+                                      "Nina.PointCloud.ColorMode.SetNormals");
 
             PushButtonData pointcloud_elevation_data = Ribbon
                 .CreatePushButtonData("pointcloud_elevation",
                                       "Set Elevation",
-                                      "Nina.Visibility.SetElevation");
+                                      "Nina.PointCloud.ColorMode.SetElevation");
 
             PushButtonData pointCloud_show_data = Ribbon
                 .CreatePushButtonData("pointcloud_show",
                                       "Show\nHide",
-                                      "Nina.Visibility.Hide");
+                                      "Nina.PointCloud.Hide");
 
-            PushButtonData links_show_data = Ribbon
-                .CreatePushButtonData("links_show",
-                                      "Show/Hide \n Revit Links",
-                                      "Nina.Visibility.HideRevitLinks");
-
-            PushButtonData viewrange_up_data = Ribbon
-                .CreatePushButtonData("viewrange_up",
-                                      "View Range up",
-                                      "Nina.Visibility.HideRevitLinks");
 
             PushButton showPointCloud = visibilityPanel.AddItem(pointCloud_show_data) as PushButton;
             showPointCloud.LargeImage = Ribbon.GetIcon("nina_show_hide_point_cloud_30");

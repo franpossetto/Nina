@@ -9,7 +9,6 @@
     <Import_RootNamespace>Nina</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)FamilyType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unit.cs" />
   </ItemGroup>
 </Project>

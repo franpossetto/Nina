@@ -13,6 +13,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)ElementTypeSwitchUp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\ElementTypeSelector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\WallFamilyType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SetSectionBox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SwitchLocationLine.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WallByDimension.cs" />
   </ItemGroup>

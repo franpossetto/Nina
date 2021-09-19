@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>5ef3e22a-e720-4b48-b02e-87337d610be9</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Nina.PointCloud</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ColorMode\SetElevation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ColorMode\SetFixedColor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ColorMode\SetIntensity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ColorMode\SetNoOverride.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ColorMode\SetNormals.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Hide.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Isolate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils.cs" />
+  </ItemGroup>
+</Project>

@@ -23,20 +23,16 @@ namespace Nina.Common
             }
         }
         private static Preferences _Preferences { get; set; }
-        
-        public static string Path { get; } = GetPath();
-  
+
+        public static string Path { get; } = @"C:\Nina\nina_settings.json";
+
+
         public static void Init()
         {
             if (File.Exists(Path)) _Preferences = new Preferences(JsonConvert.DeserializeObject<Preferences>(File.ReadAllText(Path)));
             else Preferences = new Preferences();
         }
         public static void Save() => File.WriteAllText(Path, JsonConvert.SerializeObject(_Preferences));
-
-        public static string GetPath()
-        {
-            return Assembly.GetExecutingAssembly().Location;
-        }
     }
     
 }

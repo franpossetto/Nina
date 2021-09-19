@@ -29,15 +29,15 @@ namespace Nina.Tabs
                                       "Type\ndown",
                                       "Nina.Selection.SwitchDown");
 
-            PushButtonData select_all_model_elements_data = Ribbon
-                .CreatePushButtonData("model_elements_active_view",
-                                      "Model Elements in active view",
-                                      "Nina.Selection.SelectAllModelElements");
+            //PushButtonData select_all_model_elements_data = Ribbon
+            //    .CreatePushButtonData("model_elements_active_view",
+            //                          "Model Elements in active view",
+            //                          "Nina.Selection.SelectAllModelElements");
 
-            PushButtonData select_all_anno_elements_data = Ribbon.
-                CreatePushButtonData("anno_elements_active_view",
-                                     "Annotative Elements in active view",
-                                     "Nina.Selection.SelectAllAnnotationElements");
+            //PushButtonData select_all_anno_elements_data = Ribbon.
+            //    CreatePushButtonData("anno_elements_active_view",
+            //                         "Annotative Elements in active view",
+            //                         "Nina.Selection.SelectAllAnnotationElements");
 
 
             //Panel Selection

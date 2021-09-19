@@ -24,7 +24,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE;R2019</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -82,5 +82,6 @@
   <Import Project="..\Nina.Visibility\Nina.Visibility.projitems" Label="Shared" />
   <Import Project="..\Nina.Selection\Nina.Selection.projitems" Label="Shared" />
   <Import Project="..\Nina\Nina.projitems" Label="Shared" />
+  <Import Project="..\Nina.PointCloud\Nina.PointCloud.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

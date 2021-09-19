@@ -1,53 +1,17 @@
-﻿using Autodesk.Revit.DB;
-using Autodesk.Revit.DB.PointClouds;
-using Autodesk.Revit.UI;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Text;
+using Autodesk.Revit.DB;
+using Autodesk.Revit.UI;
+using Autodesk.Revit.ApplicationServices;
+using Autodesk.Revit.Attributes;
+using Autodesk.Revit.DB.PointClouds;
 using System.Linq;
 
-namespace Nina.Visibility
+namespace Nina.PointCloud
 {
     public class Utils
     {
-        public static void HideRVT(Document doc)
-        {
-            Categories categories = doc.Settings.Categories;
-            Category linkCategory = categories.get_Item(BuiltInCategory.OST_RvtLinks);
-            View activeView = doc.ActiveView;
-
-            bool hide = activeView.GetCategoryHidden(linkCategory.Id) ? false : true;
-            PointCloudOverrides pc_ovverides = activeView.GetPointCloudOverrides();
-
-            using (Transaction t = new Transaction(doc, "Point Clouds were hidden"))
-            {
-                try
-                {
-                    t.Start();
-                    activeView.SetCategoryHidden(linkCategory.Id, hide);
-                    t.Commit();
-                }
-                catch (Exception e)
-                {
-                    TaskDialog.Show("Exception", e.StackTrace);
-                }
-            }
-        }
-        public static void HideCAD(Document doc)
-        {
-
-            IEnumerable<ImportInstance> cads = new FilteredElementCollector(doc).OfClass(typeof(ImportInstance)).Cast<ImportInstance>().Where(i => i.IsLinked == true);
-
-            Boolean anyHiddenElement = cads.Any(c => c.IsHidden(doc.ActiveView));
-            using (Transaction t = new Transaction(doc, "CADs were hidden"))
-            {
-                FamilyElementVisibility cadVisibility = new FamilyElementVisibility(FamilyElementVisibilityType.ViewSpecific);
-                List<ElementId> cadsId = cads.Select(c => c.Id).ToList();
-                t.Start();
-                if (anyHiddenElement) doc.ActiveView.UnhideElements(cadsId);
-                else doc.ActiveView.HideElements(cadsId);
-                t.Commit();
-            }
-        }
         public static void SetColorMode(Document doc, int colorMode)
         {
             //add selection
@@ -103,5 +67,63 @@ namespace Nina.Visibility
                 }
             }
         }
+
+        public static void Hide(Document doc, bool temp)
+        {
+            Categories categories = doc.Settings.Categories;
+            Category pointCloudCategory = categories.get_Item(BuiltInCategory.OST_PointClouds);
+            View activeView = doc.ActiveView;
+
+            bool hide = activeView.GetCategoryHidden(pointCloudCategory.Id) ? false : true;
+            PointCloudOverrides pc_ovverides = activeView.GetPointCloudOverrides();
+
+            using (Transaction t = new Transaction(doc, "Point Clouds were hidden"))
+            {
+                try
+                {
+                    if (!temp && activeView.ViewTemplateId == ElementId.InvalidElementId)
+                    {
+                        t.Start();
+                        activeView.SetCategoryHidden(pointCloudCategory.Id, hide);
+                        t.Commit();
+                    }
+                    else if (!temp && activeView.ViewTemplateId != ElementId.InvalidElementId)
+                        TaskDialog.Show("Hide Point Clouds", "To use this tool, disable the View Template in the Active View");
+
+                    else if (temp && hide)
+                    {
+                        t.Start();
+                        activeView.HideCategoryTemporary(pointCloudCategory.Id);
+                        t.Commit();
+                    }
+                    else { }
+
+                }
+                catch (Exception e)
+                {
+                    TaskDialog.Show("Exception", e.StackTrace);
+                }
+            }
+        }
+
+        public static void Isolate(Document doc)
+        {
+            Categories categories = doc.Settings.Categories;
+            Category pointCloudCategory = categories.get_Item(BuiltInCategory.OST_PointClouds);
+            View activeView = doc.ActiveView;
+
+
+            using (Transaction t = new Transaction(doc, "Isolate Point clouds"))
+            {
+                t.Start();
+                    if(!activeView.IsTemporaryHideIsolateActive()) activeView.IsolateCategoryTemporary(pointCloudCategory.Id);
+                t.Commit();
+            }
+
+        }
+    
+    
+    
+    
     }
 }
