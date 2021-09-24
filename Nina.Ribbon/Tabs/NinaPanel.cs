@@ -18,17 +18,31 @@ namespace Nina.Tabs
             PulldownButtonData info_button = new PulldownButtonData("info", "Info");
             info_button.LargeImage = Ribbon.GetIcon("nina_info_30");
 
-            PushButtonData about_button = Ribbon
+            PushButtonData about_button_data = Ribbon
                 .CreatePushButtonData("about", "About", "Nina.Common.About");
-            PushButtonData repo_button = Ribbon
+
+            about_button_data.LongDescription = "Put the long description here";
+            about_button_data.ToolTip = "Put the Tooltip here";
+            // about_button_data.ToolTipImage = 
+
+            PushButtonData repo_button_data = Ribbon
                 .CreatePushButtonData("github", "Github Repository", "Nina.Common.Github");
-            PushButtonData logs_button = Ribbon
+
+            repo_button_data.LongDescription = "Put the long description here";
+            repo_button_data.ToolTip = "Put the Tooltip here";
+            // repo_button_data.ToolTipImage = 
+
+            PushButtonData logs_button_data = Ribbon
                 .CreatePushButtonData("logs", "Logs", "Nina.Common.Logs");
 
+            logs_button_data.LongDescription = "Put the long description here";
+            logs_button_data.ToolTip = "Put the Tooltip here";
+            // logs_button_data.ToolTipImage = 
+
             PulldownButton info_pullDownButton = ninaPanel.AddItem(info_button) as PulldownButton;
-            info_pullDownButton.AddPushButton(about_button);
-            info_pullDownButton.AddPushButton(repo_button);
-            info_pullDownButton.AddPushButton(logs_button);
+            info_pullDownButton.AddPushButton(about_button_data);
+            info_pullDownButton.AddPushButton(repo_button_data);
+            info_pullDownButton.AddPushButton(logs_button_data);
 
             #endregion
 

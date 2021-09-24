@@ -17,17 +17,29 @@ namespace Nina.Tabs
             PushButtonData wall_byDimension_data = Ribbon
                 .CreatePushButtonData("wall_byDimension", 
                                       "WallType\nby Dim", 
-                                      "Nina.Selection.WallByDimension"); 
+                                      "Nina.Selection.WallByDimension");
+
+            wall_byDimension_data.LongDescription = "Put the long description here";
+            wall_byDimension_data.ToolTip = "Put the Tooltip here";
+            // wall_byDimension_data.ToolTipImage = 
 
             PushButtonData elementType_switch_up_data = Ribbon
                 .CreatePushButtonData("type_switch_up",
                                       "Type\nup",
                                       "Nina.Selection.SwitchUp");
 
+            elementType_switch_up_data.LongDescription = "Put the long description here";
+            elementType_switch_up_data.ToolTip = "Put the Tooltip here";
+            // elementType_switch_up_data.ToolTipImage = 
+
             PushButtonData elementType_switch_down_data = Ribbon
                 .CreatePushButtonData("type_switch_down",
                                       "Type\ndown",
                                       "Nina.Selection.SwitchDown");
+
+            elementType_switch_down_data.LongDescription = "Put the long description here";
+            elementType_switch_down_data.ToolTip = "Put the Tooltip here";
+            // elementType_switch_down_data.ToolTipImage = 
 
             //PushButtonData select_all_model_elements_data = Ribbon
             //    .CreatePushButtonData("model_elements_active_view",

@@ -13,43 +13,70 @@ namespace Nina.Tabs
         {
             RibbonPanel visibilityPanel = Ribbon.CreateRibbonPanel(application, "Point Cloud ", tabName);
 
-            PushButtonData pointCloud_isolate = Ribbon
+            PushButtonData pointCloud_isolate_data = Ribbon
                 .CreatePushButtonData("pointcloud_isolate",
                                       "Isolate ",
                                       "Nina.PointCloud.Isolate");
+
+            pointCloud_isolate_data.LongDescription = "Put the long description here";
+            pointCloud_isolate_data.ToolTip = "Put the Tooltip here";
+            // pointCloud_isolate_data.ToolTipImage = 
 
             PushButtonData pointCloud_show_data = Ribbon
                 .CreatePushButtonData("pointcloud_show",
                                       "Show\nHide",
                                       "Nina.PointCloud.Hide");
 
+            pointCloud_show_data.LongDescription = "Put the long description here";
+            pointCloud_show_data.ToolTip = "Put the Tooltip here";
+            // pointCloud_show_data.ToolTipImage = 
+
             PushButtonData pointcloud_fixedColor_data = Ribbon
                 .CreatePushButtonData("pointcloud_fixedColor",
                                       "Set Fixed Color",
                                       "Nina.PointCloud.ColorMode.SetFixedColor");
+
+            pointcloud_fixedColor_data.LongDescription = "Put the long description here";
+            pointcloud_fixedColor_data.ToolTip = "Put the Tooltip here";
+            // pointcloud_fixedColor_data.ToolTipImage = 
 
             PushButtonData pointcloud_intensity_data = Ribbon
                 .CreatePushButtonData("pointcloud_intensity",
                                       "Set Intensity",
                                       "Nina.PointCloud.ColorMode.SetIntensity");
 
+            pointcloud_intensity_data.LongDescription = "Put the long description here";
+            pointcloud_intensity_data.ToolTip = "Put the Tooltip here";
+            // pointcloud_intensity_data.ToolTipImage = 
+
             PushButtonData pointcloud_noOverride_data = Ribbon
                 .CreatePushButtonData("pointcloud_noOverride",
                                       "Set No Override",
                                       "Nina.PointCloud.ColorMode.SetNoOverride");
+
+            pointcloud_noOverride_data.LongDescription = "Put the long description here";
+            pointcloud_noOverride_data.ToolTip = "Put the Tooltip here";
+            // pointcloud_noOverride_data.ToolTipImage = 
 
             PushButtonData pointcloud_normals_data = Ribbon
                 .CreatePushButtonData("pointcloud_normals",
                                       "Set Normals",
                                       "Nina.PointCloud.ColorMode.SetNormals");
 
+            pointcloud_normals_data.LongDescription = "Put the long description here";
+            pointcloud_normals_data.ToolTip = "Put the Tooltip here";
+            // pointcloud_normals_data.ToolTipImage = 
+
             PushButtonData pointcloud_elevation_data = Ribbon
                 .CreatePushButtonData("pointcloud_elevation",
                                       "Set Elevation",
                                       "Nina.PointCloud.ColorMode.SetElevation");
 
+            pointcloud_elevation_data.LongDescription = "Put the long description here";
+            pointcloud_elevation_data.ToolTip = "Put the Tooltip here";
+            // pointcloud_elevation_data.ToolTipImage = 
 
-            PushButton pointCloudIsolate = visibilityPanel.AddItem(pointCloud_isolate) as PushButton;
+            PushButton pointCloudIsolate = visibilityPanel.AddItem(pointCloud_isolate_data) as PushButton;
             pointCloudIsolate.LargeImage = Ribbon.GetIcon("nina_point_cloud_isolate_30");
 
             PushButton showPointCloud = visibilityPanel.AddItem(pointCloud_show_data) as PushButton;
