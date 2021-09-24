@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationPackage SchemaVersion="1.0"
+                    AutodeskProduct="Revit"
+                    ProductType="Application"
+                    Name="Nina for Revit"
+                    AppVersion="1.2.0.0"
+                    Description="Productivity tools for Revit"
+                    Author="Francisco Possetto"
+                    Icon=""
+                    AppNameSpace=""
+                    OnlineDocumentation=""
+                    HelpFile=""
+                    ProductCode=""
+                    UpgradeCode=""
+                    SupportedLocales="Enu"
+                    FriendlyVersion="1.0.0.0">
+  <Components Description="2017">
+    <RuntimeRequirements OS="Win64"
+                         Platform="Revit"
+                         SeriesMin="R2017"
+                         SeriesMax="R2017" />
+    <ComponentEntry AppName="Nina for Revit"
+                    Version="2017"
+                    ModuleName="./Contents/2017/Nina.R2017.addin"
+                    AppDescription="Nina for Revit" />
+  </Components>
+  <Components Description="2018">
+    <RuntimeRequirements OS="Win64"
+                         Platform="Revit"
+                         SeriesMin="R2018"
+                         SeriesMax="R2018" />
+    <ComponentEntry AppName="Nina for Revit"
+                    Version="2018"
+                    ModuleName="./Contents/Nina.R2018/Nina.R2018.addin"
+                    AppDescription="Nina for Revit" />
+  </Components>
+  <Components Description="2019">
+    <RuntimeRequirements OS="Win64"
+                         Platform="Revit"
+                         SeriesMin="R2019"
+                         SeriesMax="R2019" />
+    <ComponentEntry AppName="RNina for Revit"
+                    Version="2019"
+                    ModuleName="./Contents/Nina.R2019/Nina.R2019.addin"
+                    AppDescription="Nina for Revit" />
+  </Components>
+  <Components Description="2020">
+    <RuntimeRequirements OS="Win64"
+                         Platform="Revit"
+                         SeriesMin="R2020"
+                         SeriesMax="R2020" />
+    <ComponentEntry AppName="Nina for Revit"
+                    Version="2020"
+                    ModuleName="./Contents/Nina.R2020/Nina.R2020.addin"
+                    AppDescription="Nina for Revit" />
+  </Components>
+  <Components Description="2021">
+    <RuntimeRequirements OS="Win64"
+                         Platform="Revit"
+                         SeriesMin="R2021"
+                         SeriesMax="R2021" />
+    <ComponentEntry AppName="Nina for Revit"
+                    Version="2021"
+                    ModuleName="./Contents/Nina.R2021/Nina.R2021.addin"
+                    AppDescription="Nina for Revit" />
+  </Components>
+  <Components Description="2022">
+    <RuntimeRequirements OS="Win64"
+                         Platform="Revit"
+                         SeriesMin="R2022"
+                         SeriesMax="R2022" />
+    <ComponentEntry AppName="Nina for Revit"
+                    Version="2022"
+                    ModuleName="./Contents/Nina.R2022/Nina.R2022.addin"
+                    AppDescription="Nina for Revit" />
+  </Components>
+</ApplicationPackage>

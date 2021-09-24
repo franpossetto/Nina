@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <RevitAddIns>
   <AddIn Type="Application">
-    <Name>Nina Revit Addin</Name>
+    <Name>Nina for Revit</Name>
     <FullClassName>Nina.Ribbon.ExternalApplication</FullClassName>
     <Text>Nina</Text>
-    <Description>Nina Revit Addin</Description>
+    <Description>Nina for Revit</Description>
     <VisibilityMode>AlwaysVisible</VisibilityMode>
     <Assembly>Nina.R2022.dll</Assembly>
     <AddInId>
