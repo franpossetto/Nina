@@ -13,6 +13,16 @@ namespace Nina.Tabs
         {
             RibbonPanel visibilityPanel = Ribbon.CreateRibbonPanel(application, "Point Cloud ", tabName);
 
+            PushButtonData pointCloud_isolate = Ribbon
+                .CreatePushButtonData("pointcloud_isolate",
+                                      "Isolate ",
+                                      "Nina.PointCloud.Isolate");
+
+            PushButtonData pointCloud_show_data = Ribbon
+                .CreatePushButtonData("pointcloud_show",
+                                      "Show\nHide",
+                                      "Nina.PointCloud.Hide");
+
             PushButtonData pointcloud_fixedColor_data = Ribbon
                 .CreatePushButtonData("pointcloud_fixedColor",
                                       "Set Fixed Color",
@@ -38,11 +48,9 @@ namespace Nina.Tabs
                                       "Set Elevation",
                                       "Nina.PointCloud.ColorMode.SetElevation");
 
-            PushButtonData pointCloud_show_data = Ribbon
-                .CreatePushButtonData("pointcloud_show",
-                                      "Show\nHide",
-                                      "Nina.PointCloud.Hide");
 
+            PushButton pointCloudIsolate = visibilityPanel.AddItem(pointCloud_isolate) as PushButton;
+            pointCloudIsolate.LargeImage = Ribbon.GetIcon("nina_point_cloud_isolate_30");
 
             PushButton showPointCloud = visibilityPanel.AddItem(pointCloud_show_data) as PushButton;
             showPointCloud.LargeImage = Ribbon.GetIcon("nina_show_hide_point_cloud_30");

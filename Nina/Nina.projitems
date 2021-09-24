@@ -9,6 +9,6 @@
     <Import_RootNamespace>Nina</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Unit.cs" />
+    <Folder Include="$(MSBuildThisFileDirectory)Documentation\Gifs\" />
   </ItemGroup>
 </Project>

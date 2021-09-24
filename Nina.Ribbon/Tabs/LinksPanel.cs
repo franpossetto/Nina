@@ -15,12 +15,17 @@ namespace Nina.Tabs
 
             PulldownButtonData hide_links = new PulldownButtonData("hideLinks", "Show\nHide");
             hide_links.LargeImage = Ribbon.GetIcon("nina_hide_links_30");
+            hide_links.LongDescription = "Put the long description here";
 
             PushButtonData rvt_links_hide = Ribbon
                 .CreatePushButtonData("links_hide", "Show\nHide RVT Links", "Nina.Visibility.HideRevitLinks");
+            rvt_links_hide.ToolTip = "Put the Tooltip here";
+            // rvt_links_hide.ToolTipImage = 
 
             PushButtonData dwg_links_hide = Ribbon
                 .CreatePushButtonData("cad_links_hide", "Show\nHide DWG Links", "Nina.Visibility.HideCADLinks");
+            dwg_links_hide.ToolTip = "Put the Tooltip here";
+            // dwg_links_hide.ToolTipImage = 
 
             PulldownButton info_pullDownButton = linksPanel.AddItem(hide_links) as PulldownButton;
             info_pullDownButton.AddPushButton(rvt_links_hide);

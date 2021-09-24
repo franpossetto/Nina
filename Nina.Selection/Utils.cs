@@ -15,6 +15,15 @@ namespace Nina.Selection
         {
             return Regex.Replace(input, "[0-9]+", match => match.Value.PadLeft(10, '0'));
         }
+        public static string TransformValueIfNecessary(Document doc, double _value)
+        {
+            double newValue = _value;
+
+            // It can be IMPERIAL or METRIC
+            DisplayUnit currentUnit = doc.DisplayUnitSystem;
+            if (currentUnit.ToString() == "METRIC") newValue = _value / 3.281;
+            return Math.Round(newValue, 2).ToString();
+        }
         public static void ElementSwitch(UIDocument uiDoc, Document doc, bool order)
         {
 
@@ -210,7 +219,7 @@ namespace Nina.Selection
             if (selectedWallType == null) selectedWallType = types.Where(t => t.FamilyName.Contains("Basic")).FirstOrDefault();
 
             string name = Settings.Preferences.WallTypePrefix;
-            string m = Units.TransformValueIfNecessary(doc, measure);
+            string m = Utils.TransformValueIfNecessary(doc, measure);
             string newWallTypeName = name + m;
             using (Transaction t = new Transaction(doc, "Create WallType"))
             {

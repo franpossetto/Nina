@@ -19,6 +19,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Ribbon.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\nina_point_cloud_isolate_30.png" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\nina_view_range_plus_16.png" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\nina_view_range_minor_16.png" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\nina_color_mode_30.png" />

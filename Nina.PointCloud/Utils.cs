@@ -112,18 +112,13 @@ namespace Nina.PointCloud
             Category pointCloudCategory = categories.get_Item(BuiltInCategory.OST_PointClouds);
             View activeView = doc.ActiveView;
 
-
             using (Transaction t = new Transaction(doc, "Isolate Point clouds"))
             {
                 t.Start();
-                    if(!activeView.IsTemporaryHideIsolateActive()) activeView.IsolateCategoryTemporary(pointCloudCategory.Id);
+                if (!activeView.IsTemporaryHideIsolateActive()) activeView.IsolateCategoryTemporary(pointCloudCategory.Id);
+                else activeView.DisableTemporaryViewMode(TemporaryViewMode.TemporaryHideIsolate);
                 t.Commit();
             }
-
         }
-    
-    
-    
-    
     }
 }
