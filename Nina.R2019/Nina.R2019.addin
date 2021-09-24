@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>Nina Revit Addin</Name>
+    <FullClassName>Nina.Ribbon.ExternalApplication</FullClassName>
+    <Text>Nina</Text>
+    <Description>Nina Revit Addin</Description>
+    <VisibilityMode>AlwaysVisible</VisibilityMode>
+    <Assembly>Nina.R2019.dll</Assembly>
+    <AddInId>
+      4a6d00b4-c004-4c32-96ab-c457c2839f54
+    </AddInId>
+    <VendorId>Nina</VendorId>
+    <VendorDescription>Nina</VendorDescription>
+  </AddIn>
+</RevitAddIns>
