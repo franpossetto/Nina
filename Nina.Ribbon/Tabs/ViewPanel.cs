@@ -22,6 +22,9 @@ namespace Nina.Tabs
                                         "Nina.Visibility.OpenMultipleViews"
                                         );
 
+            open_multiple_views_data.LongDescription = "Put the long description here";
+            open_multiple_views_data.ToolTip = "Put the Tooltip here";
+            // rvt_links_hide.ToolTipImage = 
 
             PushButtonData open_view_from_viewport_data = Ribbon
                   .CreatePushButtonData("openViewport",
@@ -29,19 +32,27 @@ namespace Nina.Tabs
                                         "Nina.Visibility.OpenViewFromViewPort"
                                         );
 
+            open_view_from_viewport_data.LongDescription = "Put the long description here";
+            open_view_from_viewport_data.ToolTip = "Put the Tooltip here";
+            // rvt_links_hide.ToolTipImage = 
 
             PushButtonData viewrange_plus_data = Ribbon
                   .CreatePushButtonData("viewrange_plus",
                                         "View Range up",
                                         "Nina.Visibility.ViewRangePlus");
 
+            viewrange_plus_data.LongDescription = "Put the long description here";
+            viewrange_plus_data.ToolTip = "Put the Tooltip here";
+            // rvt_links_hide.ToolTipImage = 
 
             PushButtonData viewrange_minor_data = Ribbon
                   .CreatePushButtonData("viewrange_down",
                                         "View Range down",
                                         "Nina.Visibility.ViewRangeMinor");
 
-
+            viewrange_minor_data.LongDescription = "Put the long description here";
+            viewrange_minor_data.ToolTip = "Put the Tooltip here";
+            // rvt_links_hide.ToolTipImage = 
 
             PulldownButtonData actions_pulldownbutton_data = new PulldownButtonData("viewActions", "Open views");
 
