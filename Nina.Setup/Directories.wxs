@@ -6,8 +6,6 @@
         <Directory Id="AUTODESKFOLDER" Name="!(loc.AutodeskFolder)">
           <Directory Id="APPLICATIONPLUGINSFOLDER" Name="!(loc.ApplicationPluginsFolder)">
             <Directory Id="ADDINFOLDER" Name="!(loc.ProductFolder)">
-              <Directory Id="TEMPLATESFOLDER" Name="!(loc.TemplatesFolder)">
-              </Directory>
               <Directory Id="LOGSFOLDER" Name="!(loc.LogsFolder)">
               </Directory>
               <Directory Id="RESOURCESFOLDER" Name="!(loc.ResourcesFolder)"/>

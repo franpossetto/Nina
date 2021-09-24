@@ -49,6 +49,30 @@
       <ComponentRef Id="nina_switch_down_icon"></ComponentRef>
 
     </ComponentGroup>
+    <DirectoryRef Id ="R2017FOLDER" FileSource="$(var.bin2017Path)">
+      <Component Id="RevitAddin_2017" Guid="{7B6F3365-B02B-411C-8A15-13515BE481D8}">
+        <File Id="RevitAddinFile_2017" Name="Nina.R2017.addin" />
+      </Component>
+      <Component Id="RevitDll_2017" Guid="{07F6FCF3-E27B-4E83-ACC5-4DE73629F9C9}">
+        <File Id="RevitDllFile_2017" Name="Nina.R2017.dll" />
+      </Component>
+      <Component Id="NewtonsoftJsonDll_2017" Guid="{D8486EAE-D4C0-4184-811F-C3085F16AD8E}">
+        <File Id="NewtonsoftJsonDllFile_2017" Name="Newtonsoft.Json.dll" />
+      </Component>
+    </DirectoryRef>
+    
+    <DirectoryRef Id ="R2018FOLDER" FileSource="$(var.bin2018Path)">
+      <Component Id="RevitAddin_2018" Guid="{7B6F3365-B02B-411C-8A15-13515BE481D8}">
+        <File Id="RevitAddinFile_2018" Name="Nina.R2018.addin" />
+      </Component>
+      <Component Id="RevitDll_2018" Guid="{07F6FCF3-E27B-4E83-ACC5-4DE73629F9C9}">
+        <File Id="RevitDllFile_2018" Name="Nina.R2018.dll" />
+      </Component>
+      <Component Id="NewtonsoftJsonDll_2018" Guid="{D8486EAE-D4C0-4184-811F-C3085F16AD8E}">
+        <File Id="NewtonsoftJsonDllFile_2018" Name="Newtonsoft.Json.dll" />
+      </Component>
+    </DirectoryRef>
+    
     <DirectoryRef Id ="R2019FOLDER" FileSource="$(var.bin2019Path)">
       <Component Id="RevitAddin_2019" Guid="{7B6F3365-B02B-411C-8A15-13515BE481D8}">
         <File Id="RevitAddinFile_2019" Name="Nina.R2019.addin" />
@@ -68,9 +92,6 @@
       <Component Id="RevitDll_2020" Guid="{5E8789E5-BA43-409D-8556-42BF29234ABC}">
         <File Id="RevitDllFile_2020" Name="Nina.R2020.dll" />
       </Component>
-      <Component Id="RevitDllConfig_2020" Guid="{2BCF0281-B28F-49B2-8600-3EBEC89C4EE2}">
-        <File Id="RevitDllConfigFile_2020" Name="Nina.R2020.dll.config" />
-      </Component>
       <Component Id="NewtonsoftJsonDll_2020" Guid="{D9F82DAD-FE02-4309-BD2B-921147959D5A}">
         <File Id="NewtonsoftJsonDllFile_2020" Name="Newtonsoft.Json.dll" />
       </Component>
@@ -82,9 +103,6 @@
       </Component>
       <Component Id="RevitDll_2021" Guid="{BA1F0191-5A56-40AA-B180-F8923D42E55F}">
         <File Id="RevitDllFile_2021" Name="Nina.R2021.dll" />
-      </Component>
-      <Component Id="RevitDllConfig_2021" Guid="{32B281F4-8623-4973-9AC6-F0C0432A4044}">
-        <File Id="RevitDllConfigFile_2021" Name="Nina.R2021.dll.config" />
       </Component>
       <Component Id="NewtonsoftJsonDll_2021" Guid="{78B1F1DF-4F86-47C3-BB73-390EDCD5DA39}">
         <File Id="NewtonsoftJsonDllFile_2021" Name="Newtonsoft.Json.dll" />
@@ -118,12 +136,6 @@
     <DirectoryRef Id ="RESOURCESFOLDER" FileSource="../Nina.Ribbon/Resources">
       <Component Id="nina_color_mode_icon" Guid="{6488821B-07A2-4CB0-91F3-FA410ACF1423}">
         <File Id="nina_color_mode_icon_file" Name="nina_color_mode_30.png" />
-      </Component>
-    </DirectoryRef>
-    
-    <DirectoryRef Id ="RESOURCESFOLDER" FileSource="../Nina.Ribbon/Resources">
-      <Component Id="split_icon" Guid="{2A2C80F0-A2B0-4133-9E0F-E7D9DF8DBFAC}">
-        <File Id="split_icon_file" Name="split.png" />
       </Component>
     </DirectoryRef>
     
@@ -189,13 +201,13 @@
 
     <DirectoryRef Id ="RESOURCESFOLDER" FileSource="../Nina.Ribbon/Resources">
       <Component Id="nina_switch_up_icon" Guid="{51E74968-3B34-43C1-A389-C0C2A3C39296}">
-        <File Id="nina_switch_up_icon_file" Name="nina_switch_up_30.png" />
+        <File Id="nina_switch_up_icon_file" Name="nina_wall_switch_up_30.png" />
       </Component>
     </DirectoryRef>
 
     <DirectoryRef Id ="RESOURCESFOLDER" FileSource="../Nina.Ribbon/Resources">
       <Component Id="nina_switch_down_icon" Guid="{51E74968-3B34-43C1-A389-C0C2A3C39296}">
-        <File Id="nina_switch_down_icon_file" Name="nina_switch_down_30.png" />
+        <File Id="nina_switch_down_icon_file" Name="nina_wall_switch_down_30.png" />
       </Component>
     </DirectoryRef>
     

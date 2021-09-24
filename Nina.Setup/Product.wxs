@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  
   <?define UpgradeCode ="{C8887281-E5B1-4B69-AEE1-2EC86A49CA4F}"?>
   <?define buildVersion ="!(bind.FileVersion.NinaDllFile_2020)"?>
 
@@ -18,13 +19,13 @@
              Keywords ="!(loc.Keywords)"
              Languages ="!(loc.Language)"/>
 
-    <MajorUpgrade DowngradeErrorMessage="A newer version of !(loc.ProductName_) is already installed." />
+    <MajorUpgrade DowngradeErrorMessage="A newer version of !(loc.ProductName) is already installed." />
     <MediaTemplate
       EmbedCab ="yes"
       />
 
-    <Feature Id="ProductFeature" Title="ProductName v.$(var.buildVersion)" Level="1">
+    <Feature Id="ProductFeature" Title="ProductName" Level="1">
       <ComponentGroupRef Id="ProductComponents" />
     </Feature>
   </Product>
-W</Wix>
+</Wix>

@@ -6,7 +6,8 @@
   <String Id ="ProductFolder">Nina.bundle</String>
   <String Id ="ContentsFolder">Contents</String>
   <String Id ="ResourcesFolder">Resources</String>
-  <String Id ="R2011Folder">Nina.R2017</String>
+  <String Id ="LogsFolder">Logs</String>
+  <String Id ="R2017Folder">Nina.R2017</String>
   <String Id ="R2018Folder">Nina.R2018</String>
   <String Id ="R2019Folder">Nina.R2019</String>
   <String Id ="R2020Folder">Nina.R2020</String>
