@@ -29,6 +29,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Nina.PointCloud", "Nina.Poi
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Nina.Setup", "Nina.Setup\Nina.Setup.wixproj", "{D72C4E05-F72B-424C-A13F-C1F8FE8281F7}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Nina.Language", "Nina.Language\Nina.Language.shproj", "{A9EF860D-ACC6-4C57-A744-E58355AB35AB}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Nina.Common\Nina.Common.projitems*{115f6477-2cac-4bf5-b7a6-ba77086a5573}*SharedItemsImports = 4
@@ -54,6 +56,7 @@ Global
 		Nina\Nina.projitems*{5063b465-5bec-495a-92b6-304f7f094475}*SharedItemsImports = 13
 		Nina.PointCloud\Nina.PointCloud.projitems*{5ef3e22a-e720-4b48-b02e-87337d610be9}*SharedItemsImports = 13
 		Nina.Visibility\Nina.Visibility.projitems*{69f27c35-99db-4218-86fa-c56e3cb8df86}*SharedItemsImports = 13
+		Nina.Language\Nina.Language.projitems*{a9ef860d-acc6-4c57-a744-e58355ab35ab}*SharedItemsImports = 13
 		Nina.Common\Nina.Common.projitems*{af077125-ed5a-43d0-8c65-57f83fb837f6}*SharedItemsImports = 4
 		Nina.PointCloud\Nina.PointCloud.projitems*{af077125-ed5a-43d0-8c65-57f83fb837f6}*SharedItemsImports = 4
 		Nina.Ribbon\Nina.Ribbon.projitems*{af077125-ed5a-43d0-8c65-57f83fb837f6}*SharedItemsImports = 4
