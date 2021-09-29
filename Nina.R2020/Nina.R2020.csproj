@@ -118,5 +118,6 @@
   <Import Project="..\Nina.Visibility\Nina.Visibility.projitems" Label="Shared" />
   <Import Project="..\Nina.Selection\Nina.Selection.projitems" Label="Shared" />
   <Import Project="..\Nina.PointCloud\Nina.PointCloud.projitems" Label="Shared" />
+  <Import Project="..\Nina.Language\Nina.Language.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

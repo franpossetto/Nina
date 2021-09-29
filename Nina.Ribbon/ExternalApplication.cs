@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 using Autodesk.Revit.UI;
+using Nina.Ribbon;
 using Nina.Tabs;
 
 namespace Nina
@@ -22,7 +23,7 @@ namespace Nina
             AddinsPanel.Build(application);
 
             const string RIBBON_TAB = "Nina";
-            Ribbon.CreateRibbonTab(application, RIBBON_TAB);
+            Utils.CreateRibbonTab(application, RIBBON_TAB);
             NinaPanel.Build(application, RIBBON_TAB);
             SelectionPanel.Build(application, RIBBON_TAB);
             Views.Build(application, RIBBON_TAB);

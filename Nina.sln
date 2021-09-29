@@ -34,6 +34,7 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Nina.Common\Nina.Common.projitems*{115f6477-2cac-4bf5-b7a6-ba77086a5573}*SharedItemsImports = 4
+		Nina.Language\Nina.Language.projitems*{115f6477-2cac-4bf5-b7a6-ba77086a5573}*SharedItemsImports = 4
 		Nina.PointCloud\Nina.PointCloud.projitems*{115f6477-2cac-4bf5-b7a6-ba77086a5573}*SharedItemsImports = 4
 		Nina.Ribbon\Nina.Ribbon.projitems*{115f6477-2cac-4bf5-b7a6-ba77086a5573}*SharedItemsImports = 4
 		Nina.Selection\Nina.Selection.projitems*{115f6477-2cac-4bf5-b7a6-ba77086a5573}*SharedItemsImports = 4
@@ -42,12 +43,14 @@ Global
 		Nina.Selection\Nina.Selection.projitems*{2543cbbe-2002-452d-b8e2-77fe6c95823c}*SharedItemsImports = 13
 		Nina.Common\Nina.Common.projitems*{2d838553-d6a4-4f38-8369-4232d7cba9a1}*SharedItemsImports = 13
 		Nina.Common\Nina.Common.projitems*{40303a00-f9fa-49c1-bb31-bc5cc5de7f7f}*SharedItemsImports = 4
+		Nina.Language\Nina.Language.projitems*{40303a00-f9fa-49c1-bb31-bc5cc5de7f7f}*SharedItemsImports = 4
 		Nina.PointCloud\Nina.PointCloud.projitems*{40303a00-f9fa-49c1-bb31-bc5cc5de7f7f}*SharedItemsImports = 4
 		Nina.Ribbon\Nina.Ribbon.projitems*{40303a00-f9fa-49c1-bb31-bc5cc5de7f7f}*SharedItemsImports = 4
 		Nina.Selection\Nina.Selection.projitems*{40303a00-f9fa-49c1-bb31-bc5cc5de7f7f}*SharedItemsImports = 4
 		Nina.Visibility\Nina.Visibility.projitems*{40303a00-f9fa-49c1-bb31-bc5cc5de7f7f}*SharedItemsImports = 4
 		Nina\Nina.projitems*{40303a00-f9fa-49c1-bb31-bc5cc5de7f7f}*SharedItemsImports = 4
 		Nina.Common\Nina.Common.projitems*{41715ff6-b8f0-4b59-bc88-98d00244df92}*SharedItemsImports = 4
+		Nina.Language\Nina.Language.projitems*{41715ff6-b8f0-4b59-bc88-98d00244df92}*SharedItemsImports = 4
 		Nina.PointCloud\Nina.PointCloud.projitems*{41715ff6-b8f0-4b59-bc88-98d00244df92}*SharedItemsImports = 4
 		Nina.Ribbon\Nina.Ribbon.projitems*{41715ff6-b8f0-4b59-bc88-98d00244df92}*SharedItemsImports = 4
 		Nina.Selection\Nina.Selection.projitems*{41715ff6-b8f0-4b59-bc88-98d00244df92}*SharedItemsImports = 4
@@ -58,6 +61,7 @@ Global
 		Nina.Visibility\Nina.Visibility.projitems*{69f27c35-99db-4218-86fa-c56e3cb8df86}*SharedItemsImports = 13
 		Nina.Language\Nina.Language.projitems*{a9ef860d-acc6-4c57-a744-e58355ab35ab}*SharedItemsImports = 13
 		Nina.Common\Nina.Common.projitems*{af077125-ed5a-43d0-8c65-57f83fb837f6}*SharedItemsImports = 4
+		Nina.Language\Nina.Language.projitems*{af077125-ed5a-43d0-8c65-57f83fb837f6}*SharedItemsImports = 4
 		Nina.PointCloud\Nina.PointCloud.projitems*{af077125-ed5a-43d0-8c65-57f83fb837f6}*SharedItemsImports = 4
 		Nina.Ribbon\Nina.Ribbon.projitems*{af077125-ed5a-43d0-8c65-57f83fb837f6}*SharedItemsImports = 4
 		Nina.Selection\Nina.Selection.projitems*{af077125-ed5a-43d0-8c65-57f83fb837f6}*SharedItemsImports = 4
@@ -65,12 +69,14 @@ Global
 		Nina\Nina.projitems*{af077125-ed5a-43d0-8c65-57f83fb837f6}*SharedItemsImports = 4
 		Nina.Ribbon\Nina.Ribbon.projitems*{d0407110-0248-4bb3-a50c-7be272db42b3}*SharedItemsImports = 13
 		Nina.Common\Nina.Common.projitems*{da685808-e83e-40bc-bb9d-f0dcd072727f}*SharedItemsImports = 4
+		Nina.Language\Nina.Language.projitems*{da685808-e83e-40bc-bb9d-f0dcd072727f}*SharedItemsImports = 4
 		Nina.PointCloud\Nina.PointCloud.projitems*{da685808-e83e-40bc-bb9d-f0dcd072727f}*SharedItemsImports = 4
 		Nina.Ribbon\Nina.Ribbon.projitems*{da685808-e83e-40bc-bb9d-f0dcd072727f}*SharedItemsImports = 4
 		Nina.Selection\Nina.Selection.projitems*{da685808-e83e-40bc-bb9d-f0dcd072727f}*SharedItemsImports = 4
 		Nina.Visibility\Nina.Visibility.projitems*{da685808-e83e-40bc-bb9d-f0dcd072727f}*SharedItemsImports = 4
 		Nina\Nina.projitems*{da685808-e83e-40bc-bb9d-f0dcd072727f}*SharedItemsImports = 4
 		Nina.Common\Nina.Common.projitems*{e72eb623-16a7-4a68-bc8a-62ccbe8550bf}*SharedItemsImports = 4
+		Nina.Language\Nina.Language.projitems*{e72eb623-16a7-4a68-bc8a-62ccbe8550bf}*SharedItemsImports = 4
 		Nina.PointCloud\Nina.PointCloud.projitems*{e72eb623-16a7-4a68-bc8a-62ccbe8550bf}*SharedItemsImports = 4
 		Nina.Ribbon\Nina.Ribbon.projitems*{e72eb623-16a7-4a68-bc8a-62ccbe8550bf}*SharedItemsImports = 4
 		Nina.Selection\Nina.Selection.projitems*{e72eb623-16a7-4a68-bc8a-62ccbe8550bf}*SharedItemsImports = 4

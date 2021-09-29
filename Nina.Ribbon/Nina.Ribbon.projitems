@@ -17,7 +17,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Tabs\PointCloudPanel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tabs\SelectionPanel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tabs\ViewPanel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Ribbon.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)PackageContents.xml" />

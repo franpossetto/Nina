@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Autodesk.Revit.UI;
+using Nina.Ribbon;
 
 namespace Nina.Tabs
 {
@@ -12,9 +13,9 @@ namespace Nina.Tabs
         public static void Build(UIControlledApplication application, string tabName)
         {
 
-            RibbonPanel selectionPanel = Ribbon.CreateRibbonPanel(application, "Type Selector", tabName);
+            RibbonPanel selectionPanel = Utils.CreateRibbonPanel(application, "Type Selector", tabName);
 
-            PushButtonData wall_byDimension_data = Ribbon
+            PushButtonData wall_byDimension_data = Utils
                 .CreatePushButtonData("wall_byDimension", 
                                       "WallType\nby Dim", 
                                       "Nina.Selection.WallByDimension");
@@ -23,7 +24,7 @@ namespace Nina.Tabs
             wall_byDimension_data.ToolTip = "Put the Tooltip here";
             // wall_byDimension_data.ToolTipImage = 
 
-            PushButtonData elementType_switch_up_data = Ribbon
+            PushButtonData elementType_switch_up_data = Utils
                 .CreatePushButtonData("type_switch_up",
                                       "Type\nup",
                                       "Nina.Selection.SwitchUp");
@@ -32,7 +33,7 @@ namespace Nina.Tabs
             elementType_switch_up_data.ToolTip = "Put the Tooltip here";
             // elementType_switch_up_data.ToolTipImage = 
 
-            PushButtonData elementType_switch_down_data = Ribbon
+            PushButtonData elementType_switch_down_data = Utils
                 .CreatePushButtonData("type_switch_down",
                                       "Type\ndown",
                                       "Nina.Selection.SwitchDown");
@@ -59,9 +60,9 @@ namespace Nina.Tabs
             PushButton switchdown_button = selectionPanel.AddItem(elementType_switch_down_data) as PushButton;
             PushButton WallByDimension_button = selectionPanel.AddItem(wall_byDimension_data) as PushButton;
 
-            switchup_button.LargeImage = Ribbon.GetIcon("nina_wall_switch_down_30");
-            switchdown_button.LargeImage = Ribbon.GetIcon("nina_wall_switch_up_30");
-            WallByDimension_button.LargeImage = Ribbon.GetIcon("nina_wall_by_dimension_30");
+            switchup_button.LargeImage = Utils.GetIcon("nina_wall_switch_down_30");
+            switchdown_button.LargeImage = Utils.GetIcon("nina_wall_switch_up_30");
+            WallByDimension_button.LargeImage = Utils.GetIcon("nina_wall_by_dimension_30");
 
         }
     }

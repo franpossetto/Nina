@@ -7,9 +7,9 @@ using Autodesk.Windows;
 using System.IO;
 using System.Windows.Media.Imaging;
 
-namespace Nina
+namespace Nina.Ribbon
 {
-    public static class Ribbon
+    public static class Utils
     {
         static string ButtonIconsFolder = @"C:\ProgramData\Autodesk\ApplicationPlugins\Nina.bundle\Resources\";
 
@@ -70,7 +70,7 @@ namespace Nina
 
         public static BitmapImage GetIcon(string iconName)
         {
-            return new BitmapImage(new Uri(Path.Combine(Nina.Ribbon.ButtonIconsFolder, $"{iconName}.png"), UriKind.Absolute));
+            return new BitmapImage(new Uri(Path.Combine(Nina.Ribbon.Utils.ButtonIconsFolder, $"{iconName}.png"), UriKind.Absolute));
         }
 
     }
