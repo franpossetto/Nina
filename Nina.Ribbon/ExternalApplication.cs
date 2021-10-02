@@ -29,6 +29,7 @@ namespace Nina
             Views.Build(application, RIBBON_TAB);
             PointCloudPanel.Build(application, RIBBON_TAB);
             LinksPanel.Build(application, RIBBON_TAB);
+            WallPanel.Build(application, RIBBON_TAB);
 
 
 

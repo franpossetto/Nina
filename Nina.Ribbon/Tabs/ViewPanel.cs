@@ -72,8 +72,8 @@ namespace Nina.Tabs
             PushButton item1 = actions_pulldownbutton.AddPushButton(open_multiple_views_data) as PushButton;
             PushButton item2 = actions_pulldownbutton.AddPushButton(open_view_from_viewport_data) as PushButton;
 
-            open_multiple_views_data.Image = Utils.GetIcon("nina_open_multiple_views_16");
-            open_view_from_viewport_data.Image = Utils.GetIcon("nina_open_multiple_views_from_viewport_16");
+            //open_multiple_views_data.Image = Utils.GetIcon("nina_open_multiple_views_16");
+            //open_view_from_viewport_data.Image = Utils.GetIcon("nina_open_multiple_views_from_viewport_16");
         }
     }
 }

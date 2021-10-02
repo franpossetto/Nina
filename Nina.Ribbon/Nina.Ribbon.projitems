@@ -16,11 +16,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Tabs\NinaPanel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tabs\PointCloudPanel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tabs\SelectionPanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tabs\WallPanel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tabs\ViewPanel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)PackageContents.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\nina_location_line_30.png" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\nina_point_cloud_isolate_30.png" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\nina_view_range_plus_16.png" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\nina_view_range_minor_16.png" />

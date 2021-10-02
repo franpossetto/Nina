@@ -9,30 +9,26 @@ namespace Nina.Language
 {
     public class LanguageManager
     {
-        private LanguageManager _Instance { get; set; }
-        public LanguageManager Instance
+        public LanguageManager(string language)
         {
-            get
-            {
-                return _Instance;
-            }
-            set
-            {
-                this._Instance = this.SetLanguage();
-            }
+
         }
+        private LanguageManager _Instance { get; set; }
+        //public LanguageManager Instance
+        //{
+        //    get
+        //    {
+        //        return _Instance;
+        //    }
+        //    set
+        //    {
+        //        this._Instance = this.SetLanguage();
+        //    }
+        //}
         public LanguageManager GetLanguage(UIControlledApplication application)
         {
             string lang = application.ControlledApplication.Language.ToString();
-
-            if (lang == "English_USA" || lang == "English_GB")
-                return new LanguageManager();
-            else if (lang == "Spanish")
-                return new LanguageManager();
-            else if (lang == "Russian")
-                return new LanguageManager();
-            else
-                return new LanguageManager();
+            return new LanguageManager(lang);
         }
         public Dictionary<string,string> Dictionary { get; set; }
         public string GetWordByKey(Dictionary<string,string> dictionary, string key)
