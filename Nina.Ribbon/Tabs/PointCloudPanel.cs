@@ -16,7 +16,7 @@ namespace Nina.Tabs
 
             PushButtonData pointCloud_isolate_data = Utils
                 .CreatePushButtonData("pointcloud_isolate",
-                                      "Isolate ",
+                                      "Isolate\nTemp ",
                                       "Nina.PointCloud.Isolate");
 
             pointCloud_isolate_data.LongDescription = "Put the long description here";

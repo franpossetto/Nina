@@ -120,5 +120,21 @@ namespace Nina.PointCloud
                 t.Commit();
             }
         }
+
+        public static void IsolateTemporary(Document doc)
+        {
+            Categories categories = doc.Settings.Categories;
+            Category pointCloudCategory = categories.get_Item(BuiltInCategory.OST_PointClouds);
+            View activeView = doc.ActiveView;
+
+            using (Transaction t = new Transaction(doc, "Isolate Point clouds"))
+            {
+                t.Start();
+                if (!activeView.IsTemporaryHideIsolateActive()) activeView.IsolateCategoryTemporary(pointCloudCategory.Id);
+                else activeView.DisableTemporaryViewMode(TemporaryViewMode.TemporaryHideIsolate);
+                t.Commit();
+
+            }
+        }
     }
 }
