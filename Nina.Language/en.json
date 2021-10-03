@@ -1,1 +1,7 @@
-﻿
+﻿{
+  "NinaInfo": "Info",
+  "NinaConfig": "Config",
+  "NinaTypeSelectorUp": "Type Up",
+  "NinaTypeSelectorDown": "Type Down",
+  "NinaWallTypeByDim": "WallType\nby dim"
+}
