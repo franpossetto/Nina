@@ -6,6 +6,10 @@ using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.UI.Selection;
+using Newtonsoft.Json;
+using Nina.Ribbon;
+using static System.Environment;
+using Nina.Language;
 
 namespace Nina.Common
 {
@@ -17,7 +21,11 @@ namespace Nina.Common
             UIApplication uiApp = commandData.Application;
             UIDocument uiDoc = uiApp.ActiveUIDocument;
             Document doc = uiDoc.Document;
-       
+
+            string path = $"{ GetFolderPath(SpecialFolder.CommonApplicationData) }/Autodesk/ApplicationPlugins/Nina.bundle/";
+
+
+            List<ButtonInfo> bi = JsonConvert.DeserializeObject<List<ButtonInfo>>(File.ReadAllText(path + "en.json"));
 
             return Result.Succeeded;
         }

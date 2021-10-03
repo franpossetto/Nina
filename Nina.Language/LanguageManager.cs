@@ -4,6 +4,10 @@ using System.Text;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.ApplicationServices;
+using System.IO;
+using Newtonsoft.Json;
+using static System.Environment;
+using Nina.Ribbon;
 
 namespace Nina.Language
 {
@@ -15,8 +19,10 @@ namespace Nina.Language
             this.UIApp = app;
         }
         public string LanguageName { get; set; }
-        private Dictionary<string, string> _Instance { get; set; }
-        public Dictionary<string, string> Instance
+
+        public string Path { get; set; }
+        private List<ButtonInfo> _Instance { get; set; }
+        public List<ButtonInfo> Instance
         {
             get
             {
@@ -27,16 +33,27 @@ namespace Nina.Language
                 this._Instance = this.GetLanguage();
             }
         }
-        public Dictionary<string, string> GetLanguage()
+        public List<ButtonInfo> GetLanguage()
         {
             this.LanguageName = this.UIApp.ControlledApplication.Language.ToString();
-            return new Dictionary<string, string>();
+
+            string path = $"{ GetFolderPath(SpecialFolder.CommonApplicationData) }/Autodesk/ApplicationPlugins/Nina.bundle/";
+
+            //switch (this.LanguageName)
+            //{
+            //    case "English_USA":
+            //        this.Path = path + "en.json";
+            //        break;
+
+            //}
+
+            this.Path = path + "en.json";
+            return JsonConvert.DeserializeObject<List<ButtonInfo>>(File.ReadAllText(this.Path));
         }
-        public Dictionary<string,string> Dictionary { get; set; }
-        public string GetWordByKey(string key)
+        public ButtonInfo GetButtonById(string key)
         {
-            if (this.Dictionary[key] != null) return this.Dictionary[key];
-            else return "";
+            foreach(ButtonInfo btn in this.Instance) if (btn.Id == key) return btn;
+            return new ButtonInfo();
         }
 
     }

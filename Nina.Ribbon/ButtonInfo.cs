@@ -9,6 +9,9 @@ namespace Nina.Ribbon
 {
     public partial class ButtonInfo
     {
+        [JsonProperty("Id")]
+        public string Id { get; set; }
+
         [JsonProperty("ButtonType")]
         public string ButtonType { get; set; }
 

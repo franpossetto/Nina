@@ -14,7 +14,9 @@ namespace Nina.Tabs
         {
             RibbonPanel linksPanel = Utils.CreateRibbonPanel(application, "Links", tabName);
 
-            PulldownButtonData hide_links = new PulldownButtonData("hideLinks", "Show\nHide");
+            PulldownButtonData hide_links = new PulldownButtonData("hideLinks", 
+                                                                   "Show\nHide");
+
             hide_links.LargeImage = Utils.GetIcon("nina_hide_links_30");
             hide_links.LongDescription = "Put the long description here";
 

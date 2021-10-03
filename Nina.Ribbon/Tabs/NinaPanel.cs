@@ -8,33 +8,53 @@ using Nina.Ribbon;
 
 namespace Nina.Tabs
 {
-    public class NinaPanel
+    public static class NinaPanel
     {
+        public static List<ButtonInfo> Language { get; set; }
         public static void Build(UIControlledApplication application, string tabName)
         {
             RibbonPanel ninaPanel = Utils.CreateRibbonPanel(application, "Nina ", tabName);
 
             #region Info Button
+            ButtonInfo buttonInfo_Info = Language.Where(button => button.Id == "NinaInfo").FirstOrDefault();
+            ButtonInfo buttonInfo_Logs = Language.Where(button => button.Id == "NinaLogs").FirstOrDefault();
+            ButtonInfo buttonInfo_About = Language.Where(button => button.Id == "NinaAbout").FirstOrDefault();
+            ButtonInfo buttonInfo_Github = Language.Where(button => button.Id == "NinaGithub").FirstOrDefault();
 
-            PulldownButtonData info_button = new PulldownButtonData("info", "Info");
+
+            string info_button_name = buttonInfo_Info.Title;
+            string about_button_name = buttonInfo_About.Title;
+            string logs_button_name = buttonInfo_Logs.Title;
+            string github_button_name = buttonInfo_Github.Title;
+
+
+            PulldownButtonData info_button = new PulldownButtonData("info",
+                                                                    info_button_name);
+
             info_button.LargeImage = Utils.GetIcon("nina_info_30");
 
             PushButtonData about_button_data = Utils
-                .CreatePushButtonData("about", "About", "Nina.Common.About");
+                .CreatePushButtonData("about",
+                                      about_button_name,
+                                      "Nina.Common.About");
 
             about_button_data.LongDescription = "Put the long description here";
             about_button_data.ToolTip = "Put the Tooltip here";
             // about_button_data.ToolTipImage = 
 
             PushButtonData repo_button_data = Utils
-                .CreatePushButtonData("github", "Github Repository", "Nina.Common.Github");
+                .CreatePushButtonData("github",
+                                      github_button_name,
+                                      "Nina.Common.Github");
 
             repo_button_data.LongDescription = "Put the long description here";
             repo_button_data.ToolTip = "Put the Tooltip here";
             // repo_button_data.ToolTipImage = 
 
             PushButtonData logs_button_data = Utils
-                .CreatePushButtonData("logs", "Logs", "Nina.Common.Logs");
+                .CreatePushButtonData("logs",
+                                      logs_button_name,
+                                      "Nina.Common.Logs");
 
             logs_button_data.LongDescription = "Put the long description here";
             logs_button_data.ToolTip = "Put the Tooltip here";

@@ -9,6 +9,7 @@
     <Import_RootNamespace>Nina.Ribbon</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ButtonBuilder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ButtonInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ExternalApplication.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tabs\AddinsPanel.cs" />

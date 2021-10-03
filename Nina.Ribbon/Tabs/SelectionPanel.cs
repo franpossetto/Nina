@@ -10,6 +10,8 @@ namespace Nina.Tabs
 {
     public static class SelectionPanel
     {
+        public static List<ButtonInfo> Language { get; set; }
+
         public static void Build(UIControlledApplication application, string tabName)
         {
 
