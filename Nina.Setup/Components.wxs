@@ -47,6 +47,13 @@
       <ComponentRef Id="nina_wall_by_dimension_icon"></ComponentRef>
       <ComponentRef Id="nina_switch_up_icon"></ComponentRef>
       <ComponentRef Id="nina_switch_down_icon"></ComponentRef>
+      <ComponentRef Id="nina_location_line_icon"></ComponentRef>
+
+      <ComponentRef Id="nina_lang_en_us"></ComponentRef>
+      <ComponentRef Id="nina_lang_en_gb"></ComponentRef>
+      <ComponentRef Id="nina_lang_ru"></ComponentRef>
+      <ComponentRef Id="nina_lang_es"></ComponentRef>
+
 
     </ComponentGroup>
     <DirectoryRef Id ="R2017FOLDER" FileSource="$(var.bin2017Path)">
@@ -60,36 +67,35 @@
         <File Id="NewtonsoftJsonDllFile_2017" Name="Newtonsoft.Json.dll" />
       </Component>
     </DirectoryRef>
-    
     <DirectoryRef Id ="R2018FOLDER" FileSource="$(var.bin2018Path)">
-      <Component Id="RevitAddin_2018" Guid="{7B6F3365-B02B-411C-8A15-13515BE481D8}">
+      <Component Id="RevitAddin_2018" Guid="{A1DE3153-683B-47C2-8843-C013B6CB506C}">
         <File Id="RevitAddinFile_2018" Name="Nina.R2018.addin" />
       </Component>
-      <Component Id="RevitDll_2018" Guid="{07F6FCF3-E27B-4E83-ACC5-4DE73629F9C9}">
+      <Component Id="RevitDll_2018" Guid="{2A1E8BCE-8660-4474-A88B-45BF6D835E47}">
         <File Id="RevitDllFile_2018" Name="Nina.R2018.dll" />
       </Component>
-      <Component Id="NewtonsoftJsonDll_2018" Guid="{D8486EAE-D4C0-4184-811F-C3085F16AD8E}">
+      <Component Id="NewtonsoftJsonDll_2018" Guid="{77AAD912-0039-4277-801C-0D01E59BF2D6}">
         <File Id="NewtonsoftJsonDllFile_2018" Name="Newtonsoft.Json.dll" />
       </Component>
     </DirectoryRef>
     
     <DirectoryRef Id ="R2019FOLDER" FileSource="$(var.bin2019Path)">
-      <Component Id="RevitAddin_2019" Guid="{7B6F3365-B02B-411C-8A15-13515BE481D8}">
+      <Component Id="RevitAddin_2019" Guid="{7E7524CC-BB54-49B5-8C8D-D244D6EF6E31}">
         <File Id="RevitAddinFile_2019" Name="Nina.R2019.addin" />
       </Component>
-      <Component Id="RevitDll_2019" Guid="{07F6FCF3-E27B-4E83-ACC5-4DE73629F9C9}">
+      <Component Id="RevitDll_2019" Guid="{8106309D-37A5-48F8-B641-328D0816CC96}">
         <File Id="RevitDllFile_2019" Name="Nina.R2019.dll" />
       </Component>
-      <Component Id="NewtonsoftJsonDll_2019" Guid="{D8486EAE-D4C0-4184-811F-C3085F16AD8E}">
+      <Component Id="NewtonsoftJsonDll_2019" Guid="{CF948EBB-A8E6-4490-A4B8-93B8C001DC41}">
         <File Id="NewtonsoftJsonDllFile_2019" Name="Newtonsoft.Json.dll" />
       </Component>
     </DirectoryRef>
 
     <DirectoryRef Id ="R2020FOLDER" FileSource="$(var.bin2020Path)">
-      <Component Id="RevitAddin_2020" Guid="{481C2261-08C1-44EF-9218-34104E66BFED}">
+      <Component Id="RevitAddin_2020" Guid="{5F17E58C-E59C-4E36-8A4A-D1F6B22E8C44}">
         <File Id="RevitAddinFile_2020" Name="Nina.R2020.addin" />
       </Component>
-      <Component Id="RevitDll_2020" Guid="{5E8789E5-BA43-409D-8556-42BF29234ABC}">
+      <Component Id="RevitDll_2020" Guid="{AB756D62-A4F6-4D99-8950-384A75C29275}">
         <File Id="RevitDllFile_2020" Name="Nina.R2020.dll" />
       </Component>
       <Component Id="NewtonsoftJsonDll_2020" Guid="{D9F82DAD-FE02-4309-BD2B-921147959D5A}">
@@ -158,43 +164,43 @@
     </DirectoryRef>
 
     <DirectoryRef Id ="RESOURCESFOLDER" FileSource="../Nina.Ribbon/Resources">
-      <Component Id="nina_open_multiple_views_from_viewport_icon" Guid="{B19E1469-A061-480A-A495-75B966ADF8F0}">
+      <Component Id="nina_open_multiple_views_from_viewport_icon" Guid="{2943E5F0-5EED-4C9F-8E99-B9AA2ABAC6D6}">
         <File Id="nina_open_multiple_views_from_viewport_icon_file" Name="nina_open_multiple_views_from_viewport_16.png" />
       </Component>
     </DirectoryRef>
     
     <DirectoryRef Id ="RESOURCESFOLDER" FileSource="../Nina.Ribbon/Resources">
-      <Component Id="nina_point_cloud_isolate_icon" Guid="{51E74968-3B34-43C1-A389-C0C2A3C39296}">
+      <Component Id="nina_point_cloud_isolate_icon" Guid="{3C96EC15-E925-4A17-8221-99BFB666021C}">
         <File Id="nina_point_cloud_isolate_icon_file" Name="nina_point_cloud_isolate_30.png" />
       </Component>
     </DirectoryRef>
 
     <DirectoryRef Id ="RESOURCESFOLDER" FileSource="../Nina.Ribbon/Resources">
-      <Component Id="nina_settings_icon" Guid="{51E74968-3B34-43C1-A389-C0C2A3C39296}">
+      <Component Id="nina_settings_icon" Guid="{37BBD6CD-2028-48F4-9626-BC0E95A24CFF}">
         <File Id="nina_settings_icon_file" Name="nina_settings_30.png" />
       </Component>
     </DirectoryRef>
 
     <DirectoryRef Id ="RESOURCESFOLDER" FileSource="../Nina.Ribbon/Resources">
-      <Component Id="nina_show_hide_point_cloud_icon" Guid="{952F48EA-1E0A-482E-B07C-6B1642B8FBF7}">
+      <Component Id="nina_show_hide_point_cloud_icon" Guid="{65C10FD4-FB58-4A23-A293-2273C682AB92}">
         <File Id="nina_show_hide_point_cloud_icon_file" Name="nina_show_hide_point_cloud_30.png" />
       </Component>
     </DirectoryRef>
   
     <DirectoryRef Id ="RESOURCESFOLDER" FileSource="../Nina.Ribbon/Resources">
-      <Component Id="nina_view_range_minor_icon" Guid="{51E74968-3B34-43C1-A389-C0C2A3C39296}">
+      <Component Id="nina_view_range_minor_icon" Guid="{69F6E3E3-50D7-4735-A584-E230AF475DBF}">
         <File Id="nina_view_range_minor_icon_file" Name="nina_view_range_minor_16.png" />
       </Component>
     </DirectoryRef>
 
     <DirectoryRef Id ="RESOURCESFOLDER" FileSource="../Nina.Ribbon/Resources">
-      <Component Id="nina_view_range_plus_icon" Guid="{51E74968-3B34-43C1-A389-C0C2A3C39296}">
+      <Component Id="nina_view_range_plus_icon" Guid="{9D02EFE3-0EF4-403A-B6BB-428B101F098A}">
         <File Id="nina_view_range_plus_icon_file" Name="nina_view_range_plus_16.png" />
       </Component>
     </DirectoryRef>
 
     <DirectoryRef Id ="RESOURCESFOLDER" FileSource="../Nina.Ribbon/Resources">
-      <Component Id="nina_wall_by_dimension_icon" Guid="{51E74968-3B34-43C1-A389-C0C2A3C39296}">
+      <Component Id="nina_wall_by_dimension_icon" Guid="{CE225867-0C25-4CD0-84A6-3F1551CA303B}">
         <File Id="nina_wall_by_dimension_icon_file" Name="nina_wall_by_dimension_30.png" />
       </Component>
     </DirectoryRef>
@@ -206,10 +212,37 @@
     </DirectoryRef>
 
     <DirectoryRef Id ="RESOURCESFOLDER" FileSource="../Nina.Ribbon/Resources">
-      <Component Id="nina_switch_down_icon" Guid="{51E74968-3B34-43C1-A389-C0C2A3C39296}">
+      <Component Id="nina_switch_down_icon" Guid="{74B8B038-754F-46D6-ABEB-BE6CB69BC40F}">
         <File Id="nina_switch_down_icon_file" Name="nina_wall_switch_down_30.png" />
       </Component>
     </DirectoryRef>
-    
+
+    <DirectoryRef Id ="RESOURCESFOLDER" FileSource="../Nina.Ribbon/Resources">
+      <Component Id="nina_location_line_icon" Guid="{777B6350-E94D-4A1C-95B4-CA291ABA4AAA}">
+        <File Id="nina_location_line_icon_file" Name="nina_location_line_30.png" />
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id ="ADDINFOLDER" FileSource="../Nina.Language">
+      <Component Id="nina_lang_en_us" Guid="{6FE9E6BE-EAE7-4ACF-B714-7951A0E4A004}">
+        <File Id="nina_lang_en_us_file" Name="English_USA.json" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id ="ADDINFOLDER" FileSource="../Nina.Language">
+      <Component Id="nina_lang_en_gb" Guid="{36BEDDB5-3D29-40F9-A7A7-0F1907822B62}">
+        <File Id="nina_lang_en_gb_file" Name="English_GB.json" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id ="ADDINFOLDER" FileSource="../Nina.Language">
+      <Component Id="nina_lang_ru" Guid="{0FFDA96F-FA64-4AF7-9B67-E1583D4EF3E6}">
+        <File Id="nina_lang_ru_file" Name="Russian.json" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id ="ADDINFOLDER" FileSource="../Nina.Language">
+      <Component Id="nina_lang_es" Guid="{68F49922-2878-4975-8991-18E5CC1F14CE}">
+        <File Id="nina_lang_es_file" Name="Spanish.json" />
+      </Component>
+    </DirectoryRef>
+
   </Fragment>
 </Wix>

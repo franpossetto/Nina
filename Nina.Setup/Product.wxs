@@ -2,8 +2,8 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
   
   <?define UpgradeCode ="{C8887281-E5B1-4B69-AEE1-2EC86A49CA4F}"?>
-  <?define buildVersion ="!(bind.FileVersion.NinaDllFile_2020)"?>
-
+  <?define buildVersion ="0.2.0"?>
+  
   <Product Id="*"
 				 Name="!(loc.ProductName)"
 				 Language="!(loc.Language)"
