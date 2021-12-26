@@ -39,15 +39,20 @@ namespace Nina.Language
 
             string path = $"{ GetFolderPath(SpecialFolder.CommonApplicationData) }/Autodesk/ApplicationPlugins/Nina.bundle/";
 
-            //switch (this.LanguageName)
-            //{
-            //    case "English_USA":
-            //        this.Path = path + "en.json";
-            //        break;
+            switch (this.LanguageName)
+            {
+                case "English_USA":
+                    this.Path = path + "English_USA.json";
+                    break;
+                case "English_GB":
+                    this.Path = path + "English_GB.json";
+                    break;
+                case "Spanish":
+                    this.Path = path + "Spanish.json";
+                    break;
 
-            //}
+            }
 
-            this.Path = path + "en.json";
             return JsonConvert.DeserializeObject<List<ButtonInfo>>(File.ReadAllText(this.Path));
         }
         public ButtonInfo GetButtonById(string key)

@@ -27,11 +27,11 @@ namespace Nina
             Utils.CreateRibbonTab(application, RIBBON_TAB);
 
             LanguageManager lm = new LanguageManager(application);
-            NinaPanel.Language = lm.GetLanguage();
 
+            NinaPanel.Language = lm.GetLanguage();
             NinaPanel.Build(application, RIBBON_TAB);
 
-            SelectionPanel.Language = lm.Instance;
+            SelectionPanel.Language = lm.GetLanguage();
             SelectionPanel.Build(application, RIBBON_TAB);
             
             Views.Build(application, RIBBON_TAB);

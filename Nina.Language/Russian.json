@@ -1,0 +1,100 @@
+﻿[
+  {
+    "Id": "Info",
+    "ButtonType": "PullDownButton",
+    "Title": "Info",
+    "LongDescription": "",
+    "ToolTipDescription": ""
+  },
+  {
+    "Id": "About",
+    "ButtonType": "PullDownButton",
+    "Title": "About",
+    "LongDescription": "",
+    "ToolTipDescription": ""
+  },
+  {
+    "Id": "Github",
+    "ButtonType": "PullDownButton",
+    "Title": "Github Repo",
+    "LongDescription": "",
+    "ToolTipDescription": ""
+  },
+  {
+    "Id": "Logs",
+    "ButtonType": "PullDownButton",
+    "Title": "Logs",
+    "LongDescription": "",
+    "ToolTipDescription": ""
+  },
+  {
+    "Id": "TypeUp",
+    "ButtonType": "",
+    "Title": "Type\nUp",
+    "LongDescription": "Change the type of the selected element to the one above",
+    "ToolTipDescription": "Change the type of the selected element to the one above"
+  },
+  {
+    "Id": "TypeDown",
+    "ButtonType": "",
+    "Title": "Type\nDown",
+    "LongDescription": "Change the type of the selected element to the one below",
+    "ToolTipDescription": "Change the type of the selected element to the one below"
+  },
+  {
+    "Id": "WallTypeByDimension",
+    "ButtonType": "",
+    "Title": "WallType\nBy Dim",
+    "LongDescription": "Creates a walltype from a measure. If that wall already exists, it is selected",
+    "ToolTipDescription": "Creates a walltype from a measure. If that wall already exists, it is selected"
+  },
+  {
+    "Id": "ViewRangeUp",
+    "ButtonType": "",
+    "Title": "View Range Up",
+    "LongDescription": "Move up view range. To edit the step, go to config.",
+    "ToolTipDescription": "Move up view range. To edit the step, go to config."
+  },
+  {
+    "Id": "ViewRangeDown",
+    "ButtonType": "",
+    "Title": "View Range Down",
+    "LongDescription": "Move down view range. To edit the step, go to config.",
+    "ToolTipDescription": "Move down view range. To edit the step, go to config."
+  },
+  {
+    "Id": "OpenViews",
+    "ButtonType": "P",
+    "Title": "Open Views",
+    "LongDescription": "Allows to open multiple views selected from the project browser",
+    "ToolTipDescription": "Allows to open multiple views selected from the project browser"
+  },
+  {
+    "Id": "IsolateTemp",
+    "ButtonType": "",
+    "Title": "Isolate\nTemp",
+    "LongDescription": "Isolate point clouds temporary from the active view",
+    "ToolTipDescription": "Isolate point clouds temporary from the active view"
+  },
+  {
+    "Id": "ShowHide",
+    "ButtonType": "",
+    "Title": "Show\nHide",
+    "LongDescription": "Show/Hide point clouds from the active view",
+    "ToolTipDescription": "Show/Hide point clouds from the active view"
+  },
+  {
+    "Id": "ColorMode",
+    "ButtonType": "",
+    "Title": "Color\nMode",
+    "LongDescription": "Change the color mode of the point cloud in the active view",
+    "ToolTipDescription": "Change the color mode of the point cloud in the active view"
+  },
+  {
+    "Id": "ShowHideLinks",
+    "ButtonType": "",
+    "Title": "Show\nHide",
+    "LongDescription": "Show/Hide links from the active view",
+    "ToolTipDescription": "Show/Hide links from the active view"
+  }
+]

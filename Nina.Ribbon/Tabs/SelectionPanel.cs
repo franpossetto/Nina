@@ -17,9 +17,17 @@ namespace Nina.Tabs
 
             RibbonPanel selectionPanel = Utils.CreateRibbonPanel(application, "Type Selector", tabName);
 
+            ButtonInfo buttonInfo_TypeUp = Language.Where(button => button.Id == "TypeUp").FirstOrDefault();
+            ButtonInfo buttonInfo_TypeDown = Language.Where(button => button.Id == "TypeDown").FirstOrDefault();
+            ButtonInfo buttonInfo_WallByDim = Language.Where(button => button.Id == "WallTypeByDimension").FirstOrDefault();
+            
+            string typeup_button_name = buttonInfo_TypeUp.Title ?? "Type\nUp";
+            string typedown_button_name = buttonInfo_TypeDown.Title ?? "Type\nDown";
+            string wall_by_dim_button_name = buttonInfo_WallByDim.Title ?? "WallType\nby Dim";
+
             PushButtonData wall_byDimension_data = Utils
-                .CreatePushButtonData("wall_byDimension", 
-                                      "WallType\nby Dim", 
+                .CreatePushButtonData("wall_byDimension",
+                                      wall_by_dim_button_name, 
                                       "Nina.Selection.WallByDimension");
 
             wall_byDimension_data.LongDescription = "Put the long description here";
@@ -28,7 +36,7 @@ namespace Nina.Tabs
 
             PushButtonData elementType_switch_up_data = Utils
                 .CreatePushButtonData("type_switch_up",
-                                      "Type\nup",
+                                      typeup_button_name,
                                       "Nina.Selection.SwitchUp");
 
             elementType_switch_up_data.LongDescription = "Put the long description here";
@@ -37,7 +45,7 @@ namespace Nina.Tabs
 
             PushButtonData elementType_switch_down_data = Utils
                 .CreatePushButtonData("type_switch_down",
-                                      "Type\ndown",
+                                      typedown_button_name,
                                       "Nina.Selection.SwitchDown");
 
             elementType_switch_down_data.LongDescription = "Put the long description here";

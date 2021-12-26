@@ -16,16 +16,17 @@ namespace Nina.Tabs
             RibbonPanel ninaPanel = Utils.CreateRibbonPanel(application, "Nina ", tabName);
 
             #region Info Button
-            ButtonInfo buttonInfo_Info = Language.Where(button => button.Id == "NinaInfo").FirstOrDefault();
-            ButtonInfo buttonInfo_Logs = Language.Where(button => button.Id == "NinaLogs").FirstOrDefault();
-            ButtonInfo buttonInfo_About = Language.Where(button => button.Id == "NinaAbout").FirstOrDefault();
-            ButtonInfo buttonInfo_Github = Language.Where(button => button.Id == "NinaGithub").FirstOrDefault();
+            ButtonInfo buttonInfo_Info = Language.Where(button => button.Id == "Info").FirstOrDefault();
+            ButtonInfo buttonInfo_About = Language.Where(button => button.Id == "About").FirstOrDefault();
+            ButtonInfo buttonInfo_Logs = Language.Where(button => button.Id == "Logs").FirstOrDefault();
+            ButtonInfo buttonInfo_Github = Language.Where(button => button.Id == "Github").FirstOrDefault();
+  
+            string info_button_name = buttonInfo_Info.Title ?? "Info"; 
+            string about_button_name = buttonInfo_About.Title ?? "About";
+            string logs_button_name = buttonInfo_Logs.Title ?? "Logs";
+            string github_button_name = buttonInfo_Github.Title ?? "GitHub";
+      
 
-
-            string info_button_name = buttonInfo_Info.Title;
-            string about_button_name = buttonInfo_About.Title;
-            string logs_button_name = buttonInfo_Logs.Title;
-            string github_button_name = buttonInfo_Github.Title;
 
 
             PulldownButtonData info_button = new PulldownButtonData("info",

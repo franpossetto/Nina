@@ -9,7 +9,10 @@
     <Import_RootNamespace>Nina.Language</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)en.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Russian.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Spanish.json" />
+    <Content Include="$(MSBuildThisFileDirectory)English_GB.json" />
+    <Content Include="$(MSBuildThisFileDirectory)English_USA.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)LanguageManager.cs" />
