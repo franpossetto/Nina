@@ -1,9 +1,11 @@
 # Nina for Revit
 ![.NET](https://img.shields.io/badge/.NET-4.7-green.svg)
+![Revit API](https://img.shields.io/badge/RevitAPI-2017-blue.svg)
 ![Revit API](https://img.shields.io/badge/RevitAPI-2018-blue.svg)
 ![Revit API](https://img.shields.io/badge/RevitAPI-2019-blue.svg)
 ![Revit API](https://img.shields.io/badge/RevitAPI-2020-blue.svg)
 ![Revit API](https://img.shields.io/badge/RevitAPI-2021-blue.svg)
+![Revit API](https://img.shields.io/badge/RevitAPI-2022-blue.svg)
 
 Most of this work was done on Sunday mornings with [Nina](Nina.png).
 
