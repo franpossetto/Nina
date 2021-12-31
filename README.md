@@ -71,4 +71,4 @@ For correct use, use these commands as keyboard shorcuts. This is my personal co
 - Fede Schmidt
 - Exer Romero
 - [Jean Marc Couffin](https://github.com/jmcouffin)
-- [Manu Olmedo] (https://github.com/manu-o)
+- [Manu Olmedo](https://github.com/manu-o)
