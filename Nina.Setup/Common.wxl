@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+  <String Id ="ProductName">Nina</String>
+  <String Id ="AutodeskFolder">Autodesk</String>
+  <String Id ="ApplicationPluginsFolder">ApplicationPlugins</String>
+  <String Id ="ProductFolder">Nina.bundle</String>
+  <String Id ="ContentsFolder">Contents</String>
+  <String Id ="ResourcesFolder">Resources</String>
+  <String Id ="LogsFolder">Logs</String>
+  <String Id ="R2017Folder">Nina.R2017</String>
+  <String Id ="R2018Folder">Nina.R2018</String>
+  <String Id ="R2019Folder">Nina.R2019</String>
+  <String Id ="R2020Folder">Nina.R2020</String>
+  <String Id ="R2021Folder">Nina.R2021</String>
+  <String Id ="R2022Folder">Nina.R2022</String>
+  <String Id ="Language"> 1033 </String>
+  <String Id ="CompanyName"> Nina </String>
+  <String Id ="Description"> A collection of tiny automations for Autodesk Revit. </String>
+  <String Id ="Keywords"> Autodesk, Revit, Point Clouds, S2B, Automation </String>
+</WixLocalization>

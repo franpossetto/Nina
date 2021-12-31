@@ -1,0 +1,98 @@
+﻿<Window x:Class="Nina.UI.Config"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Nina.UI"
+             mc:Ignorable="d" 
+             Title="Nina Settings"
+             ResizeMode="NoResize"
+             Height="550"
+             Width="350">
+<Border Padding="10">
+     <StackPanel>
+        <GroupBox  Header="Walltype by Dimension"
+                   Height="225"
+                   Margin="0,20,0,0">
+            <Border Padding="20">
+                <StackPanel>
+                    <CheckBox x:Name ="Checkbox_CreateWallType" 
+                              Content="Create Walltype by tolerance"
+                              HorizontalAlignment="Left"
+                              VerticalAlignment="Top"
+                              Checked="createWallType_Checked"
+                              Unchecked="createWallType_Unchecked"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0"
+                                    Margin="0,0,10,0">
+                            <TextBlock Margin="0,20,0,0"
+                                       Text="Name"/>
+                            <TextBox x:Name ="WallTypeName"
+                                     Height="24"
+                                     Margin="0,10,0,0"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Margin="0,20,0,0"
+                            Text="Tolerance (Unit)"/>
+                            <TextBox x:Name ="TextBox_tolerance"
+                                     Height="24"
+                                     Margin="0,10,0,0"/>
+                        </StackPanel>
+                    </Grid>
+                    <TextBlock Margin="0,20,0,0"
+                               Text="Select base Walltype"/>
+                        <ComboBox x:Name="ComboBox_WallTypes" 
+                                  Height="24"
+                                  Margin="0,10,0,0"/>
+
+                    </StackPanel>
+               </Border>
+        </GroupBox>
+        <GroupBox  Header="View Range"
+                Height="150"
+                Margin="0,20,0,0">
+            <Border Padding="20">
+                <StackPanel>
+                    <CheckBox  x:Name ="Checkbox_ViewRangeTopBottom"
+                               Content="Move Top and Bottom"
+                               Checked="MoveTopBottom_Checked"
+                               Unchecked="MoveTopBottom_Unchecked"/>
+               
+                    <TextBlock Margin="0,20,0,0"
+                               Text="View Range Step"/>
+                     <TextBox x:Name ="TextBox_ViewRangeStep"
+                              Height="24"
+                              Margin="0,10,0,0" 
+                              Text="1.00" />
+
+                    </StackPanel>
+
+            </Border>
+        </GroupBox>
+            <Grid Margin="0,40,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                    <TextBlock x:Name ="help"
+                               TextDecorations="Underline"
+                               Grid.Column="0"
+                               Margin="10,0,0,0">
+                                    <Hyperlink NavigateUri="https://github.com/franpossetto/Nina/tree/master"
+                                               RequestNavigate="Hyperlink_RequestNavigate">
+                                               Help..
+                                    </Hyperlink>
+                    </TextBlock>
+                <Button Grid.Column="3" Content="Cancel" Height="24" Margin="0,0,5,0" Click="Button_Cancel"/>
+                <Button Grid.Column="4" Content="Save" Height="24" Margin="5,0,0,0" Click="Button_Save"/>
+                </Grid>
+        </StackPanel>
+</Border>
+</Window>
