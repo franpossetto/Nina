@@ -1,5 +1,6 @@
 # Nina for Revit
 ![.NET](https://img.shields.io/badge/.NET-4.7-green.svg)
+![.NET](https://img.shields.io/badge/.NET-4.8-green.svg)
 ![Revit API](https://img.shields.io/badge/RevitAPI-2017-blue.svg)
 ![Revit API](https://img.shields.io/badge/RevitAPI-2018-blue.svg)
 ![Revit API](https://img.shields.io/badge/RevitAPI-2019-blue.svg)
