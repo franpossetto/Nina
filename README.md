@@ -36,17 +36,23 @@ This tool allows users to select WallTypes by drawing a dimension. The dimension
 ### 4. Show / Hide Point Clouds
 Show or Hide point clouds in the current view.
 
-### 5. Point Cloud Color Mode
+### 5. Isolate Point Clouds
+Isolate point clouds in the current view.
+
+### 6. Point Cloud Color Mode
 This tool allow users modify the view range in the active view.
 
-### 6. Show / Hide RVT Links
+### 7. Show / Hide RVT Links
 Show or Hide RVT links in the current view.
 
-### 7. Show / Hide DWG Links
+### 8. Show / Hide DWG Links
 Show or Hide DWG links in the current view.
 
-### 8. Open Multiple View(s)
+### 9. Open Multiple View(s)
 Open one or multiple views doing the selection from the Project Browser.
+
+### 10. Wall Location Line
+This tool allow users modify the location line on selected walls.
 
 ### Recommendation
 For correct use, use these commands as keyboard shorcuts. This is my personal configuration:
@@ -59,10 +65,13 @@ For correct use, use these commands as keyboard shorcuts. This is my personal co
 |Type Selector|`View Range (-)`| `ww`|
 |Type Selector|`WallType by Dimension`| `dd`|
 |Point Clouds|`Show Hide Point Clouds`| `hp`|
+|Point Clouds|`Isolate Point Clouds`| `ip`|
 |Point Clouds|`Color Mode: Set Normals`| `nn`|
 |Links|`Show Hide RVT Links`| `hk`|
 |Links|`Show Hide RVT Links`| `hc`|
 |Views|`Open Multiple View(s)`| `om`|
+|Walls|`Location Line: Set Finish Face: Exterior`| `fe`|
+|Walls|`Location Line: Set Finish Face: Interior`| `fi`|
 
 *Before using Open Multiple View(s) as shorcut you have to click some empty space on the Ribbon bar.*
 
