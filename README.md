@@ -68,6 +68,7 @@ For correct use, use these commands as keyboard shorcuts. This is my personal co
 
 ## Contributions
 - Paloma Wilberger
-- Federico Schmidt
+- Fede Schmidt
 - Exer Romero
 - [Jean Marc Couffin](https://github.com/jmcouffin)
+- [Manu Olmedo] (https://github.com/manu-o)
