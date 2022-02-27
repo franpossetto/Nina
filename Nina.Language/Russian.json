@@ -64,7 +64,7 @@
   },
   {
     "Id": "OpenViews",
-    "ButtonType": "P",
+    "ButtonType": "",
     "Title": "Open Views",
     "LongDescription": "Allows to open multiple views selected from the project browser",
     "ToolTipDescription": "Allows to open multiple views selected from the project browser"
