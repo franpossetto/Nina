@@ -25,4 +25,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Settings\nina_settings.json" />
+  </ItemGroup>
 </Project>
