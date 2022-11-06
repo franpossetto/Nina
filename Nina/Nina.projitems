@@ -11,4 +11,8 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Documentation\Gifs\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\nina_black.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\nina_white.png" />
+  </ItemGroup>
 </Project>
