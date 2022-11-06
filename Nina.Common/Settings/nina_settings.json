@@ -1,0 +1,10 @@
+﻿{
+  "Nina": "Nina_",
+  "LogDirectory": "",
+  "CreateWallType": true,
+  "WallTypePrefix": null,
+  "ViewRangeStep": 0.1,
+  "WallTypeSelected": null,
+  "Tolerance": 0.1,
+  "ViewRangeTopBottom": false
+}

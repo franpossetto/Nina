@@ -1,0 +1,5 @@
+﻿To nuget location
+C:\Users\Tati\.nuget\packages\tools.innosetup\6.2.1\tools\ISCC.exe $(ProjectDir)SetupScript.iss
+
+To Solution location
+$(ProjectDir)\Inno\ISCC.exe $(ProjectDir)SetupScript.iss
