@@ -9,11 +9,13 @@
     <Import_RootNamespace>Nina</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Assets\transparent\" />
     <Folder Include="$(MSBuildThisFileDirectory)Documentation\Gifs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Assets\nina.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\nina_black.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\nina_white.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\transparent\nina_black.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\transparent\nina_white.png" />
   </ItemGroup>
 </Project>
