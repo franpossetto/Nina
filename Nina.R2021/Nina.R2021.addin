@@ -7,9 +7,7 @@
     <Description>Nina for Revit</Description>
     <VisibilityMode>AlwaysVisible</VisibilityMode>
     <Assembly>Nina.R2021.dll</Assembly>
-    <AddInId>
-      B4ABCD0-880C-4D05-88AC-04AB1D2E8FD1
-    </AddInId>
+    <AddInId>E0B07037-503D-4145-885A-2535CBB5E500</AddInId>
     <VendorId>Nina</VendorId>
     <VendorDescription>Nina</VendorDescription>
   </AddIn>
