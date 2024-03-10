@@ -11,6 +11,8 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)HideCADLinks.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HideRVTLinks.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OpenMultipleViews.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OpenViewFromViewPort.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewRangeMinor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewRangePlus.cs" />

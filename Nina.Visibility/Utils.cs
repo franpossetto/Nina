@@ -4,6 +4,7 @@ using Autodesk.Revit.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Controls;
 
 namespace Nina.Visibility
 {
@@ -100,6 +101,40 @@ namespace Nina.Visibility
                     {
                         TaskDialog.Show("Exception", e.StackTrace);
                     }
+                }
+            }
+        }
+
+        public static void OpenMultipleViews(Document doc, UIDocument uiDoc, List<ElementId> viewIds)
+        {
+            foreach (ElementId id in viewIds)
+            {
+                try
+                {
+                    View view = doc.GetElement(id) as View;
+                    uiDoc.RequestViewChange(view);
+                }
+                catch
+                {
+                    // cannot do it.
+                }
+            }
+        }
+
+        public static void OpenFromViewPort(Document doc, UIDocument uiDoc, ICollection<ElementId> viewPortIds)
+        {
+            foreach (ElementId id in viewPortIds)
+            {
+                try
+                {
+                    Viewport viewport = doc.GetElement(id) as Viewport;
+                    ElementId viewId = viewport.ViewId;
+                    View view = doc.GetElement(viewId) as View;
+                    uiDoc.RequestViewChange(view);
+                }
+                catch
+                {
+                    // cannot do it.
                 }
             }
         }

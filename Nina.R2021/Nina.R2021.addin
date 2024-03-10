@@ -8,8 +8,8 @@
     <VisibilityMode>AlwaysVisible</VisibilityMode>
     <Assembly>Nina.R2021.dll</Assembly>
     <AddInId>
-      B4ABCD0-880C-4D05-88AC-04AB1D2E8FD1
-    </AddInId>
+		6E5AB5F7-C932-4845-861D-6000F55DFEA1
+	</AddInId>
     <VendorId>Nina</VendorId>
     <VendorDescription>Nina</VendorDescription>
   </AddIn>
