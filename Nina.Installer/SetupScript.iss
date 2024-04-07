@@ -49,6 +49,11 @@ Source: "..\Nina.R2022\Nina.R2022.addin"; DestDir: "{commonappdata}\Autodesk\App
 Source: "..\Nina.R2023\bin\Release\Nina.R2023.dll"; DestDir: "{commonappdata}\Autodesk\ApplicationPlugins\Nina.bundle\Contents\2023"; Flags: ignoreversion
 Source: "..\Nina.R2023\Nina.R2023.addin"; DestDir: "{commonappdata}\Autodesk\ApplicationPlugins\Nina.bundle\Contents\2023"; Flags: ignoreversion
 
+; 2024 Files
+Source: "..\Nina.R2024\bin\Release\Nina.R2024.dll"; DestDir: "{commonappdata}\Autodesk\ApplicationPlugins\Nina.bundle\Contents\2024"; Flags: ignoreversion
+Source: "..\Nina.R2024\Nina.R2024.addin"; DestDir: "{commonappdata}\Autodesk\ApplicationPlugins\Nina.bundle\Contents\2024"; Flags: ignoreversion
+
+
 ; Langauges
 Source: "..\Nina.Language\English_GB.json"; DestDir: "{commonappdata}\Autodesk\ApplicationPlugins\Nina.bundle"; Flags: ignoreversion
 Source: "..\Nina.Language\English_USA.json"; DestDir: "{commonappdata}\Autodesk\ApplicationPlugins\Nina.bundle"; Flags: ignoreversion

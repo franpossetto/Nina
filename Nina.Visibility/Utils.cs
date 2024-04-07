@@ -4,7 +4,7 @@ using Autodesk.Revit.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Controls;
+using System.Windows.Forms;
 
 namespace Nina.Visibility
 {
@@ -14,7 +14,7 @@ namespace Nina.Visibility
         {
             Categories categories = doc.Settings.Categories;
             Category linkCategory = categories.get_Item(BuiltInCategory.OST_RvtLinks);
-            View activeView = doc.ActiveView;
+            Autodesk.Revit.DB.View activeView = doc.ActiveView;
 
             bool hide = activeView.GetCategoryHidden(linkCategory.Id) ? false : true;
             PointCloudOverrides pc_ovverides = activeView.GetPointCloudOverrides();
@@ -85,7 +85,7 @@ namespace Nina.Visibility
                         break;
                 }
 
-                View activeView = doc.ActiveView;
+                Autodesk.Revit.DB.View activeView = doc.ActiveView;
                 PointCloudOverrides overrides = activeView.GetPointCloudOverrides();
                 PointCloudColorSettings pointCloudColorSettings = new PointCloudColorSettings();
 
@@ -111,7 +111,7 @@ namespace Nina.Visibility
             {
                 try
                 {
-                    View view = doc.GetElement(id) as View;
+                    Autodesk.Revit.DB.View view = doc.GetElement(id) as Autodesk.Revit.DB.View;
                     uiDoc.RequestViewChange(view);
                 }
                 catch
@@ -129,7 +129,7 @@ namespace Nina.Visibility
                 {
                     Viewport viewport = doc.GetElement(id) as Viewport;
                     ElementId viewId = viewport.ViewId;
-                    View view = doc.GetElement(viewId) as View;
+                    Autodesk.Revit.DB.View view = doc.GetElement(viewId) as Autodesk.Revit.DB.View;
                     uiDoc.RequestViewChange(view);
                 }
                 catch
@@ -138,5 +138,18 @@ namespace Nina.Visibility
                 }
             }
         }
+
+        public static void HideSectionBox(Document doc)
+        {
+            View3D view = doc.ActiveView as View3D;
+
+            using (Transaction t = new Transaction(doc))
+            {
+                t.Start("Toggle Section Box");
+                view.IsSectionBoxActive = !view.IsSectionBoxActive;
+                t.Commit();
+            }
+        }
+
     }
 }

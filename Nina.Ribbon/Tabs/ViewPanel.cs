@@ -25,7 +25,6 @@ namespace Nina.Tabs
 
             open_multiple_views_data.LongDescription = "Put the long description here";
             open_multiple_views_data.ToolTip = "Put the Tooltip here";
-            // rvt_links_hide.ToolTipImage = 
 
             PushButtonData open_view_from_viewport_data = Utils
                   .CreatePushButtonData("openViewport",
@@ -35,7 +34,6 @@ namespace Nina.Tabs
 
             open_view_from_viewport_data.LongDescription = "Put the long description here";
             open_view_from_viewport_data.ToolTip = "Put the Tooltip here";
-            // rvt_links_hide.ToolTipImage = 
 
             PushButtonData viewrange_plus_data = Utils
                   .CreatePushButtonData("viewrange_plus",
@@ -44,7 +42,6 @@ namespace Nina.Tabs
 
             viewrange_plus_data.LongDescription = "Put the long description here";
             viewrange_plus_data.ToolTip = "Put the Tooltip here";
-            // rvt_links_hide.ToolTipImage = 
 
             PushButtonData viewrange_minor_data = Utils
                   .CreatePushButtonData("viewrange_down",
@@ -53,9 +50,16 @@ namespace Nina.Tabs
 
             viewrange_minor_data.LongDescription = "Put the long description here";
             viewrange_minor_data.ToolTip = "Put the Tooltip here";
-            // rvt_links_hide.ToolTipImage = 
 
-            PulldownButtonData actions_pulldownbutton_data = new PulldownButtonData("viewActions", "Open views");
+            PushButtonData hide_section_box_data = Utils
+                  .CreatePushButtonData("hide_section_box",
+                                        "Hide Section Box",
+                                        "Nina.Visibility.HideSectionBox");
+
+            hide_section_box_data.LongDescription = "Put the long description here";
+            hide_section_box_data.ToolTip = "Put the Tooltip here";
+
+            PulldownButtonData actions_pulldownbutton_data = new PulldownButtonData("viewActions", "View Actions");
 
             viewrange_plus_data.Image = Utils.GetIcon("nina_view_range_plus_16");
             viewrange_minor_data.Image = Utils.GetIcon("nina_view_range_minor_16");
@@ -71,6 +75,7 @@ namespace Nina.Tabs
 
             PushButton item1 = actions_pulldownbutton.AddPushButton(open_multiple_views_data) as PushButton;
             PushButton item2 = actions_pulldownbutton.AddPushButton(open_view_from_viewport_data) as PushButton;
+            PushButton item3 = actions_pulldownbutton.AddPushButton(hide_section_box_data) as PushButton;
 
             //open_multiple_views_data.Image = Utils.GetIcon("nina_open_multiple_views_16");
             //open_view_from_viewport_data.Image = Utils.GetIcon("nina_open_multiple_views_from_viewport_16");
