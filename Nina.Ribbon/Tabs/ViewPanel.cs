@@ -53,7 +53,7 @@ namespace Nina.Tabs
 
             PushButtonData hide_section_box_data = Utils
                   .CreatePushButtonData("hide_section_box",
-                                        "Hide Section Box",
+                                        "Show/Hide Section Box",
                                         "Nina.Visibility.HideSectionBox");
 
             hide_section_box_data.LongDescription = "Put the long description here";
