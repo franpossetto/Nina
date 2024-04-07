@@ -57,6 +57,9 @@ Open one or multiple views doing the selection from the Project Browser.
 ### 10. Wall Location Line
 This tool allow users modify the location line on selected walls.
 
+### 11. Show / Hide Section Box
+Show or Hide Section Box in the current 3D view.
+
 ### Recommendation
 For correct use, use these commands as keyboard shorcuts. This is my personal configuration:
 
