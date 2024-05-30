@@ -84,4 +84,14 @@
 					ModuleName="./Contents/2023/Nina.R2023.addin"
 					AppDescription="Nina for Revit" />
 </Components>
+	<Components Description="2024">
+		<RuntimeRequirements OS="Win64"
+								Platform="Revit"
+								SeriesMin="R2024"
+								SeriesMax="R2024" />
+		<ComponentEntry AppName="Nina for Revit"
+						Version="2024"
+						ModuleName="./Contents/2024/Nina.R2024.addin"
+						AppDescription="Nina for Revit" />
+	</Components>
 </ApplicationPackage>
