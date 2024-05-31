@@ -199,6 +199,13 @@ Global
 		Nina.Visibility\Nina.Visibility.projitems*{115f6477-2cac-4bf5-b7a6-ba77086a5573}*SharedItemsImports = 4
 		Nina\Nina.projitems*{115f6477-2cac-4bf5-b7a6-ba77086a5573}*SharedItemsImports = 4
 		Nina.Selection\Nina.Selection.projitems*{2543cbbe-2002-452d-b8e2-77fe6c95823c}*SharedItemsImports = 13
+		Nina.Common\Nina.Common.projitems*{2bfaed22-33f3-4772-bef3-8396f4548505}*SharedItemsImports = 4
+		Nina.Language\Nina.Language.projitems*{2bfaed22-33f3-4772-bef3-8396f4548505}*SharedItemsImports = 4
+		Nina.PointCloud\Nina.PointCloud.projitems*{2bfaed22-33f3-4772-bef3-8396f4548505}*SharedItemsImports = 4
+		Nina.Ribbon\Nina.Ribbon.projitems*{2bfaed22-33f3-4772-bef3-8396f4548505}*SharedItemsImports = 4
+		Nina.Selection\Nina.Selection.projitems*{2bfaed22-33f3-4772-bef3-8396f4548505}*SharedItemsImports = 4
+		Nina.Visibility\Nina.Visibility.projitems*{2bfaed22-33f3-4772-bef3-8396f4548505}*SharedItemsImports = 4
+		Nina\Nina.projitems*{2bfaed22-33f3-4772-bef3-8396f4548505}*SharedItemsImports = 4
 		Nina.Common\Nina.Common.projitems*{2d838553-d6a4-4f38-8369-4232d7cba9a1}*SharedItemsImports = 13
 		Nina.Common\Nina.Common.projitems*{40303a00-f9fa-49c1-bb31-bc5cc5de7f7f}*SharedItemsImports = 4
 		Nina.Language\Nina.Language.projitems*{40303a00-f9fa-49c1-bb31-bc5cc5de7f7f}*SharedItemsImports = 4
