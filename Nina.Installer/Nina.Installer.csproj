@@ -64,7 +64,7 @@
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>C:\Users\franc\.nuget\packages\tools.innosetup\6.2.1\tools\ISCC.exe $(ProjectDir)SetupScript.iss</PostBuildEvent>
+    <PostBuildEvent>$(SolutionDir)packages\Tools.InnoSetup.6.2.1\tools\ISCC.exe $(ProjectDir)SetupScript.iss</PostBuildEvent>
   </PropertyGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
